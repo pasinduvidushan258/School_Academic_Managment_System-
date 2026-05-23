@@ -1,4 +1,6 @@
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Project
 {
@@ -7,6 +9,21 @@ namespace Project
         public From1()
         {
             InitializeComponent();
+        }
+
+        //password encryption
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in bytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+                return builder.ToString();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,8 +66,10 @@ namespace Project
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
+
+                        string hashedPassword = HashPassword(password);
                         cmd.Parameters.AddWithValue("@User", username);
-                        cmd.Parameters.AddWithValue("@Pass", password);
+                        cmd.Parameters.AddWithValue("@Pass", hashedPassword);
 
                         object roleObj = cmd.ExecuteScalar();
 
@@ -73,8 +92,12 @@ namespace Project
                                 ClassTeacherDashboard classTeacherForm = new ClassTeacherDashboard();
                                 classTeacherForm.Show();
                             }
+                            else if (userRole == "Pending")
+                            {
+                                MessageBox.Show("Your account is pending approval. Please contact the Prenciple .", "Account Pending", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return; 
+                            }
 
-                            this.Hide();
                         }
                         else
                         {
@@ -87,6 +110,13 @@ namespace Project
             {
                 MessageBox.Show("Database Connection Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+            this.Hide();
         }
     }
 }

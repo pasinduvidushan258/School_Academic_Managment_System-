@@ -38,7 +38,7 @@
             button2 = new Button();
             button1 = new Button();
             linkLabel2 = new LinkLabel();
-            linkLabel1 = new LinkLabel();
+            Register = new LinkLabel();
             label3 = new Label();
             txtPassword = new TextBox();
             label2 = new Label();
@@ -112,7 +112,7 @@
             PanelRight.Controls.Add(button2);
             PanelRight.Controls.Add(button1);
             PanelRight.Controls.Add(linkLabel2);
-            PanelRight.Controls.Add(linkLabel1);
+            PanelRight.Controls.Add(Register);
             PanelRight.Controls.Add(label3);
             PanelRight.Controls.Add(txtPassword);
             PanelRight.Controls.Add(label2);
@@ -121,7 +121,7 @@
             PanelRight.Controls.Add(LOGIN);
             PanelRight.Location = new Point(349, 0);
             PanelRight.Name = "PanelRight";
-            PanelRight.Size = new Size(554, 500);
+            PanelRight.Size = new Size(555, 500);
             PanelRight.TabIndex = 1;
             PanelRight.Paint += PanelRight_Paint;
             // 
@@ -161,15 +161,16 @@
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Forgot Password?";
             // 
-            // linkLabel1
+            // Register
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(235, 440);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(114, 20);
-            linkLabel1.TabIndex = 7;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Create Account!";
+            Register.AutoSize = true;
+            Register.Location = new Point(235, 440);
+            Register.Name = "Register";
+            Register.Size = new Size(114, 20);
+            Register.TabIndex = 7;
+            Register.TabStop = true;
+            Register.Text = "Create Account!";
+            Register.LinkClicked += register_LinkClicked;
             // 
             // label3
             // 
@@ -259,7 +260,7 @@
         private ColorDialog colorDialog1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private LinkLabel linkLabel1;
+        private LinkLabel Register;
         private Label label3;
         private LinkLabel linkLabel2;
         private Label label4;
