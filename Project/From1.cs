@@ -1,6 +1,7 @@
 using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using System.Text;
+using System.Drawing.Drawing2D;
 
 namespace Project
 {
@@ -10,6 +11,22 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void RoundPanel(Panel pnl, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.StartFigure();
+
+            // curve for each corner
+            path.AddArc(0, 0, radius, radius, 180, 90); // left-top
+            path.AddArc(pnl.Width - radius, 0, radius, radius, 270, 90); // right-top
+            path.AddArc(pnl.Width - radius, pnl.Height - radius, radius, radius, 0, 90); // right-bottom
+            path.AddArc(0, pnl.Height - radius, radius, radius, 90, 90); // left-bottom
+
+            path.CloseFigure();
+            pnl.Region = new Region(path);
+        }
+
 
         //password encryption
         private string HashPassword(string password)
@@ -26,9 +43,33 @@ namespace Project
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
+        
+
+        private void RoundButton(Button btn)
+        {
+            GraphicsPath path = new GraphicsPath();
+            int radius = 30;
+
+            path.StartFigure();
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(btn.Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(btn.Width - radius, btn.Height - radius, radius, radius, 0, 90);
+            path.AddArc(0, btn.Height - radius, radius, radius, 90, 90);
+            path.CloseFigure();
+
+            btn.Region = new Region(path);
+        }
+
+
+
+    private void Form1_Load(object sender, EventArgs e)
+        {
+            RoundPanel(PanelLeft, 30);
+            RoundPanel(PanelRight, 30);
+            RoundButton(button1);
+            
+            
         }
 
         private void PanelRight_Paint(object sender, PaintEventArgs e)
@@ -95,7 +136,7 @@ namespace Project
                             else if (userRole == "Pending")
                             {
                                 MessageBox.Show("Your account is pending approval. Please contact the Prenciple .", "Account Pending", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                return; 
+                                return;
                             }
 
                         }
@@ -117,6 +158,26 @@ namespace Project
             Register register = new Register();
             register.Show();
             this.Hide();
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        // Show and hide password
+        private void passwordHide_Click(object sender, EventArgs e)
+        {
+            
+            txtPassword.UseSystemPasswordChar = true;
+            passwordShow.Visible = true;
+            passwordHide.Visible = false;
+        }
+
+        private void passwordShow_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = false;
+            passwordHide.Visible = true;
+            passwordShow.Visible = false;
         }
     }
 }

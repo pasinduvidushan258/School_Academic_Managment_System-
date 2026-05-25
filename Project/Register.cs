@@ -1,17 +1,17 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
 //password encryption
 using System.Security.Cryptography;
 using System.Text;
-using MySql.Data.MySqlClient;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Project
 {
@@ -35,6 +35,21 @@ namespace Project
                 }
                 return builder.ToString();
             }
+        }
+        // Method to round the corners of a panel
+        private void RoundPanel(Panel pnl, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.StartFigure();
+
+            // curve for each corner
+            path.AddArc(0, 0, radius, radius, 180, 90); // left-top
+            path.AddArc(pnl.Width - radius, 0, radius, radius, 270, 90); // right-top
+            path.AddArc(pnl.Width - radius, pnl.Height - radius, radius, radius, 0, 90); // right-bottom
+            path.AddArc(0, pnl.Height - radius, radius, radius, 90, 90); // left-bottom
+
+            path.CloseFigure();
+            pnl.Region = new Region(path);
         }
 
 
@@ -145,6 +160,62 @@ namespace Project
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMobileNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+            RoundPanel(panelTop, 30);
+            RoundPanel(panelBottom, 30);
+        }
+
+        // Show and hide password
+
+        private void passwordHide_Click_1(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+            passwordShow.Visible = true;
+            passwordHide.Visible = false;
+        }
+
+        private void passwordShow_Click_1(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = false;
+            passwordHide.Visible = true;
+            passwordShow.Visible = false;
+        }
+
+        private void passwordShow1_Click(object sender, EventArgs e)
+        {
+            txtConfirmPassword.UseSystemPasswordChar = false;
+            passwordHide1.Visible = true;
+            passwordShow1.Visible = false;
+        }
+
+        private void passwordHide1_Click(object sender, EventArgs e)
+        {
+            txtConfirmPassword.UseSystemPasswordChar = true;
+            passwordShow1.Visible = true;
+            passwordHide1.Visible = false;
         }
     }
 }
