@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,17 +85,18 @@ namespace Project
                 return;
             }
 
-            string connectionString = "Server=localhost;Database=school_ams;Uid=root;Pwd=1234;";
+            string connectionString = @"Server=LAPTOP-U0AVEUM3;Database=School_AMS;Integrated Security=True;";
 
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
 
+                    string checkUserQuery = "SELECT COUNT(*) FROM Users WHERE Username = @User";
 
-                    string checkUserQuery = "SELECT COUNT(*) FROM users WHERE Username = @User";
-                    using (MySqlCommand checkCmd = new MySqlCommand(checkUserQuery, conn))
+                    // 3. SqlCommand බවට පත් කිරීම
+                    using (SqlCommand checkCmd = new SqlCommand(checkUserQuery, conn))
                     {
                         checkCmd.Parameters.AddWithValue("@User", username);
                         int userExists = Convert.ToInt32(checkCmd.ExecuteScalar());
@@ -107,14 +108,13 @@ namespace Project
                         }
                     }
 
-
                     string hashedPassword = HashPassword(password);
 
-
-                    string insertQuery = "INSERT INTO users (FirstName, LastName, Email, Username, Password, MobileNumber, Gender, DOB, UserRole) " +
+                    string insertQuery = "INSERT INTO Users (FirstName, LastName, Email, Username, Password, MobileNumber, Gender, DOB, UserRole) " +
                                          "VALUES (@FName, @LName, @Email, @User, @Pass, @Mobile, @Gender, @DOB, @Role)";
 
-                    using (MySqlCommand cmd = new MySqlCommand(insertQuery, conn))
+                    
+                    using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("@FName", fName);
                         cmd.Parameters.AddWithValue("@LName", lName);
@@ -131,7 +131,6 @@ namespace Project
                         if (result > 0)
                         {
                             MessageBox.Show("Registration successful! Waiting for Admin approval.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
 
                             From1 loginForm = new From1();
                             loginForm.Show();

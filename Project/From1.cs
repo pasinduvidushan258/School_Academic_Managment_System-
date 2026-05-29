@@ -1,4 +1,4 @@
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Drawing.Drawing2D;
@@ -95,19 +95,20 @@ namespace Project
             }
 
 
-            string connectionString = "Server=localhost;Database=School_AMS;Uid=root;Pwd=1234;";
+            string connectionString = @"Server=LAPTOP-U0AVEUM3;Database=School_AMS;Integrated Security=True;";
 
             try
             {
-                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
                     string query = "SELECT UserRole FROM Users WHERE Username = @User AND Password = @Pass";
 
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-
                         string hashedPassword = HashPassword(password);
                         cmd.Parameters.AddWithValue("@User", username);
                         cmd.Parameters.AddWithValue("@Pass", hashedPassword);
@@ -135,7 +136,7 @@ namespace Project
                             }
                             else if (userRole == "Pending")
                             {
-                                MessageBox.Show("Your account is pending approval. Please contact the Prenciple .", "Account Pending", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Your account is pending approval. Please contact the Principle.", "Account Pending", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 return;
                             }
 
