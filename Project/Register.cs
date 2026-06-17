@@ -1,4 +1,4 @@
-﻿using System.Data.SqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,9 +85,9 @@ namespace Project
                 return;
             }
 
-            string connectionString = @"Server=LAPTOP-U0AVEUM3;Database=School_AMS;Integrated Security=True;";
+            string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
@@ -95,8 +95,7 @@ namespace Project
 
                     string checkUserQuery = "SELECT COUNT(*) FROM Users WHERE Username = @User";
 
-                    // 3. SqlCommand බවට පත් කිරීම
-                    using (SqlCommand checkCmd = new SqlCommand(checkUserQuery, conn))
+                    using (MySqlCommand checkCmd = new MySqlCommand(checkUserQuery, conn))
                     {
                         checkCmd.Parameters.AddWithValue("@User", username);
                         int userExists = Convert.ToInt32(checkCmd.ExecuteScalar());
@@ -113,8 +112,8 @@ namespace Project
                     string insertQuery = "INSERT INTO Users (FirstName, LastName, Email, Username, Password, MobileNumber, Gender, DOB, UserRole) " +
                                          "VALUES (@FName, @LName, @Email, @User, @Pass, @Mobile, @Gender, @DOB, @Role)";
 
-                    
-                    using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
+
+                    using (MySqlCommand cmd = new MySqlCommand(insertQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("@FName", fName);
                         cmd.Parameters.AddWithValue("@LName", lName);

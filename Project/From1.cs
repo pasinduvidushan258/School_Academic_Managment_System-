@@ -1,4 +1,4 @@
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Drawing.Drawing2D;
@@ -95,19 +95,19 @@ namespace Project
             }
 
 
-            string connectionString = @"Server=LAPTOP-U0AVEUM3;Database=School_AMS;Integrated Security=True;";
+            string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
 
             try
             {
                 
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
 
                     string query = "SELECT UserRole FROM Users WHERE Username = @User AND Password = @Pass";
 
-                    
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         string hashedPassword = HashPassword(password);
                         cmd.Parameters.AddWithValue("@User", username);
