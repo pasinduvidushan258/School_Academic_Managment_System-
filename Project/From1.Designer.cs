@@ -89,9 +89,9 @@
             PanelRight.Controls.Add(txtUserName);
             PanelRight.Controls.Add(label1);
             PanelRight.Controls.Add(LOGIN);
-            PanelRight.Location = new Point(347, 12);
+            PanelRight.Location = new Point(362, 12);
             PanelRight.Name = "PanelRight";
-            PanelRight.Size = new Size(540, 476);
+            PanelRight.Size = new Size(525, 476);
             PanelRight.TabIndex = 1;
             PanelRight.Paint += PanelRight_Paint;
             // 
@@ -135,7 +135,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(487, 3);
+            button2.Location = new Point(472, 3);
             button2.Name = "button2";
             button2.Size = new Size(50, 29);
             button2.TabIndex = 10;

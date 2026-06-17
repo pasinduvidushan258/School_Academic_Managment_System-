@@ -85,7 +85,7 @@ namespace Project
                 return;
             }
 
-            string connectionString = "Server=localhost;Database=school_ams;Uid=root;Pwd=1234;";
+            string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -93,8 +93,8 @@ namespace Project
                 {
                     conn.Open();
 
+                    string checkUserQuery = "SELECT COUNT(*) FROM Users WHERE Username = @User";
 
-                    string checkUserQuery = "SELECT COUNT(*) FROM users WHERE Username = @User";
                     using (MySqlCommand checkCmd = new MySqlCommand(checkUserQuery, conn))
                     {
                         checkCmd.Parameters.AddWithValue("@User", username);
@@ -107,12 +107,11 @@ namespace Project
                         }
                     }
 
-
                     string hashedPassword = HashPassword(password);
 
-
-                    string insertQuery = "INSERT INTO users (FirstName, LastName, Email, Username, Password, MobileNumber, Gender, DOB, UserRole) " +
+                    string insertQuery = "INSERT INTO Users (FirstName, LastName, Email, Username, Password, MobileNumber, Gender, DOB, UserRole) " +
                                          "VALUES (@FName, @LName, @Email, @User, @Pass, @Mobile, @Gender, @DOB, @Role)";
+
 
                     using (MySqlCommand cmd = new MySqlCommand(insertQuery, conn))
                     {
@@ -131,7 +130,6 @@ namespace Project
                         if (result > 0)
                         {
                             MessageBox.Show("Registration successful! Waiting for Admin approval.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
 
                             From1 loginForm = new From1();
                             loginForm.Show();
