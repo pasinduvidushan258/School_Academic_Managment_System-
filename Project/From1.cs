@@ -44,7 +44,7 @@ namespace Project
         }
 
 
-        
+
 
         private void RoundButton(Button btn)
         {
@@ -63,13 +63,13 @@ namespace Project
 
 
 
-    private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             RoundPanel(PanelLeft, 30);
             RoundPanel(PanelRight, 30);
             RoundButton(button1);
-            
-            
+
+
         }
 
         private void PanelRight_Paint(object sender, PaintEventArgs e)
@@ -99,7 +99,7 @@ namespace Project
 
             try
             {
-                
+
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
@@ -168,7 +168,7 @@ namespace Project
         // Show and hide password
         private void passwordHide_Click(object sender, EventArgs e)
         {
-            
+
             txtPassword.UseSystemPasswordChar = true;
             passwordShow.Visible = true;
             passwordHide.Visible = false;
@@ -179,6 +179,11 @@ namespace Project
             txtPassword.UseSystemPasswordChar = false;
             passwordHide.Visible = true;
             passwordShow.Visible = false;
+        }
+
+        private void PanelLeft_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
