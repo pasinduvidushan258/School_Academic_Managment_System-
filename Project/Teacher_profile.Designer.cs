@@ -949,6 +949,7 @@
             leftPanel.Name = "leftPanel";
             leftPanel.Size = new Size(1920, 1080);
             leftPanel.TabIndex = 5;
+            leftPanel.Paint += leftPanel_Paint;
             // 
             // panel20
             // 

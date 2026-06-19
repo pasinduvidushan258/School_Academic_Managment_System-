@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class ClassTeacherDashboard : Form
+    public partial class Class_Teacher_Top_Students : Form
     {
-        public ClassTeacherDashboard()
+        public Class_Teacher_Top_Students()
         {
             InitializeComponent();
         }
@@ -24,24 +24,10 @@ namespace Project
             this.Hide();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Class_Teacher_Subject_marks classTeacherSubjectMarks = new Class_Teacher_Subject_marks();
-            classTeacherSubjectMarks.Show();
-            this.Hide();
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Class_Teacher_Analytics classTeacherAnalytics = new Class_Teacher_Analytics();
             classTeacherAnalytics.Show();
-            this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Class_Teacher_Top_Students classTeacherTopStudents = new Class_Teacher_Top_Students();
-            classTeacherTopStudents.Show();
             this.Hide();
         }
 
@@ -73,17 +59,31 @@ namespace Project
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            From1 from1 = new From1();
-            from1.Show();
-            this.Hide();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             ClassTeacherDashboard classTeacherDashboard = new ClassTeacherDashboard();
             classTeacherDashboard.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Class_Teacher_Subject_marks class_Teacher_Subject_Marks = new Class_Teacher_Subject_marks();
+            class_Teacher_Subject_Marks.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Class_Teacher_Top_Students class_Teacher_Top_Students = new Class_Teacher_Top_Students();
+            class_Teacher_Top_Students.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            From1 from1 = new From1();
+            from1.Show();
             this.Hide();
         }
     }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class ClassTeacherDashboard : Form
+    public partial class Class_Teacher_Profile : Form
     {
-        public ClassTeacherDashboard()
+        public Class_Teacher_Profile()
         {
             InitializeComponent();
         }
@@ -73,17 +73,17 @@ namespace Project
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            From1 from1 = new From1();
-            from1.Show();
-            this.Hide();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             ClassTeacherDashboard classTeacherDashboard = new ClassTeacherDashboard();
             classTeacherDashboard.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            From1 from1 = new From1();
+            from1.Show();
             this.Hide();
         }
     }

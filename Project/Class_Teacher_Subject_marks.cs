@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class ClassTeacherDashboard : Form
+    public partial class Class_Teacher_Subject_marks : Form
     {
-        public ClassTeacherDashboard()
+        public Class_Teacher_Subject_marks()
         {
             InitializeComponent();
         }
@@ -68,15 +68,8 @@ namespace Project
 
         private void Class_Top_Students_Click(object sender, EventArgs e)
         {
-            Class_Teacher_Class_Top_Students classTeacherClassTopStudents = new Class_Teacher_Class_Top_Students();
-            classTeacherClassTopStudents.Show();
-            this.Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            From1 from1 = new From1();
-            from1.Show();
+            Class_Teacher_Class_Top_Students Class_Teacher_Class_Top_Students = new Class_Teacher_Class_Top_Students();
+            Class_Teacher_Class_Top_Students.Show();
             this.Hide();
         }
 
@@ -84,6 +77,13 @@ namespace Project
         {
             ClassTeacherDashboard classTeacherDashboard = new ClassTeacherDashboard();
             classTeacherDashboard.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            From1 from1= new From1();
+            from1.Show();
             this.Hide();
         }
     }
