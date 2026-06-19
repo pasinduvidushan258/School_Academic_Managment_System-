@@ -12,6 +12,7 @@ namespace Project
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new From1());
+            
         }
     }
 }
