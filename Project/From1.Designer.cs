@@ -99,7 +99,7 @@
             // passwordShow
             // 
             passwordShow.Image = (Image)resources.GetObject("passwordShow.Image");
-            passwordShow.Location = new Point(450, 282);
+            passwordShow.Location = new Point(450, 276);
             passwordShow.Name = "passwordShow";
             passwordShow.Size = new Size(25, 18);
             passwordShow.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -110,7 +110,7 @@
             // passwordHide
             // 
             passwordHide.Image = (Image)resources.GetObject("passwordHide.Image");
-            passwordHide.Location = new Point(450, 282);
+            passwordHide.Location = new Point(450, 276);
             passwordHide.Name = "passwordHide";
             passwordHide.Size = new Size(25, 18);
             passwordHide.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -158,7 +158,7 @@
             // linkLabel2
             // 
             linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(358, 313);
+            linkLabel2.Location = new Point(358, 317);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(125, 20);
             linkLabel2.TabIndex = 8;
@@ -188,10 +188,13 @@
             // txtPassword
             // 
             txtPassword.BorderStyle = BorderStyle.None;
-            txtPassword.Location = new Point(66, 281);
+            txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(66, 267);
+            txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(417, 20);
+            txtPassword.Size = new Size(417, 35);
             txtPassword.TabIndex = 4;
+            txtPassword.TextAlign = HorizontalAlignment.Center;
             txtPassword.UseSystemPasswordChar = true;
             // 
             // label2
@@ -207,10 +210,13 @@
             // txtUserName
             // 
             txtUserName.BorderStyle = BorderStyle.None;
+            txtUserName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUserName.Location = new Point(66, 186);
+            txtUserName.Multiline = true;
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(417, 20);
+            txtUserName.Size = new Size(417, 35);
             txtUserName.TabIndex = 2;
+            txtUserName.TextAlign = HorizontalAlignment.Center;
             txtUserName.TextChanged += txtUserName_TextChanged;
             // 
             // label1

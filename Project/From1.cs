@@ -69,7 +69,25 @@ namespace Project
             RoundPanel(PanelRight, 30);
             RoundButton(button1);
 
+            txtPassword.BorderStyle = BorderStyle.None;
+            CurveTextBoxCorners(txtPassword, 15);
+            txtUserName.BorderStyle = BorderStyle.None;
+            CurveTextBoxCorners(txtUserName, 15);
 
+        }
+
+        private void CurveTextBoxCorners(TextBox tb, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            Rectangle rect = new Rectangle(0, 0, tb.Width, tb.Height);
+            int d = radius * 2;
+
+            path.AddArc(rect.X, rect.Y, d, d, 180, 90);
+            path.AddArc(rect.Right - d, rect.Y, d, d, 270, 90);
+            path.AddArc(rect.Right - d, rect.Bottom - d, d, d, 0, 90);
+            path.AddArc(rect.X, rect.Bottom - d, d, d, 90, 90); path.CloseFigure();
+
+            tb.Region = new Region(path);
         }
 
         private void PanelRight_Paint(object sender, PaintEventArgs e)
@@ -95,7 +113,7 @@ namespace Project
             }
 
 
-            string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
+            string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
 
             try
             {
@@ -104,7 +122,7 @@ namespace Project
                 {
                     conn.Open();
 
-                    string query = "SELECT UserRole FROM Users WHERE Username = @User AND Password = @Pass";
+                    string query = "SELECT UserRole FROM users WHERE Username = @User AND Password = @Pass";
 
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
@@ -119,20 +137,25 @@ namespace Project
                         {
                             string userRole = roleObj.ToString();
 
+                            Project.Teacher_profile.Session.LoggedInUsername = username;
+
                             if (userRole == "Admin")
                             {
                                 AdminDashboard adminForm = new AdminDashboard();
                                 adminForm.Show();
+                                this.Hide();
                             }
                             else if (userRole == "Teacher")
                             {
                                 TeacherDashboard teacherForm = new TeacherDashboard();
                                 teacherForm.Show();
+                                this.Hide();
                             }
                             else if (userRole == "ClassTeacher")
                             {
                                 ClassTeacherDashboard classTeacherForm = new ClassTeacherDashboard();
                                 classTeacherForm.Show();
+                                this.Hide();
                             }
                             else if (userRole == "Pending")
                             {

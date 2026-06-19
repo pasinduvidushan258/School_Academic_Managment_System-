@@ -109,13 +109,13 @@
             pictureBox36 = new PictureBox();
             pictureBox32 = new PictureBox();
             pictureBox35 = new PictureBox();
-            button19 = new Button();
+            btnUpdatePassword = new Button();
             passwordShow = new PictureBox();
-            Confirm_New_Password = new TextBox();
+            txtConfirmPassword = new TextBox();
             label10 = new Label();
-            New_Password = new TextBox();
+            txtNewPassword = new TextBox();
             label9 = new Label();
-            Current_Password = new TextBox();
+            txtCurrentPassword = new TextBox();
             label8 = new Label();
             label7 = new Label();
             pictureBox31 = new PictureBox();
@@ -1034,13 +1034,13 @@
             panel18.Controls.Add(pictureBox36);
             panel18.Controls.Add(pictureBox32);
             panel18.Controls.Add(pictureBox35);
-            panel18.Controls.Add(button19);
+            panel18.Controls.Add(btnUpdatePassword);
             panel18.Controls.Add(passwordShow);
-            panel18.Controls.Add(Confirm_New_Password);
+            panel18.Controls.Add(txtConfirmPassword);
             panel18.Controls.Add(label10);
-            panel18.Controls.Add(New_Password);
+            panel18.Controls.Add(txtNewPassword);
             panel18.Controls.Add(label9);
-            panel18.Controls.Add(Current_Password);
+            panel18.Controls.Add(txtCurrentPassword);
             panel18.Controls.Add(label8);
             panel18.Controls.Add(label7);
             panel18.Controls.Add(pictureBox31);
@@ -1140,15 +1140,16 @@
             pictureBox35.TabStop = false;
             pictureBox35.Click += pictureBox35_Click;
             // 
-            // button19
+            // btnUpdatePassword
             // 
-            button19.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button19.Location = new Point(99, 353);
-            button19.Name = "button19";
-            button19.Size = new Size(208, 38);
-            button19.TabIndex = 8;
-            button19.Text = "Update Password";
-            button19.UseVisualStyleBackColor = true;
+            btnUpdatePassword.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdatePassword.Location = new Point(99, 353);
+            btnUpdatePassword.Name = "btnUpdatePassword";
+            btnUpdatePassword.Size = new Size(208, 38);
+            btnUpdatePassword.TabIndex = 8;
+            btnUpdatePassword.Text = "Update Password";
+            btnUpdatePassword.UseVisualStyleBackColor = true;
+            btnUpdatePassword.Click += btnUpdatePassword_Click;
             // 
             // passwordShow
             // 
@@ -1161,14 +1162,14 @@
             passwordShow.TabStop = false;
             passwordShow.Click += passwordShow_Click;
             // 
-            // Confirm_New_Password
+            // txtConfirmPassword
             // 
-            Confirm_New_Password.Location = new Point(37, 286);
-            Confirm_New_Password.Name = "Confirm_New_Password";
-            Confirm_New_Password.Size = new Size(336, 27);
-            Confirm_New_Password.TabIndex = 7;
-            Confirm_New_Password.TextAlign = HorizontalAlignment.Center;
-            Confirm_New_Password.UseSystemPasswordChar = true;
+            txtConfirmPassword.Location = new Point(37, 286);
+            txtConfirmPassword.Name = "txtConfirmPassword";
+            txtConfirmPassword.Size = new Size(336, 27);
+            txtConfirmPassword.TabIndex = 7;
+            txtConfirmPassword.TextAlign = HorizontalAlignment.Center;
+            txtConfirmPassword.UseSystemPasswordChar = true;
             // 
             // label10
             // 
@@ -1180,14 +1181,14 @@
             label10.TabIndex = 6;
             label10.Text = "Confirm New Password";
             // 
-            // New_Password
+            // txtNewPassword
             // 
-            New_Password.Location = new Point(37, 201);
-            New_Password.Name = "New_Password";
-            New_Password.Size = new Size(336, 27);
-            New_Password.TabIndex = 5;
-            New_Password.TextAlign = HorizontalAlignment.Center;
-            New_Password.UseSystemPasswordChar = true;
+            txtNewPassword.Location = new Point(37, 201);
+            txtNewPassword.Name = "txtNewPassword";
+            txtNewPassword.Size = new Size(336, 27);
+            txtNewPassword.TabIndex = 5;
+            txtNewPassword.TextAlign = HorizontalAlignment.Center;
+            txtNewPassword.UseSystemPasswordChar = true;
             // 
             // label9
             // 
@@ -1199,14 +1200,14 @@
             label9.TabIndex = 4;
             label9.Text = "New Password";
             // 
-            // Current_Password
+            // txtCurrentPassword
             // 
-            Current_Password.Location = new Point(37, 119);
-            Current_Password.Name = "Current_Password";
-            Current_Password.Size = new Size(336, 27);
-            Current_Password.TabIndex = 3;
-            Current_Password.TextAlign = HorizontalAlignment.Center;
-            Current_Password.UseSystemPasswordChar = true;
+            txtCurrentPassword.Location = new Point(37, 119);
+            txtCurrentPassword.Name = "txtCurrentPassword";
+            txtCurrentPassword.Size = new Size(336, 27);
+            txtCurrentPassword.TabIndex = 3;
+            txtCurrentPassword.TextAlign = HorizontalAlignment.Center;
+            txtCurrentPassword.UseSystemPasswordChar = true;
             // 
             // label8
             // 
@@ -1677,12 +1678,12 @@
         private Panel panel17;
         private Label label6;
         private PictureBox pictureBox30;
-        private Button button19;
-        private TextBox Confirm_New_Password;
+        private Button btnUpdatePassword;
+        private TextBox txtConfirmPassword;
         private Label label10;
-        private TextBox New_Password;
+        private TextBox txtNewPassword;
         private Label label9;
-        private TextBox Current_Password;
+        private TextBox txtCurrentPassword;
         private Label label8;
         private PictureBox pictureBox34;
         private PictureBox pictureBox33;

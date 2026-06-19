@@ -6,7 +6,6 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
-//password encryption
 using System.Security.Cryptography;
 using System.Text;
 using System.Text;
@@ -85,7 +84,7 @@ namespace Project
                 return;
             }
 
-            string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
+            string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -184,6 +183,34 @@ namespace Project
         {
             RoundPanel(panelTop, 30);
             RoundPanel(panelBottom, 30);
+            txtFirstName.BorderStyle = BorderStyle.None;
+            CurveTextBoxCorners(txtFirstName, 15);
+            txtLastName.BorderStyle = BorderStyle.None;
+            CurveTextBoxCorners(txtLastName, 15);
+            txtEmail.BorderStyle = BorderStyle.None;
+            CurveTextBoxCorners(txtEmail, 15);
+            txtUserName.BorderStyle = BorderStyle.None;
+            CurveTextBoxCorners(txtUserName, 15);
+            txtPassword.BorderStyle = BorderStyle.None;
+            CurveTextBoxCorners(txtPassword, 15);
+            txtConfirmPassword.BorderStyle = BorderStyle.None;
+            CurveTextBoxCorners(txtConfirmPassword, 15);
+            txtMobileNumber.BorderStyle = BorderStyle.None;
+            CurveTextBoxCorners(txtMobileNumber, 15);
+        }
+
+        private void CurveTextBoxCorners(TextBox tb, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            Rectangle rect = new Rectangle(0, 0, tb.Width, tb.Height);
+            int d = radius * 2;
+
+            path.AddArc(rect.X, rect.Y, d, d, 180, 90);
+            path.AddArc(rect.Right - d, rect.Y, d, d, 270, 90);
+            path.AddArc(rect.Right - d, rect.Bottom - d, d, d, 0, 90);
+            path.AddArc(rect.X, rect.Bottom - d, d, d, 90, 90); path.CloseFigure();
+
+            tb.Region = new Region(path);
         }
 
         // Show and hide password

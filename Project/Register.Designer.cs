@@ -155,46 +155,58 @@
             // 
             // txtFirstName
             // 
+            txtFirstName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtFirstName.Location = new Point(20, 65);
+            txtFirstName.Multiline = true;
             txtFirstName.Name = "txtFirstName";
-            txtFirstName.Size = new Size(250, 27);
+            txtFirstName.Size = new Size(250, 35);
             txtFirstName.TabIndex = 9;
             // 
             // txtLastName
             // 
+            txtLastName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtLastName.Location = new Point(309, 65);
+            txtLastName.Multiline = true;
             txtLastName.Name = "txtLastName";
-            txtLastName.Size = new Size(249, 27);
+            txtLastName.Size = new Size(249, 35);
             txtLastName.TabIndex = 10;
             // 
             // txtUserName
             // 
+            txtUserName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUserName.Location = new Point(20, 225);
+            txtUserName.Multiline = true;
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(538, 27);
+            txtUserName.Size = new Size(538, 35);
             txtUserName.TabIndex = 11;
             // 
             // txtPassword
             // 
+            txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPassword.Location = new Point(20, 305);
+            txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(250, 27);
+            txtPassword.Size = new Size(250, 35);
             txtPassword.TabIndex = 12;
             txtPassword.UseSystemPasswordChar = true;
             // 
             // txtConfirmPassword
             // 
+            txtConfirmPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtConfirmPassword.Location = new Point(309, 305);
+            txtConfirmPassword.Multiline = true;
             txtConfirmPassword.Name = "txtConfirmPassword";
-            txtConfirmPassword.Size = new Size(250, 27);
+            txtConfirmPassword.Size = new Size(250, 35);
             txtConfirmPassword.TabIndex = 13;
             txtConfirmPassword.UseSystemPasswordChar = true;
             // 
             // txtMobileNumber
             // 
+            txtMobileNumber.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtMobileNumber.Location = new Point(20, 385);
+            txtMobileNumber.Multiline = true;
             txtMobileNumber.Name = "txtMobileNumber";
-            txtMobileNumber.Size = new Size(538, 27);
+            txtMobileNumber.Size = new Size(538, 35);
             txtMobileNumber.TabIndex = 14;
             txtMobileNumber.TextChanged += txtMobileNumber_TextChanged;
             // 
@@ -278,9 +290,11 @@
             // 
             // txtEmail
             // 
+            txtEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEmail.Location = new Point(20, 145);
+            txtEmail.Multiline = true;
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(538, 27);
+            txtEmail.Size = new Size(538, 35);
             txtEmail.TabIndex = 23;
             // 
             // panelTop
@@ -293,7 +307,7 @@
             panelTop.Controls.Add(panelBottom);
             panelTop.Controls.Add(button2);
             panelTop.Controls.Add(pictureBox1);
-            panelTop.Location = new Point(400, 150);
+            panelTop.Location = new Point(400, 101);
             panelTop.Name = "panelTop";
             panelTop.Size = new Size(600, 900);
             panelTop.TabIndex = 24;
@@ -370,7 +384,7 @@
             // passwordShow1
             // 
             passwordShow1.Image = (Image)resources.GetObject("passwordShow1.Image");
-            passwordShow1.Location = new Point(530, 310);
+            passwordShow1.Location = new Point(520, 313);
             passwordShow1.Name = "passwordShow1";
             passwordShow1.Size = new Size(25, 18);
             passwordShow1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -381,7 +395,7 @@
             // passwordHide1
             // 
             passwordHide1.Image = (Image)resources.GetObject("passwordHide1.Image");
-            passwordHide1.Location = new Point(530, 310);
+            passwordHide1.Location = new Point(520, 313);
             passwordHide1.Name = "passwordHide1";
             passwordHide1.Size = new Size(25, 18);
             passwordHide1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -393,7 +407,7 @@
             // passwordHide
             // 
             passwordHide.Image = (Image)resources.GetObject("passwordHide.Image");
-            passwordHide.Location = new Point(240, 310);
+            passwordHide.Location = new Point(232, 313);
             passwordHide.Name = "passwordHide";
             passwordHide.Size = new Size(25, 18);
             passwordHide.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -405,7 +419,7 @@
             // passwordShow
             // 
             passwordShow.Image = (Image)resources.GetObject("passwordShow.Image");
-            passwordShow.Location = new Point(240, 310);
+            passwordShow.Location = new Point(232, 313);
             passwordShow.Name = "passwordShow";
             passwordShow.Size = new Size(25, 18);
             passwordShow.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -439,7 +453,7 @@
             BackColor = SystemColors.InactiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1400, 1200);
+            ClientSize = new Size(1400, 1102);
             Controls.Add(panelTop);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Register";

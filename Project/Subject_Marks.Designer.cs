@@ -94,6 +94,17 @@
             button5 = new Button();
             button6 = new Button();
             pictureBox2 = new PictureBox();
+            vScrollBar1 = new VScrollBar();
+            panel15 = new Panel();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            panel16 = new Panel();
+            panel17 = new Panel();
+            panel18 = new Panel();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
@@ -120,12 +131,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            leftPanel.SuspendLayout();
             panel2.SuspendLayout();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel15.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox19
@@ -702,6 +715,12 @@
             // leftPanel
             // 
             leftPanel.BackColor = SystemColors.InactiveCaption;
+            leftPanel.Controls.Add(panel18);
+            leftPanel.Controls.Add(panel17);
+            leftPanel.Controls.Add(panel16);
+            leftPanel.Controls.Add(label3);
+            leftPanel.Controls.Add(panel15);
+            leftPanel.Controls.Add(vScrollBar1);
             leftPanel.Dock = DockStyle.Fill;
             leftPanel.Location = new Point(420, 85);
             leftPanel.Name = "leftPanel";
@@ -879,6 +898,106 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
+            // vScrollBar1
+            // 
+            vScrollBar1.Location = new Point(1463, 0);
+            vScrollBar1.Name = "vScrollBar1";
+            vScrollBar1.Size = new Size(19, 948);
+            vScrollBar1.TabIndex = 0;
+            // 
+            // panel15
+            // 
+            panel15.BackColor = SystemColors.ControlDark;
+            panel15.Controls.Add(textBox1);
+            panel15.Controls.Add(label7);
+            panel15.Controls.Add(label6);
+            panel15.Controls.Add(label5);
+            panel15.Controls.Add(label4);
+            panel15.Location = new Point(72, 69);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(1324, 148);
+            panel15.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold);
+            label3.Location = new Point(24, 7);
+            label3.Name = "label3";
+            label3.Size = new Size(246, 46);
+            label3.TabIndex = 2;
+            label3.Text = "Subject Marks";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(12, 7);
+            label4.Name = "label4";
+            label4.Size = new Size(70, 31);
+            label4.TabIndex = 0;
+            label4.Text = "Filter";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 8.25F);
+            label5.Location = new Point(24, 58);
+            label5.Name = "label5";
+            label5.Size = new Size(42, 17);
+            label5.TabIndex = 1;
+            label5.Text = "Class";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(400, 58);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 20);
+            label6.TabIndex = 2;
+            label6.Text = "Term";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(688, 58);
+            label7.Name = "label7";
+            label7.Size = new Size(58, 20);
+            label7.TabIndex = 3;
+            label7.Text = "Subject";
+            label7.Click += label7_Click;
+            // 
+            // panel16
+            // 
+            panel16.BackColor = SystemColors.ControlDark;
+            panel16.Location = new Point(72, 372);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(1324, 125);
+            panel16.TabIndex = 3;
+            // 
+            // panel17
+            // 
+            panel17.BackColor = SystemColors.ControlDark;
+            panel17.Location = new Point(72, 530);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(1324, 125);
+            panel17.TabIndex = 4;
+            // 
+            // panel18
+            // 
+            panel18.BackColor = SystemColors.ControlDark;
+            panel18.Location = new Point(72, 716);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(1324, 125);
+            panel18.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(109, 59);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 4;
+            // 
             // Subject_Marks
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -917,6 +1036,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            leftPanel.ResumeLayout(false);
+            leftPanel.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel6.ResumeLayout(false);
@@ -924,6 +1045,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel15.ResumeLayout(false);
+            panel15.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -995,5 +1118,16 @@
         private Button button5;
         private Button button6;
         private PictureBox pictureBox2;
+        private Panel panel15;
+        private VScrollBar vScrollBar1;
+        private Label label3;
+        private Label label4;
+        private Panel panel16;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private Panel panel18;
+        private Panel panel17;
+        private TextBox textBox1;
     }
 }
