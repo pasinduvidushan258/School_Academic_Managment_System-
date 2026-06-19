@@ -94,6 +94,45 @@
             label2 = new Label();
             pictureBox2 = new PictureBox();
             leftPanel = new Panel();
+            panel20 = new Panel();
+            label12 = new Label();
+            pictureBox40 = new PictureBox();
+            panel19 = new Panel();
+            label11 = new Label();
+            pictureBox39 = new PictureBox();
+            panel18 = new Panel();
+            pictureBox38 = new PictureBox();
+            pictureBox34 = new PictureBox();
+            pictureBox37 = new PictureBox();
+            pictureBox33 = new PictureBox();
+            passwordHide = new PictureBox();
+            pictureBox36 = new PictureBox();
+            pictureBox32 = new PictureBox();
+            pictureBox35 = new PictureBox();
+            button19 = new Button();
+            passwordShow = new PictureBox();
+            Confirm_New_Password = new TextBox();
+            label10 = new Label();
+            New_Password = new TextBox();
+            label9 = new Label();
+            Current_Password = new TextBox();
+            label8 = new Label();
+            label7 = new Label();
+            pictureBox31 = new PictureBox();
+            panel17 = new Panel();
+            label6 = new Label();
+            pictureBox30 = new PictureBox();
+            panel16 = new Panel();
+            label5 = new Label();
+            pictureBox29 = new PictureBox();
+            panel15 = new Panel();
+            pictureBox28 = new PictureBox();
+            edit = new Button();
+            Teacher_name = new Label();
+            pictureBox27 = new PictureBox();
+            pictureBox26 = new PictureBox();
+            label4 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
@@ -126,6 +165,30 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            leftPanel.SuspendLayout();
+            panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox40).BeginInit();
+            panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox39).BeginInit();
+            panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox38).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox34).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox37).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox33).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)passwordHide).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox36).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox32).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox35).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)passwordShow).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox31).BeginInit();
+            panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox30).BeginInit();
+            panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox29).BeginInit();
+            panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
             SuspendLayout();
             // 
             // pictureBox14
@@ -873,11 +936,437 @@
             // leftPanel
             // 
             leftPanel.BackColor = SystemColors.InactiveCaption;
+            leftPanel.Controls.Add(panel20);
+            leftPanel.Controls.Add(panel19);
+            leftPanel.Controls.Add(panel18);
+            leftPanel.Controls.Add(panel17);
+            leftPanel.Controls.Add(panel16);
+            leftPanel.Controls.Add(panel15);
+            leftPanel.Controls.Add(label4);
+            leftPanel.Controls.Add(label3);
             leftPanel.Dock = DockStyle.Fill;
             leftPanel.Location = new Point(0, 0);
             leftPanel.Name = "leftPanel";
             leftPanel.Size = new Size(1920, 1080);
             leftPanel.TabIndex = 5;
+            // 
+            // panel20
+            // 
+            panel20.BackColor = Color.Gray;
+            panel20.Controls.Add(label12);
+            panel20.Controls.Add(pictureBox40);
+            panel20.Location = new Point(1458, 869);
+            panel20.Name = "panel20";
+            panel20.Size = new Size(414, 181);
+            panel20.TabIndex = 6;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(62, 25);
+            label12.Name = "label12";
+            label12.Size = new Size(221, 38);
+            label12.TabIndex = 1;
+            label12.Text = "Current Subject";
+            // 
+            // pictureBox40
+            // 
+            pictureBox40.Image = Properties.Resources.project;
+            pictureBox40.Location = new Point(26, 29);
+            pictureBox40.Name = "pictureBox40";
+            pictureBox40.Size = new Size(30, 30);
+            pictureBox40.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox40.TabIndex = 0;
+            pictureBox40.TabStop = false;
+            // 
+            // panel19
+            // 
+            panel19.BackColor = Color.Gray;
+            panel19.Controls.Add(label11);
+            panel19.Controls.Add(pictureBox39);
+            panel19.Location = new Point(966, 689);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(414, 361);
+            panel19.TabIndex = 5;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(62, 25);
+            label11.Name = "label11";
+            label11.Size = new Size(234, 38);
+            label11.TabIndex = 1;
+            label11.Text = "Assigned Classes";
+            // 
+            // pictureBox39
+            // 
+            pictureBox39.Image = Properties.Resources.project;
+            pictureBox39.Location = new Point(26, 29);
+            pictureBox39.Name = "pictureBox39";
+            pictureBox39.Size = new Size(30, 30);
+            pictureBox39.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox39.TabIndex = 0;
+            pictureBox39.TabStop = false;
+            // 
+            // panel18
+            // 
+            panel18.BackColor = Color.Gray;
+            panel18.Controls.Add(pictureBox38);
+            panel18.Controls.Add(pictureBox34);
+            panel18.Controls.Add(pictureBox37);
+            panel18.Controls.Add(pictureBox33);
+            panel18.Controls.Add(passwordHide);
+            panel18.Controls.Add(pictureBox36);
+            panel18.Controls.Add(pictureBox32);
+            panel18.Controls.Add(pictureBox35);
+            panel18.Controls.Add(button19);
+            panel18.Controls.Add(passwordShow);
+            panel18.Controls.Add(Confirm_New_Password);
+            panel18.Controls.Add(label10);
+            panel18.Controls.Add(New_Password);
+            panel18.Controls.Add(label9);
+            panel18.Controls.Add(Current_Password);
+            panel18.Controls.Add(label8);
+            panel18.Controls.Add(label7);
+            panel18.Controls.Add(pictureBox31);
+            panel18.Location = new Point(1458, 422);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(414, 425);
+            panel18.TabIndex = 5;
+            // 
+            // pictureBox38
+            // 
+            pictureBox38.Image = Properties.Resources.eye__1_2;
+            pictureBox38.Location = new Point(342, 290);
+            pictureBox38.Name = "pictureBox38";
+            pictureBox38.Size = new Size(25, 18);
+            pictureBox38.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox38.TabIndex = 19;
+            pictureBox38.TabStop = false;
+            pictureBox38.Visible = false;
+            pictureBox38.Click += pictureBox38_Click;
+            // 
+            // pictureBox34
+            // 
+            pictureBox34.BackColor = Color.White;
+            pictureBox34.Image = Properties.Resources.locked_computer;
+            pictureBox34.Location = new Point(48, 121);
+            pictureBox34.Name = "pictureBox34";
+            pictureBox34.Size = new Size(20, 20);
+            pictureBox34.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox34.TabIndex = 10;
+            pictureBox34.TabStop = false;
+            // 
+            // pictureBox37
+            // 
+            pictureBox37.Image = Properties.Resources.eye__1_1;
+            pictureBox37.Location = new Point(342, 205);
+            pictureBox37.Name = "pictureBox37";
+            pictureBox37.Size = new Size(25, 18);
+            pictureBox37.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox37.TabIndex = 18;
+            pictureBox37.TabStop = false;
+            pictureBox37.Visible = false;
+            pictureBox37.Click += pictureBox37_Click;
+            // 
+            // pictureBox33
+            // 
+            pictureBox33.BackColor = Color.White;
+            pictureBox33.Image = Properties.Resources.locked_computer;
+            pictureBox33.Location = new Point(48, 205);
+            pictureBox33.Name = "pictureBox33";
+            pictureBox33.Size = new Size(20, 20);
+            pictureBox33.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox33.TabIndex = 9;
+            pictureBox33.TabStop = false;
+            // 
+            // passwordHide
+            // 
+            passwordHide.Image = Properties.Resources.eye__1_;
+            passwordHide.Location = new Point(342, 123);
+            passwordHide.Name = "passwordHide";
+            passwordHide.Size = new Size(25, 18);
+            passwordHide.SizeMode = PictureBoxSizeMode.StretchImage;
+            passwordHide.TabIndex = 15;
+            passwordHide.TabStop = false;
+            passwordHide.Visible = false;
+            passwordHide.Click += passwordHide_Click;
+            // 
+            // pictureBox36
+            // 
+            pictureBox36.Image = Properties.Resources.hidden__1_2;
+            pictureBox36.Location = new Point(342, 290);
+            pictureBox36.Name = "pictureBox36";
+            pictureBox36.Size = new Size(25, 18);
+            pictureBox36.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox36.TabIndex = 17;
+            pictureBox36.TabStop = false;
+            pictureBox36.Click += pictureBox36_Click;
+            // 
+            // pictureBox32
+            // 
+            pictureBox32.BackColor = Color.White;
+            pictureBox32.Image = Properties.Resources.locked_computer;
+            pictureBox32.Location = new Point(48, 290);
+            pictureBox32.Name = "pictureBox32";
+            pictureBox32.Size = new Size(20, 20);
+            pictureBox32.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox32.TabIndex = 6;
+            pictureBox32.TabStop = false;
+            // 
+            // pictureBox35
+            // 
+            pictureBox35.Image = Properties.Resources.hidden__1_1;
+            pictureBox35.Location = new Point(342, 205);
+            pictureBox35.Name = "pictureBox35";
+            pictureBox35.Size = new Size(25, 18);
+            pictureBox35.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox35.TabIndex = 16;
+            pictureBox35.TabStop = false;
+            pictureBox35.Click += pictureBox35_Click;
+            // 
+            // button19
+            // 
+            button19.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button19.Location = new Point(99, 353);
+            button19.Name = "button19";
+            button19.Size = new Size(208, 38);
+            button19.TabIndex = 8;
+            button19.Text = "Update Password";
+            button19.UseVisualStyleBackColor = true;
+            // 
+            // passwordShow
+            // 
+            passwordShow.Image = Properties.Resources.hidden__1_;
+            passwordShow.Location = new Point(342, 123);
+            passwordShow.Name = "passwordShow";
+            passwordShow.Size = new Size(25, 18);
+            passwordShow.SizeMode = PictureBoxSizeMode.StretchImage;
+            passwordShow.TabIndex = 14;
+            passwordShow.TabStop = false;
+            passwordShow.Click += passwordShow_Click;
+            // 
+            // Confirm_New_Password
+            // 
+            Confirm_New_Password.Location = new Point(37, 286);
+            Confirm_New_Password.Name = "Confirm_New_Password";
+            Confirm_New_Password.Size = new Size(336, 27);
+            Confirm_New_Password.TabIndex = 7;
+            Confirm_New_Password.TextAlign = HorizontalAlignment.Center;
+            Confirm_New_Password.UseSystemPasswordChar = true;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label10.Location = new Point(26, 255);
+            label10.Name = "label10";
+            label10.Size = new Size(234, 28);
+            label10.TabIndex = 6;
+            label10.Text = "Confirm New Password";
+            // 
+            // New_Password
+            // 
+            New_Password.Location = new Point(37, 201);
+            New_Password.Name = "New_Password";
+            New_Password.Size = new Size(336, 27);
+            New_Password.TabIndex = 5;
+            New_Password.TextAlign = HorizontalAlignment.Center;
+            New_Password.UseSystemPasswordChar = true;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label9.Location = new Point(26, 170);
+            label9.Name = "label9";
+            label9.Size = new Size(151, 28);
+            label9.TabIndex = 4;
+            label9.Text = "New Password";
+            // 
+            // Current_Password
+            // 
+            Current_Password.Location = new Point(37, 119);
+            Current_Password.Name = "Current_Password";
+            Current_Password.Size = new Size(336, 27);
+            Current_Password.TabIndex = 3;
+            Current_Password.TextAlign = HorizontalAlignment.Center;
+            Current_Password.UseSystemPasswordChar = true;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.Location = new Point(26, 88);
+            label8.Name = "label8";
+            label8.Size = new Size(180, 28);
+            label8.TabIndex = 2;
+            label8.Text = "Current Password";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(62, 25);
+            label7.Name = "label7";
+            label7.Size = new Size(245, 38);
+            label7.TabIndex = 1;
+            label7.Text = "Change Password";
+            // 
+            // pictureBox31
+            // 
+            pictureBox31.Image = Properties.Resources.padlock;
+            pictureBox31.Location = new Point(26, 29);
+            pictureBox31.Name = "pictureBox31";
+            pictureBox31.Size = new Size(30, 30);
+            pictureBox31.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox31.TabIndex = 0;
+            pictureBox31.TabStop = false;
+            // 
+            // panel17
+            // 
+            panel17.BackColor = Color.Gray;
+            panel17.Controls.Add(label6);
+            panel17.Controls.Add(pictureBox30);
+            panel17.Location = new Point(966, 422);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(414, 248);
+            panel17.TabIndex = 4;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(62, 25);
+            label6.Name = "label6";
+            label6.Size = new Size(221, 38);
+            label6.TabIndex = 1;
+            label6.Text = "Current Subject";
+            // 
+            // pictureBox30
+            // 
+            pictureBox30.Image = Properties.Resources.project;
+            pictureBox30.Location = new Point(26, 29);
+            pictureBox30.Name = "pictureBox30";
+            pictureBox30.Size = new Size(30, 30);
+            pictureBox30.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox30.TabIndex = 0;
+            pictureBox30.TabStop = false;
+            // 
+            // panel16
+            // 
+            panel16.BackColor = Color.Gray;
+            panel16.Controls.Add(label5);
+            panel16.Controls.Add(pictureBox29);
+            panel16.Location = new Point(464, 422);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(414, 628);
+            panel16.TabIndex = 3;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(62, 25);
+            label5.Name = "label5";
+            label5.Size = new Size(295, 38);
+            label5.TabIndex = 1;
+            label5.Text = "Personal Information";
+            // 
+            // pictureBox29
+            // 
+            pictureBox29.Image = Properties.Resources.project;
+            pictureBox29.Location = new Point(26, 29);
+            pictureBox29.Name = "pictureBox29";
+            pictureBox29.Size = new Size(30, 30);
+            pictureBox29.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox29.TabIndex = 0;
+            pictureBox29.TabStop = false;
+            // 
+            // panel15
+            // 
+            panel15.BackColor = Color.Gray;
+            panel15.Controls.Add(pictureBox28);
+            panel15.Controls.Add(edit);
+            panel15.Controls.Add(Teacher_name);
+            panel15.Controls.Add(pictureBox27);
+            panel15.Controls.Add(pictureBox26);
+            panel15.Location = new Point(464, 214);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(1408, 170);
+            panel15.TabIndex = 2;
+            // 
+            // pictureBox28
+            // 
+            pictureBox28.BackColor = Color.White;
+            pictureBox28.Image = Properties.Resources.edit_button;
+            pictureBox28.Location = new Point(1227, 48);
+            pictureBox28.Name = "pictureBox28";
+            pictureBox28.Size = new Size(30, 30);
+            pictureBox28.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox28.TabIndex = 6;
+            pictureBox28.TabStop = false;
+            // 
+            // edit
+            // 
+            edit.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            edit.Location = new Point(1215, 31);
+            edit.Name = "edit";
+            edit.Size = new Size(146, 63);
+            edit.TabIndex = 5;
+            edit.Text = "Edit";
+            edit.UseVisualStyleBackColor = true;
+            // 
+            // Teacher_name
+            // 
+            Teacher_name.AutoSize = true;
+            Teacher_name.Location = new Point(218, 20);
+            Teacher_name.Name = "Teacher_name";
+            Teacher_name.Size = new Size(50, 20);
+            Teacher_name.TabIndex = 4;
+            Teacher_name.Text = "label5";
+            // 
+            // pictureBox27
+            // 
+            pictureBox27.Image = Properties.Resources.pencil;
+            pictureBox27.Location = new Point(139, 105);
+            pictureBox27.Name = "pictureBox27";
+            pictureBox27.Size = new Size(40, 40);
+            pictureBox27.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox27.TabIndex = 3;
+            pictureBox27.TabStop = false;
+            // 
+            // pictureBox26
+            // 
+            pictureBox26.Image = Properties.Resources.user;
+            pictureBox26.Location = new Point(54, 20);
+            pictureBox26.Name = "pictureBox26";
+            pictureBox26.Size = new Size(125, 125);
+            pictureBox26.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox26.TabIndex = 0;
+            pictureBox26.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.Location = new Point(464, 158);
+            label4.Name = "label4";
+            label4.Size = new Size(427, 28);
+            label4.TabIndex = 1;
+            label4.Text = "View and update your personal information";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(464, 103);
+            label3.Name = "label3";
+            label3.Size = new Size(195, 46);
+            label3.TabIndex = 0;
+            label3.Text = "My Profile ";
             // 
             // Teacher_profile
             // 
@@ -924,6 +1413,37 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            leftPanel.ResumeLayout(false);
+            leftPanel.PerformLayout();
+            panel20.ResumeLayout(false);
+            panel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox40).EndInit();
+            panel19.ResumeLayout(false);
+            panel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox39).EndInit();
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox38).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox34).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox37).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox33).EndInit();
+            ((System.ComponentModel.ISupportInitialize)passwordHide).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox36).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox32).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox35).EndInit();
+            ((System.ComponentModel.ISupportInitialize)passwordShow).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox31).EndInit();
+            panel17.ResumeLayout(false);
+            panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox30).EndInit();
+            panel16.ResumeLayout(false);
+            panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox29).EndInit();
+            panel15.ResumeLayout(false);
+            panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
             ResumeLayout(false);
         }
 
@@ -995,5 +1515,44 @@
         private Label label2;
         private PictureBox pictureBox2;
         private Panel leftPanel;
+        private Panel panel15;
+        private Label label4;
+        private Label label3;
+        private PictureBox pictureBox26;
+        private PictureBox pictureBox27;
+        private Button edit;
+        private Label Teacher_name;
+        private PictureBox pictureBox28;
+        private Panel panel16;
+        private Label label5;
+        private PictureBox pictureBox29;
+        private Panel panel18;
+        private Label label7;
+        private PictureBox pictureBox31;
+        private Panel panel17;
+        private Label label6;
+        private PictureBox pictureBox30;
+        private Button button19;
+        private TextBox Confirm_New_Password;
+        private Label label10;
+        private TextBox New_Password;
+        private Label label9;
+        private TextBox Current_Password;
+        private Label label8;
+        private PictureBox pictureBox34;
+        private PictureBox pictureBox33;
+        private PictureBox pictureBox32;
+        private PictureBox passwordShow;
+        private PictureBox passwordHide;
+        private PictureBox pictureBox38;
+        private PictureBox pictureBox37;
+        private PictureBox pictureBox36;
+        private PictureBox pictureBox35;
+        private Panel panel19;
+        private Label label11;
+        private PictureBox pictureBox39;
+        private Panel panel20;
+        private Label label12;
+        private PictureBox pictureBox40;
     }
 }

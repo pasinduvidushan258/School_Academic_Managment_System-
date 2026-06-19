@@ -51,5 +51,47 @@ namespace Project
             loginForm.Show();
             this.Close();
         }
+
+        private void passwordShow_Click(object sender, EventArgs e)
+        {
+            Current_Password.UseSystemPasswordChar = false;
+            passwordHide.Visible = true;
+            passwordShow.Visible = false;
+        }
+
+        private void passwordHide_Click(object sender, EventArgs e)
+        {
+            Current_Password.UseSystemPasswordChar = true;
+            passwordShow.Visible = true;
+            passwordHide.Visible = false;
+        }
+
+        private void pictureBox35_Click(object sender, EventArgs e)
+        {
+            New_Password.UseSystemPasswordChar = false;
+            pictureBox35.Visible = false;
+            pictureBox37.Visible = true;
+        }
+
+        private void pictureBox37_Click(object sender, EventArgs e)
+        {
+            New_Password.UseSystemPasswordChar = true;
+            pictureBox37.Visible = false;
+            pictureBox35.Visible = true;
+        }
+
+        private void pictureBox36_Click(object sender, EventArgs e)
+        {
+            Confirm_New_Password.UseSystemPasswordChar = false;
+            pictureBox36.Visible = false;
+            pictureBox38.Visible = true;
+        }
+
+        private void pictureBox38_Click(object sender, EventArgs e)
+        {
+            Confirm_New_Password.UseSystemPasswordChar = true;
+            pictureBox38.Visible = false;
+            pictureBox36.Visible = true;
+        }
     }
 }
