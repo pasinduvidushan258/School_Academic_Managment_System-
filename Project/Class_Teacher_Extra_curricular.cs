@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class ClassTeacherDashboard : Form
+    public partial class Class_Teacher_Extra_curricular : Form
     {
-        public ClassTeacherDashboard()
+        public Class_Teacher_Extra_curricular()
         {
             InitializeComponent();
         }
@@ -38,17 +38,10 @@ namespace Project
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Class_Teacher_Top_Students classTeacherTopStudents = new Class_Teacher_Top_Students();
-            classTeacherTopStudents.Show();
-            this.Hide();
-        }
-
         private void Class_Analytics_Click(object sender, EventArgs e)
         {
-            Class_Teacher_Class_Analytics classTeacherClassAnalytics = new Class_Teacher_Class_Analytics();
-            classTeacherClassAnalytics.Show();
+            Class_Teacher_Class_Analytics classTeacherAnalytics = new Class_Teacher_Class_Analytics();
+            classTeacherAnalytics.Show();
             this.Hide();
         }
 
@@ -73,17 +66,24 @@ namespace Project
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            From1 from1 = new From1();
-            from1.Show();
-            this.Hide();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             ClassTeacherDashboard classTeacherDashboard = new ClassTeacherDashboard();
             classTeacherDashboard.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Class_Teacher_Top_Students classTeacherTopStudents = new Class_Teacher_Top_Students();
+            classTeacherTopStudents.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            From1 from1 = new From1();
+            from1.Show();
             this.Hide();
         }
     }

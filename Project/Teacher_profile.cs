@@ -93,5 +93,10 @@ namespace Project
             pictureBox38.Visible = false;
             pictureBox36.Visible = true;
         }
+
+        private void leftPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
