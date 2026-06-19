@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class TeacherDashboard
+    partial class Subject_Marks
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            panel2 = new Panel();
-            panel8 = new Panel();
-            panel14 = new Panel();
-            panel12 = new Panel();
+            pictureBox19 = new PictureBox();
             button13 = new Button();
             pictureBox20 = new PictureBox();
             panel13 = new Panel();
             button14 = new Button();
             pictureBox21 = new PictureBox();
+            panel12 = new Panel();
             button15 = new Button();
             button16 = new Button();
             pictureBox22 = new PictureBox();
@@ -46,22 +43,13 @@
             button18 = new Button();
             pictureBox24 = new PictureBox();
             pictureBox25 = new PictureBox();
-            panel6 = new Panel();
-            button1 = new Button();
-            pictureBox8 = new PictureBox();
-            panel7 = new Panel();
-            button2 = new Button();
-            pictureBox9 = new PictureBox();
-            button3 = new Button();
-            button4 = new Button();
-            pictureBox10 = new PictureBox();
-            button5 = new Button();
+            panel11 = new Panel();
             pictureBox11 = new PictureBox();
-            button6 = new Button();
+            panel8 = new Panel();
+            panel14 = new Panel();
             pictureBox12 = new PictureBox();
             pictureBox13 = new PictureBox();
             panel4 = new Panel();
-            panel11 = new Panel();
             panel9 = new Panel();
             button7 = new Button();
             pictureBox14 = new PictureBox();
@@ -75,7 +63,6 @@
             pictureBox17 = new PictureBox();
             button12 = new Button();
             pictureBox18 = new PictureBox();
-            pictureBox19 = new PictureBox();
             panel3 = new Panel();
             LogOut = new Button();
             pictureBox7 = new PictureBox();
@@ -92,22 +79,31 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
-            pictureBox2 = new PictureBox();
             leftPanel = new Panel();
-            panel2.SuspendLayout();
-            panel8.SuspendLayout();
-            panel12.SuspendLayout();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel6 = new Panel();
+            button1 = new Button();
+            pictureBox8 = new PictureBox();
+            panel7 = new Panel();
+            button2 = new Button();
+            pictureBox9 = new PictureBox();
+            button3 = new Button();
+            button4 = new Button();
+            pictureBox10 = new PictureBox();
+            button5 = new Button();
+            button6 = new Button();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
+            panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox24).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox25).BeginInit();
-            panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             panel4.SuspendLayout();
@@ -117,7 +113,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -125,72 +120,23 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel2.SuspendLayout();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // pictureBox19
             // 
-            panel1.BackColor = Color.Navy;
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(420, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1500, 85);
-            panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Navy;
-            panel2.Controls.Add(panel8);
-            panel2.Controls.Add(panel6);
-            panel2.Controls.Add(panel4);
-            panel2.Controls.Add(panel3);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(420, 1080);
-            panel2.TabIndex = 2;
-            // 
-            // panel8
-            // 
-            panel8.BackColor = SystemColors.InactiveCaption;
-            panel8.Controls.Add(panel14);
-            panel8.Controls.Add(panel12);
-            panel8.Location = new Point(3, 85);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(420, 5);
-            panel8.TabIndex = 0;
-            // 
-            // panel14
-            // 
-            panel14.BackColor = SystemColors.InactiveCaption;
-            panel14.Location = new Point(0, 0);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(420, 5);
-            panel14.TabIndex = 0;
-            // 
-            // panel12
-            // 
-            panel12.BackColor = Color.Gray;
-            panel12.Controls.Add(button13);
-            panel12.Controls.Add(pictureBox20);
-            panel12.Controls.Add(panel13);
-            panel12.Controls.Add(button14);
-            panel12.Controls.Add(pictureBox21);
-            panel12.Controls.Add(button15);
-            panel12.Controls.Add(button16);
-            panel12.Controls.Add(pictureBox22);
-            panel12.Controls.Add(button17);
-            panel12.Controls.Add(pictureBox23);
-            panel12.Controls.Add(button18);
-            panel12.Controls.Add(pictureBox24);
-            panel12.Controls.Add(pictureBox25);
-            panel12.Location = new Point(30, 32);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(356, 933);
-            panel12.TabIndex = 0;
+            pictureBox19.Image = Properties.Resources.app;
+            pictureBox19.Location = new Point(33, 43);
+            pictureBox19.Name = "pictureBox19";
+            pictureBox19.Size = new Size(40, 40);
+            pictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox19.TabIndex = 0;
+            pictureBox19.TabStop = false;
             // 
             // button13
             // 
@@ -203,7 +149,6 @@
             button13.TabIndex = 11;
             button13.Text = "Log Out";
             button13.UseVisualStyleBackColor = false;
-            button13.Click += LogOut_Click;
             // 
             // pictureBox20
             // 
@@ -244,6 +189,27 @@
             pictureBox21.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox21.TabIndex = 8;
             pictureBox21.TabStop = false;
+            // 
+            // panel12
+            // 
+            panel12.BackColor = Color.Gray;
+            panel12.Controls.Add(button13);
+            panel12.Controls.Add(pictureBox20);
+            panel12.Controls.Add(panel13);
+            panel12.Controls.Add(button14);
+            panel12.Controls.Add(pictureBox21);
+            panel12.Controls.Add(button15);
+            panel12.Controls.Add(button16);
+            panel12.Controls.Add(pictureBox22);
+            panel12.Controls.Add(button17);
+            panel12.Controls.Add(pictureBox23);
+            panel12.Controls.Add(button18);
+            panel12.Controls.Add(pictureBox24);
+            panel12.Controls.Add(pictureBox25);
+            panel12.Location = new Point(30, 32);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(356, 933);
+            panel12.TabIndex = 0;
             // 
             // button15
             // 
@@ -333,129 +299,13 @@
             pictureBox25.TabIndex = 0;
             pictureBox25.TabStop = false;
             // 
-            // panel6
+            // panel11
             // 
-            panel6.BackColor = Color.Gray;
-            panel6.Controls.Add(button1);
-            panel6.Controls.Add(pictureBox8);
-            panel6.Controls.Add(panel7);
-            panel6.Controls.Add(button2);
-            panel6.Controls.Add(pictureBox9);
-            panel6.Controls.Add(button3);
-            panel6.Controls.Add(button4);
-            panel6.Controls.Add(pictureBox10);
-            panel6.Controls.Add(button5);
-            panel6.Controls.Add(pictureBox11);
-            panel6.Controls.Add(button6);
-            panel6.Controls.Add(pictureBox12);
-            panel6.Controls.Add(pictureBox13);
-            panel6.Location = new Point(33, 117);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(356, 933);
-            panel6.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Brown;
-            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(77, 877);
-            button1.Name = "button1";
-            button1.Size = new Size(242, 46);
-            button1.TabIndex = 11;
-            button1.Text = "Log Out";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += LogOut_Click;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = Properties.Resources.logout__2_;
-            pictureBox8.Location = new Point(33, 877);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(40, 40);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 10;
-            pictureBox8.TabStop = false;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.Black;
-            panel7.Location = new Point(3, 862);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(350, 5);
-            panel7.TabIndex = 0;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.RoyalBlue;
-            button2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Black;
-            button2.Location = new Point(77, 330);
-            button2.Name = "button2";
-            button2.Size = new Size(242, 46);
-            button2.TabIndex = 9;
-            button2.Text = "Top Students";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.Image = Properties.Resources.ranking;
-            pictureBox9.Location = new Point(33, 332);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(40, 40);
-            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox9.TabIndex = 8;
-            pictureBox9.TabStop = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.RoyalBlue;
-            button3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.Black;
-            button3.Location = new Point(77, 263);
-            button3.Name = "button3";
-            button3.Size = new Size(242, 46);
-            button3.TabIndex = 7;
-            button3.Text = "Analytics";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.RoyalBlue;
-            button4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.Black;
-            button4.Location = new Point(77, 190);
-            button4.Name = "button4";
-            button4.Size = new Size(242, 46);
-            button4.TabIndex = 5;
-            button4.Text = "Subject Marks";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.Image = Properties.Resources.bar_chart1;
-            pictureBox10.Location = new Point(33, 265);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(40, 40);
-            pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox10.TabIndex = 6;
-            pictureBox10.TabStop = false;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.RoyalBlue;
-            button5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.Black;
-            button5.Location = new Point(77, 115);
-            button5.Name = "button5";
-            button5.Size = new Size(242, 46);
-            button5.TabIndex = 3;
-            button5.Text = "My Profile";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            panel11.BackColor = SystemColors.InactiveCaption;
+            panel11.Location = new Point(0, 0);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(420, 5);
+            panel11.TabIndex = 0;
             // 
             // pictureBox11
             // 
@@ -467,17 +317,23 @@
             pictureBox11.TabIndex = 4;
             pictureBox11.TabStop = false;
             // 
-            // button6
+            // panel8
             // 
-            button6.BackColor = Color.DeepSkyBlue;
-            button6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.Black;
-            button6.Location = new Point(77, 41);
-            button6.Name = "button6";
-            button6.Size = new Size(242, 46);
-            button6.TabIndex = 1;
-            button6.Text = "Dashboard";
-            button6.UseVisualStyleBackColor = false;
+            panel8.BackColor = SystemColors.InactiveCaption;
+            panel8.Controls.Add(panel14);
+            panel8.Controls.Add(panel12);
+            panel8.Location = new Point(3, 85);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(420, 5);
+            panel8.TabIndex = 0;
+            // 
+            // panel14
+            // 
+            panel14.BackColor = SystemColors.InactiveCaption;
+            panel14.Location = new Point(0, 0);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(420, 5);
+            panel14.TabIndex = 0;
             // 
             // pictureBox12
             // 
@@ -508,14 +364,6 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(420, 5);
             panel4.TabIndex = 0;
-            // 
-            // panel11
-            // 
-            panel11.BackColor = SystemColors.InactiveCaption;
-            panel11.Location = new Point(0, 0);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(420, 5);
-            panel11.TabIndex = 0;
             // 
             // panel9
             // 
@@ -549,7 +397,6 @@
             button7.TabIndex = 11;
             button7.Text = "Log Out";
             button7.UseVisualStyleBackColor = false;
-            button7.Click += LogOut_Click;
             // 
             // pictureBox14
             // 
@@ -669,16 +516,6 @@
             pictureBox18.TabIndex = 2;
             pictureBox18.TabStop = false;
             // 
-            // pictureBox19
-            // 
-            pictureBox19.Image = Properties.Resources.app;
-            pictureBox19.Location = new Point(33, 43);
-            pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(40, 40);
-            pictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox19.TabIndex = 0;
-            pictureBox19.TabStop = false;
-            // 
             // panel3
             // 
             panel3.BackColor = Color.Gray;
@@ -711,7 +548,6 @@
             LogOut.TabIndex = 11;
             LogOut.Text = "Log Out";
             LogOut.UseVisualStyleBackColor = false;
-            LogOut.Click += LogOut_Click;
             // 
             // pictureBox7
             // 
@@ -862,7 +698,176 @@
             label2.Size = new Size(96, 38);
             label2.TabIndex = 0;
             label2.Text = "SAMS";
-            label2.Click += label1_Click;
+            // 
+            // leftPanel
+            // 
+            leftPanel.BackColor = SystemColors.InactiveCaption;
+            leftPanel.Dock = DockStyle.Fill;
+            leftPanel.Location = new Point(420, 85);
+            leftPanel.Name = "leftPanel";
+            leftPanel.Size = new Size(1482, 948);
+            leftPanel.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Navy;
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(420, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1482, 85);
+            panel1.TabIndex = 6;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Navy;
+            panel2.Controls.Add(panel8);
+            panel2.Controls.Add(panel6);
+            panel2.Controls.Add(panel4);
+            panel2.Controls.Add(panel3);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Dock = DockStyle.Left;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(420, 1033);
+            panel2.TabIndex = 7;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.Gray;
+            panel6.Controls.Add(button1);
+            panel6.Controls.Add(pictureBox8);
+            panel6.Controls.Add(panel7);
+            panel6.Controls.Add(button2);
+            panel6.Controls.Add(pictureBox9);
+            panel6.Controls.Add(button3);
+            panel6.Controls.Add(button4);
+            panel6.Controls.Add(pictureBox10);
+            panel6.Controls.Add(button5);
+            panel6.Controls.Add(pictureBox11);
+            panel6.Controls.Add(button6);
+            panel6.Controls.Add(pictureBox12);
+            panel6.Controls.Add(pictureBox13);
+            panel6.Location = new Point(33, 117);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(356, 933);
+            panel6.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Brown;
+            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(77, 877);
+            button1.Name = "button1";
+            button1.Size = new Size(242, 46);
+            button1.TabIndex = 11;
+            button1.Text = "Log Out";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = Properties.Resources.logout__2_;
+            pictureBox8.Location = new Point(33, 877);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(40, 40);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox8.TabIndex = 10;
+            pictureBox8.TabStop = false;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.Black;
+            panel7.Location = new Point(3, 862);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(350, 5);
+            panel7.TabIndex = 0;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.RoyalBlue;
+            button2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.Black;
+            button2.Location = new Point(77, 330);
+            button2.Name = "button2";
+            button2.Size = new Size(242, 46);
+            button2.TabIndex = 9;
+            button2.Text = "Top Students";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = Properties.Resources.ranking;
+            pictureBox9.Location = new Point(33, 332);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(40, 40);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox9.TabIndex = 8;
+            pictureBox9.TabStop = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.RoyalBlue;
+            button3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.Black;
+            button3.Location = new Point(77, 263);
+            button3.Name = "button3";
+            button3.Size = new Size(242, 46);
+            button3.TabIndex = 7;
+            button3.Text = "Analytics";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.DeepSkyBlue;
+            button4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.Black;
+            button4.Location = new Point(77, 190);
+            button4.Name = "button4";
+            button4.Size = new Size(242, 46);
+            button4.TabIndex = 5;
+            button4.Text = "Subject Marks";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.Image = Properties.Resources.bar_chart1;
+            pictureBox10.Location = new Point(33, 265);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(40, 40);
+            pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox10.TabIndex = 6;
+            pictureBox10.TabStop = false;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.RoyalBlue;
+            button5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.Black;
+            button5.Location = new Point(77, 115);
+            button5.Name = "button5";
+            button5.Size = new Size(242, 46);
+            button5.TabIndex = 3;
+            button5.Text = "My Profile";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.RoyalBlue;
+            button6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.Black;
+            button6.Location = new Point(77, 41);
+            button6.Name = "button6";
+            button6.Size = new Size(242, 46);
+            button6.TabIndex = 1;
+            button6.Text = "Dashboard";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // pictureBox2
             // 
@@ -874,43 +879,28 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
-            // leftPanel
-            // 
-            leftPanel.BackColor = SystemColors.InactiveCaption;
-            leftPanel.Dock = DockStyle.Fill;
-            leftPanel.Location = new Point(0, 0);
-            leftPanel.Name = "leftPanel";
-            leftPanel.Size = new Size(1920, 1080);
-            leftPanel.TabIndex = 2;
-            leftPanel.Paint += leftPanel_Paint;
-            // 
-            // TeacherDashboard
+            // Subject_Marks
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1920, 1080);
+            ClientSize = new Size(1902, 1033);
+            Controls.Add(leftPanel);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Controls.Add(leftPanel);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "TeacherDashboard";
-            Text = "TeacherDashboard";
+            Name = "Subject_Marks";
+            Text = "Subject_Marks";
             WindowState = FormWindowState.Maximized;
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel8.ResumeLayout(false);
-            panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
+            panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox23).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox24).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox25).EndInit();
-            panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             panel4.ResumeLayout(false);
@@ -920,7 +910,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -928,40 +917,25 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private Panel panel1;
-        private Panel panel2;
-        private Label label2;
-        private PictureBox pictureBox2;
-        private Label label1;
-        private Panel panel3;
-        private Panel leftPanel;
-        private Panel panel4;
-        private Button Dashboard;
-        private PictureBox pictureBox1;
-        private Button MyProfile;
-        private PictureBox pictureBox3;
-        private Button TopStudents;
-        private PictureBox pictureBox6;
-        private Button Analytics;
-        private Button SubjectMarks;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private Panel panel5;
-        private Button LogOut;
-        private PictureBox pictureBox7;
-        private Panel panel8;
-        private Panel panel14;
-        private Panel panel12;
+
+        private PictureBox pictureBox19;
         private Button button13;
         private PictureBox pictureBox20;
         private Panel panel13;
         private Button button14;
         private PictureBox pictureBox21;
+        private Panel panel12;
         private Button button15;
         private Button button16;
         private PictureBox pictureBox22;
@@ -970,21 +944,13 @@
         private Button button18;
         private PictureBox pictureBox24;
         private PictureBox pictureBox25;
-        private Panel panel6;
-        private Button button1;
-        private PictureBox pictureBox8;
-        private Panel panel7;
-        private Button button2;
-        private PictureBox pictureBox9;
-        private Button button3;
-        private Button button4;
-        private PictureBox pictureBox10;
-        private Button button5;
+        private Panel panel11;
         private PictureBox pictureBox11;
-        private Button button6;
+        private Panel panel8;
+        private Panel panel14;
         private PictureBox pictureBox12;
         private PictureBox pictureBox13;
-        private Panel panel11;
+        private Panel panel4;
         private Panel panel9;
         private Button button7;
         private PictureBox pictureBox14;
@@ -998,6 +964,36 @@
         private PictureBox pictureBox17;
         private Button button12;
         private PictureBox pictureBox18;
-        private PictureBox pictureBox19;
+        private Panel panel3;
+        private Button LogOut;
+        private PictureBox pictureBox7;
+        private Panel panel5;
+        private Button TopStudents;
+        private PictureBox pictureBox6;
+        private Button Analytics;
+        private Button SubjectMarks;
+        private PictureBox pictureBox5;
+        private Button MyProfile;
+        private PictureBox pictureBox4;
+        private Button Dashboard;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox1;
+        private Label label1;
+        private Label label2;
+        private Panel leftPanel;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel6;
+        private Button button1;
+        private PictureBox pictureBox8;
+        private Panel panel7;
+        private Button button2;
+        private PictureBox pictureBox9;
+        private Button button3;
+        private Button button4;
+        private PictureBox pictureBox10;
+        private Button button5;
+        private Button button6;
+        private PictureBox pictureBox2;
     }
 }

@@ -10,38 +10,28 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class TeacherDashboard : Form
+    public partial class Analytics : Form
     {
-        public TeacherDashboard()
+        public Analytics()
         {
             InitializeComponent();
         }
 
-        private void leftPanel_Paint(object sender, PaintEventArgs e)
+        private void button19_Click(object sender, EventArgs e)
         {
-
+            TeacherDashboard teacherDashboard = new TeacherDashboard();
+            teacherDashboard.Show();
+            this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LogOut_Click(object sender, EventArgs e)
-        {
-            From1 loginForm = new From1();
-            loginForm.Show();
-            this.Close();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
             Teacher_profile teacherProfile = new Teacher_profile();
             teacherProfile.Show();
             this.Hide();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             Subject_Marks subjectMarks = new Subject_Marks();
             subjectMarks.Show();
@@ -50,16 +40,16 @@ namespace Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Analytics analytics = new Analytics();
-            analytics.Show();
+            Top_Students students = new Top_Students();
+            students.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Top_Students topStudents = new Top_Students();
-            topStudents.Show();
-            this.Hide();
+            From1 loginForm = new From1();
+            loginForm.Show();
+            this.Close();
         }
     }
 }
