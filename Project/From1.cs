@@ -112,18 +112,15 @@ namespace Project
                 return;
             }
 
-
-            string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
+            string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
 
             try
             {
-
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
 
-                    string query = "SELECT UserRole FROM users WHERE Username = @User AND Password = @Pass";
-
+                    string query = "SELECT UserRole, UserID FROM users WHERE Username = @User AND Password = @Pass";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -131,49 +128,46 @@ namespace Project
                         cmd.Parameters.AddWithValue("@User", username);
                         cmd.Parameters.AddWithValue("@Pass", hashedPassword);
 
-                        object roleObj = cmd.ExecuteScalar();
 
-                        if (roleObj != null)
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
-                            string userRole = roleObj.ToString();
+                            if (reader.Read()) 
+                            {
+                                string userRole = reader["UserRole"].ToString();
+                                int userId = Convert.ToInt32(reader["UserID"]); 
 
-                            Project.Teacher_profile.Session.LoggedInUsername = username;
 
-                            if (userRole == "Admin")
-                            {
-                                AdminDashboard adminForm = new AdminDashboard();
-                                adminForm.Show();
-                                this.Hide();
-                            }
-                            else if (userRole == "Teacher")
-                            {
-                                TeacherDashboard teacherForm = new TeacherDashboard();
-                                teacherForm.Show();
-                                this.Hide();
-                            }
-                            else if (userRole == "ClassTeacher")
-                            {
-                                ClassTeacherDashboard classTeacherForm = new ClassTeacherDashboard();
-                                classTeacherForm.Show();
-                                this.Hide();
-                            }
-                            else if (userRole == "Pending")
-                            {
-                                MessageBox.Show("Your account is pending approval. Please contact the Principle.", "Account Pending", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                return;
-                            }
+                                Project.Teacher_profile.Session.LoggedInUsername = username;
+                                Project.Teacher_profile.Session.LoggedInUserID = userId; 
 
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid Username or Password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                if (userRole == "Admin")
+                                {
+                                    AdminDashboard adminForm = new AdminDashboard();
+                                    adminForm.Show();
+                                    this.Hide();
+                                }
+                                else if (userRole == "Teacher" || userRole == "ClassTeacher") 
+                                {
+                                    TeacherDashboard teacherForm = new TeacherDashboard();
+                                    teacherForm.Show();
+                                    this.Hide();
+                                }
+                                else if (userRole == "Pending")
+                                {
+                                    MessageBox.Show("Your account is pending approval.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid Username or Password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Database Connection Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Database Error: " + ex.Message);
             }
         }
 

@@ -153,6 +153,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap filter {
+            get {
+                object obj = ResourceManager.GetObject("filter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gemini_Generated_Image_pu4ap3pu4ap3pu4a_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_pu4ap3pu4ap3pu4a-removebg-preview", resourceCulture);
@@ -246,6 +256,16 @@ namespace Project.Properties {
         internal static System.Drawing.Bitmap logout__2_ {
             get {
                 object obj = ResourceManager.GetObject("logout (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mark {
+            get {
+                object obj = ResourceManager.GetObject("mark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

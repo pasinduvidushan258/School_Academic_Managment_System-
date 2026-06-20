@@ -13,14 +13,16 @@ using System.Security.Cryptography;
 
 namespace Project
 {
-    public static class Session
-    {
-        public static string LoggedInUsername = "";
-    }
+
     public partial class Teacher_profile : Form
     {
+        public static class Session
+        {
+            public static string LoggedInUsername = "";
+            public static int LoggedInUserID = 0;
+        }
 
-        private string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
+        private string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
         public Teacher_profile()
         {
             InitializeComponent();
@@ -229,11 +231,6 @@ namespace Project
                     cmd.ExecuteNonQuery();
                 }
             }
-        }
-
-        public static class Session
-        {
-            public static string LoggedInUsername = "";
         }
     }
 }

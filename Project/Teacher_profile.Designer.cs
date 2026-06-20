@@ -642,6 +642,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1500, 85);
             panel1.TabIndex = 3;
+            
             // 
             // panel2
             // 
@@ -1295,6 +1296,14 @@
             panel16.Size = new Size(496, 628);
             panel16.TabIndex = 3;
             // 
+            // g_Ender
+            // 
+            g_Ender.AutoSize = true;
+            g_Ender.Font = new Font("Segoe UI", 10F);
+            g_Ender.ForeColor = SystemColors.ButtonHighlight;
+            g_Ender.Location = new Point(251, 405);
+            g_Ender.Name = "g_Ender";
+            g_Ender.Size = new Size(0, 23);
             // bottom_whiteline_pi
             // 
             bottom_whiteline_pi.BackColor = Color.White;
@@ -1324,6 +1333,11 @@
             // m_Obile
             // 
             m_Obile.AutoSize = true;
+            m_Obile.Font = new Font("Segoe UI", 10F);
+            m_Obile.ForeColor = SystemColors.ButtonHighlight;
+            m_Obile.Location = new Point(54, 405);
+            m_Obile.Name = "m_Obile";
+            m_Obile.Size = new Size(0, 23);
             m_Obile.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             m_Obile.ForeColor = SystemColors.ButtonHighlight;
             m_Obile.Location = new Point(173, 341);
@@ -1334,6 +1348,11 @@
             // d_ob
             // 
             d_ob.AutoSize = true;
+            d_ob.Font = new Font("Segoe UI", 10F);
+            d_ob.ForeColor = SystemColors.ButtonHighlight;
+            d_ob.Location = new Point(251, 293);
+            d_ob.Name = "d_ob";
+            d_ob.Size = new Size(0, 23);
             d_ob.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             d_ob.ForeColor = SystemColors.ButtonHighlight;
             d_ob.Location = new Point(173, 285);
@@ -1344,6 +1363,11 @@
             // e_Mail
             // 
             e_Mail.AutoSize = true;
+            e_Mail.Font = new Font("Segoe UI", 10F);
+            e_Mail.ForeColor = SystemColors.ButtonHighlight;
+            e_Mail.Location = new Point(54, 293);
+            e_Mail.Name = "e_Mail";
+            e_Mail.Size = new Size(0, 23);
             e_Mail.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             e_Mail.ForeColor = SystemColors.ButtonHighlight;
             e_Mail.Location = new Point(173, 233);
@@ -1354,6 +1378,11 @@
             // index_Number
             // 
             index_Number.AutoSize = true;
+            index_Number.Font = new Font("Segoe UI", 10F);
+            index_Number.ForeColor = SystemColors.ButtonHighlight;
+            index_Number.Location = new Point(251, 149);
+            index_Number.Name = "index_Number";
+            index_Number.Size = new Size(0, 23);
             index_Number.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             index_Number.ForeColor = SystemColors.ButtonHighlight;
             index_Number.Location = new Point(173, 175);
@@ -1364,6 +1393,10 @@
             // full_Name
             // 
             full_Name.AutoSize = true;
+            full_Name.ForeColor = SystemColors.ButtonHighlight;
+            full_Name.Location = new Point(54, 149);
+            full_Name.Name = "full_Name";
+            full_Name.Size = new Size(0, 20);
             full_Name.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             full_Name.ForeColor = SystemColors.ButtonHighlight;
             full_Name.Location = new Point(173, 121);
@@ -1374,6 +1407,12 @@
             // gender
             // 
             gender.AutoSize = true;
+            gender.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            gender.Location = new Point(251, 353);
+            gender.Name = "gender";
+            gender.Size = new Size(68, 23);
+            gender.TabIndex = 7;
+            gender.Text = "Gender";
             gender.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             gender.Location = new Point(6, 408);
             gender.Name = "gender";
@@ -1384,6 +1423,12 @@
             // mobile
             // 
             mobile.AutoSize = true;
+            mobile.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            mobile.Location = new Point(54, 353);
+            mobile.Name = "mobile";
+            mobile.Size = new Size(66, 23);
+            mobile.TabIndex = 6;
+            mobile.Text = "Mobile";
             mobile.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             mobile.Location = new Point(5, 341);
             mobile.Name = "mobile";
@@ -1394,6 +1439,12 @@
             // dob
             // 
             dob.AutoSize = true;
+            dob.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dob.Location = new Point(251, 241);
+            dob.Name = "dob";
+            dob.Size = new Size(115, 23);
+            dob.TabIndex = 5;
+            dob.Text = "Date of Birth";
             dob.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             dob.Location = new Point(3, 285);
             dob.Name = "dob";
@@ -1404,6 +1455,12 @@
             // email
             // 
             email.AutoSize = true;
+            email.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            email.Location = new Point(54, 241);
+            email.Name = "email";
+            email.Size = new Size(61, 23);
+            email.TabIndex = 4;
+            email.Text = "E-mail";
             email.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             email.Location = new Point(3, 233);
             email.Name = "email";
@@ -1414,6 +1471,12 @@
             // indexNumber
             // 
             indexNumber.AutoSize = true;
+            indexNumber.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            indexNumber.Location = new Point(251, 100);
+            indexNumber.Name = "indexNumber";
+            indexNumber.Size = new Size(125, 23);
+            indexNumber.TabIndex = 3;
+            indexNumber.Text = "Index Number";
             indexNumber.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             indexNumber.Location = new Point(3, 175);
             indexNumber.Name = "indexNumber";
@@ -1425,6 +1488,12 @@
             // fullName
             // 
             fullName.AutoSize = true;
+            fullName.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            fullName.Location = new Point(54, 98);
+            fullName.Name = "fullName";
+            fullName.Size = new Size(91, 23);
+            fullName.TabIndex = 2;
+            fullName.Text = "Full Name";
             fullName.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             fullName.Location = new Point(6, 115);
             fullName.Name = "fullName";
