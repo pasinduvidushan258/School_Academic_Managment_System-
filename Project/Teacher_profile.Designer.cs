@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             pictureBox14 = new PictureBox();
             button9 = new Button();
             button10 = new Button();
@@ -95,6 +98,7 @@
             pictureBox2 = new PictureBox();
             leftPanel = new Panel();
             panel20 = new Panel();
+            listBoxCurrentSubjects = new ListBox();
             label12 = new Label();
             pictureBox40 = new PictureBox();
             panel19 = new Panel();
@@ -145,7 +149,6 @@
             pictureBox26 = new PictureBox();
             label4 = new Label();
             label3 = new Label();
-            listBoxCurrentSubjects = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
@@ -973,6 +976,17 @@
             panel20.Size = new Size(414, 181);
             panel20.TabIndex = 6;
             // 
+            // listBoxCurrentSubjects
+            // 
+            listBoxCurrentSubjects.BackColor = Color.Gray;
+            listBoxCurrentSubjects.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            listBoxCurrentSubjects.FormattingEnabled = true;
+            listBoxCurrentSubjects.ItemHeight = 23;
+            listBoxCurrentSubjects.Location = new Point(62, 61);
+            listBoxCurrentSubjects.Name = "listBoxCurrentSubjects";
+            listBoxCurrentSubjects.Size = new Size(232, 73);
+            listBoxCurrentSubjects.TabIndex = 22;
+            // 
             // label12
             // 
             label12.AutoSize = true;
@@ -1008,11 +1022,36 @@
             // 
             dataGridViewAssignedClass.BackgroundColor = Color.Gray;
             dataGridViewAssignedClass.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.Gray;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewAssignedClass.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewAssignedClass.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewAssignedClass.Location = new Point(44, 88);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.Gray;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridViewAssignedClass.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewAssignedClass.EnableHeadersVisualStyles = false;
+            dataGridViewAssignedClass.Location = new Point(26, 88);
             dataGridViewAssignedClass.Name = "dataGridViewAssignedClass";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.Gray;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridViewAssignedClass.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewAssignedClass.RowHeadersWidth = 51;
-            dataGridViewAssignedClass.Size = new Size(311, 465);
+            dataGridViewAssignedClass.Size = new Size(365, 465);
             dataGridViewAssignedClass.TabIndex = 2;
             // 
             // label11
@@ -1278,54 +1317,60 @@
             // disTeacherId
             // 
             disTeacherId.AutoSize = true;
+            disTeacherId.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             disTeacherId.Location = new Point(227, 183);
             disTeacherId.Name = "disTeacherId";
-            disTeacherId.Size = new Size(58, 20);
+            disTeacherId.Size = new Size(69, 23);
             disTeacherId.TabIndex = 21;
             disTeacherId.Text = "label18";
             // 
             // disGender
             // 
             disGender.AutoSize = true;
+            disGender.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             disGender.Location = new Point(227, 416);
             disGender.Name = "disGender";
-            disGender.Size = new Size(58, 20);
+            disGender.Size = new Size(69, 23);
             disGender.TabIndex = 20;
             disGender.Text = "label17";
             // 
             // disMobile
             // 
             disMobile.AutoSize = true;
+            disMobile.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             disMobile.Location = new Point(227, 353);
             disMobile.Name = "disMobile";
-            disMobile.Size = new Size(58, 20);
+            disMobile.Size = new Size(69, 23);
             disMobile.TabIndex = 19;
             disMobile.Text = "label16";
             // 
             // disDOB
             // 
             disDOB.AutoSize = true;
+            disDOB.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             disDOB.Location = new Point(227, 293);
             disDOB.Name = "disDOB";
-            disDOB.Size = new Size(58, 20);
+            disDOB.Size = new Size(69, 23);
             disDOB.TabIndex = 18;
             disDOB.Text = "label15";
             // 
             // disEmail
             // 
             disEmail.AutoSize = true;
+            disEmail.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             disEmail.Location = new Point(227, 241);
             disEmail.Name = "disEmail";
-            disEmail.Size = new Size(58, 20);
+            disEmail.Size = new Size(69, 23);
             disEmail.TabIndex = 17;
             disEmail.Text = "label14";
             // 
             // disFullName
             // 
             disFullName.AutoSize = true;
+            disFullName.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             disFullName.Location = new Point(227, 119);
             disFullName.Name = "disFullName";
-            disFullName.Size = new Size(58, 20);
+            disFullName.Size = new Size(69, 23);
             disFullName.TabIndex = 16;
             disFullName.Text = "label13";
             // 
@@ -1463,9 +1508,10 @@
             // Teacher_name
             // 
             Teacher_name.AutoSize = true;
-            Teacher_name.Location = new Point(218, 20);
+            Teacher_name.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold);
+            Teacher_name.Location = new Point(229, 62);
             Teacher_name.Name = "Teacher_name";
-            Teacher_name.Size = new Size(50, 20);
+            Teacher_name.Size = new Size(128, 50);
             Teacher_name.TabIndex = 4;
             Teacher_name.Text = "label5";
             // 
@@ -1508,14 +1554,6 @@
             label3.Size = new Size(195, 46);
             label3.TabIndex = 0;
             label3.Text = "My Profile ";
-            // 
-            // listBoxCurrentSubjects
-            // 
-            listBoxCurrentSubjects.FormattingEnabled = true;
-            listBoxCurrentSubjects.Location = new Point(62, 61);
-            listBoxCurrentSubjects.Name = "listBoxCurrentSubjects";
-            listBoxCurrentSubjects.Size = new Size(232, 84);
-            listBoxCurrentSubjects.TabIndex = 22;
             // 
             // Teacher_profile
             // 

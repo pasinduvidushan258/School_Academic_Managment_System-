@@ -790,6 +790,7 @@
             Add_marks.TabIndex = 2;
             Add_marks.Text = "Add marks";
             Add_marks.UseVisualStyleBackColor = true;
+            Add_marks.Click += Add_marks_Click;
             // 
             // pictureBox27
             // 
@@ -836,7 +837,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold | FontStyle.Italic);
-            label13.Location = new Point(42, 57);
+            label13.Location = new Point(42, 64);
             label13.Name = "label13";
             label13.Size = new Size(70, 23);
             label13.TabIndex = 2;
@@ -848,9 +849,8 @@
             Highest.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold);
             Highest.Location = new Point(31, 0);
             Highest.Name = "Highest";
-            Highest.Size = new Size(81, 62);
+            Highest.Size = new Size(0, 62);
             Highest.TabIndex = 1;
-            Highest.Text = "88";
             // 
             // panel20
             // 
@@ -869,9 +869,8 @@
             label7.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold);
             label7.Location = new Point(84, -1);
             label7.Name = "label7";
-            label7.Size = new Size(68, 62);
+            label7.Size = new Size(0, 62);
             label7.TabIndex = 7;
-            label7.Text = "%";
             // 
             // label11
             // 
@@ -889,9 +888,8 @@
             Class_avg.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold);
             Class_avg.Location = new Point(22, -1);
             Class_avg.Name = "Class_avg";
-            Class_avg.Size = new Size(81, 62);
+            Class_avg.Size = new Size(0, 62);
             Class_avg.TabIndex = 1;
-            Class_avg.Text = "77";
             // 
             // panel19
             // 
@@ -920,9 +918,8 @@
             Students.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Students.Location = new Point(29, 0);
             Students.Name = "Students";
-            Students.Size = new Size(81, 62);
+            Students.Size = new Size(0, 62);
             Students.TabIndex = 0;
-            Students.Text = "38";
             // 
             // label3
             // 
@@ -952,7 +949,7 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(633, 86);
+            comboBox2.Location = new Point(654, 86);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(151, 28);
             comboBox2.TabIndex = 8;
@@ -990,7 +987,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            label6.Location = new Point(613, 49);
+            label6.Location = new Point(634, 49);
             label6.Name = "label6";
             label6.Size = new Size(62, 25);
             label6.TabIndex = 2;
