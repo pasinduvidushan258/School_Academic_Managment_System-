@@ -60,6 +60,22 @@
             pictureBox17 = new PictureBox();
             button9 = new Button();
             leftPanel = new Panel();
+            panel21 = new Panel();
+            Current_Users_View = new DataGridView();
+            label6 = new Label();
+            panel17 = new Panel();
+            panel20 = new Panel();
+            Manage_Pending_User = new Button();
+            Pending_Users_view = new DataGridView();
+            label5 = new Label();
+            panel16 = new Panel();
+            panel19 = new Panel();
+            label4 = new Label();
+            comboBox1 = new ComboBox();
+            panel18 = new Panel();
+            pictureBox29 = new PictureBox();
+            textBox1 = new TextBox();
+            label3 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel8 = new Panel();
@@ -101,6 +117,7 @@
             pictureBox19 = new PictureBox();
             label2 = new Label();
             pictureBox2 = new PictureBox();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
@@ -115,6 +132,16 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            leftPanel.SuspendLayout();
+            panel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Current_Users_View).BeginInit();
+            panel17.SuspendLayout();
+            panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Pending_Users_view).BeginInit();
+            panel16.SuspendLayout();
+            panel19.SuspendLayout();
+            panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox29).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel8.SuspendLayout();
             panel12.SuspendLayout();
@@ -319,7 +346,7 @@
             button4.Name = "button4";
             button4.Size = new Size(242, 46);
             button4.TabIndex = 5;
-            button4.Text = "Teacher";
+            button4.Text = "User";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
@@ -500,11 +527,178 @@
             // leftPanel
             // 
             leftPanel.BackColor = SystemColors.InactiveCaption;
+            leftPanel.Controls.Add(panel21);
+            leftPanel.Controls.Add(panel17);
+            leftPanel.Controls.Add(panel16);
+            leftPanel.Controls.Add(label3);
             leftPanel.Dock = DockStyle.Fill;
             leftPanel.Location = new Point(420, 85);
             leftPanel.Name = "leftPanel";
             leftPanel.Size = new Size(1500, 995);
             leftPanel.TabIndex = 11;
+            leftPanel.Paint += leftPanel_Paint;
+            // 
+            // panel21
+            // 
+            panel21.BackColor = Color.Gray;
+            panel21.Controls.Add(Current_Users_View);
+            panel21.Controls.Add(label6);
+            panel21.Location = new Point(152, 527);
+            panel21.Name = "panel21";
+            panel21.Size = new Size(1202, 438);
+            panel21.TabIndex = 3;
+            // 
+            // Current_Users_View
+            // 
+            Current_Users_View.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Current_Users_View.Location = new Point(73, 82);
+            Current_Users_View.Name = "Current_Users_View";
+            Current_Users_View.RowHeadersWidth = 51;
+            Current_Users_View.Size = new Size(1047, 321);
+            Current_Users_View.TabIndex = 2;
+            Current_Users_View.CellContentClick += Current_Users_View_CellContentClick;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label6.Location = new Point(73, 17);
+            label6.Name = "label6";
+            label6.Size = new Size(237, 46);
+            label6.TabIndex = 1;
+            label6.Text = "Current Users";
+            label6.Click += label6_Click;
+            // 
+            // panel17
+            // 
+            panel17.BackColor = Color.Gray;
+            panel17.Controls.Add(panel20);
+            panel17.Controls.Add(Pending_Users_view);
+            panel17.Controls.Add(label5);
+            panel17.Location = new Point(152, 261);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(1202, 244);
+            panel17.TabIndex = 2;
+            // 
+            // panel20
+            // 
+            panel20.BackColor = Color.FromArgb(0, 64, 0);
+            panel20.Controls.Add(Manage_Pending_User);
+            panel20.Location = new Point(962, 14);
+            panel20.Name = "panel20";
+            panel20.Size = new Size(216, 55);
+            panel20.TabIndex = 1;
+            // 
+            // Manage_Pending_User
+            // 
+            Manage_Pending_User.BackColor = Color.FromArgb(0, 64, 0);
+            Manage_Pending_User.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            Manage_Pending_User.Location = new Point(11, 8);
+            Manage_Pending_User.Name = "Manage_Pending_User";
+            Manage_Pending_User.Size = new Size(197, 40);
+            Manage_Pending_User.TabIndex = 0;
+            Manage_Pending_User.Text = "Manage User";
+            Manage_Pending_User.UseVisualStyleBackColor = false;
+            Manage_Pending_User.Click += Manage_Pending_User_Click;
+            // 
+            // Pending_Users_view
+            // 
+            Pending_Users_view.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Pending_Users_view.Location = new Point(73, 81);
+            Pending_Users_view.Name = "Pending_Users_view";
+            Pending_Users_view.RowHeadersWidth = 51;
+            Pending_Users_view.Size = new Size(1047, 142);
+            Pending_Users_view.TabIndex = 1;
+            Pending_Users_view.CellContentClick += Pending_Users_view_CellContentClick;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label5.Location = new Point(73, 14);
+            label5.Name = "label5";
+            label5.Size = new Size(246, 46);
+            label5.TabIndex = 0;
+            label5.Text = "Pending Users";
+            // 
+            // panel16
+            // 
+            panel16.BackColor = Color.Gray;
+            panel16.Controls.Add(panel19);
+            panel16.Controls.Add(panel18);
+            panel16.Location = new Point(152, 137);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(1202, 102);
+            panel16.TabIndex = 1;
+            // 
+            // panel19
+            // 
+            panel19.BackColor = Color.RoyalBlue;
+            panel19.Controls.Add(label4);
+            panel19.Controls.Add(comboBox1);
+            panel19.Location = new Point(816, 25);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(354, 57);
+            panel19.TabIndex = 1;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic);
+            label4.Location = new Point(28, 12);
+            label4.Name = "label4";
+            label4.Size = new Size(115, 31);
+            label4.TabIndex = 1;
+            label4.Text = "User Role";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(157, 15);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(177, 28);
+            comboBox1.TabIndex = 0;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // panel18
+            // 
+            panel18.BackColor = Color.RoyalBlue;
+            panel18.Controls.Add(pictureBox29);
+            panel18.Controls.Add(textBox1);
+            panel18.Location = new Point(95, 25);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(387, 57);
+            panel18.TabIndex = 0;
+            // 
+            // pictureBox29
+            // 
+            pictureBox29.Image = Properties.Resources.find;
+            pictureBox29.Location = new Point(30, 8);
+            pictureBox29.Name = "pictureBox29";
+            pictureBox29.Size = new Size(40, 40);
+            pictureBox29.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox29.TabIndex = 3;
+            pictureBox29.TabStop = false;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(91, 17);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(264, 27);
+            textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold | FontStyle.Italic);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
+            label3.Location = new Point(96, 65);
+            label3.Name = "label3";
+            label3.Size = new Size(278, 54);
+            label3.TabIndex = 0;
+            label3.Text = "Manage user";
+            label3.Click += label3_Click;
             // 
             // label1
             // 
@@ -986,6 +1180,7 @@
             Name = "Admin_Teacher";
             Text = "Admin_Teacher";
             WindowState = FormWindowState.Maximized;
+            Load += Admin_Teacher_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
             panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
@@ -1000,6 +1195,21 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            leftPanel.ResumeLayout(false);
+            leftPanel.PerformLayout();
+            panel21.ResumeLayout(false);
+            panel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Current_Users_View).EndInit();
+            panel17.ResumeLayout(false);
+            panel17.PerformLayout();
+            panel20.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)Pending_Users_view).EndInit();
+            panel16.ResumeLayout(false);
+            panel19.ResumeLayout(false);
+            panel19.PerformLayout();
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox29).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel8.ResumeLayout(false);
             panel12.ResumeLayout(false);
@@ -1100,5 +1310,22 @@
         private PictureBox pictureBox19;
         private Label label2;
         private PictureBox pictureBox2;
+        private Label label3;
+        private Panel panel17;
+        private Panel panel16;
+        private Panel panel18;
+        private Panel panel20;
+        private Button Manage_Pending_User;
+        private Panel panel19;
+        private Label label4;
+        private ComboBox comboBox1;
+        private TextBox textBox1;
+        private PictureBox pictureBox29;
+        private Panel panel21;
+        private Label label5;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Label label6;
+        private DataGridView Pending_Users_view;
+        private DataGridView Current_Users_View;
     }
 }

@@ -99,6 +99,18 @@
             panel4 = new Panel();
             pictureBox2 = new PictureBox();
             leftPanel = new Panel();
+            panel17 = new Panel();
+            dataGridView1 = new DataGridView();
+            panel16 = new Panel();
+            panel20 = new Panel();
+            button19 = new Button();
+            panel19 = new Panel();
+            label4 = new Label();
+            comboBox1 = new ComboBox();
+            panel18 = new Panel();
+            pictureBox29 = new PictureBox();
+            textBox1 = new TextBox();
+            label3 = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
             panel12.SuspendLayout();
@@ -135,6 +147,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            leftPanel.SuspendLayout();
+            panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel16.SuspendLayout();
+            panel20.SuspendLayout();
+            panel19.SuspendLayout();
+            panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox29).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -943,11 +963,135 @@
             // leftPanel
             // 
             leftPanel.BackColor = SystemColors.InactiveCaption;
+            leftPanel.Controls.Add(panel17);
+            leftPanel.Controls.Add(panel16);
+            leftPanel.Controls.Add(label3);
             leftPanel.Dock = DockStyle.Fill;
             leftPanel.Location = new Point(420, 85);
             leftPanel.Name = "leftPanel";
             leftPanel.Size = new Size(1500, 995);
             leftPanel.TabIndex = 14;
+            leftPanel.Paint += leftPanel_Paint;
+            // 
+            // panel17
+            // 
+            panel17.BackColor = Color.Gray;
+            panel17.Controls.Add(dataGridView1);
+            panel17.Location = new Point(177, 327);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(1202, 620);
+            panel17.TabIndex = 5;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(86, 50);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(1041, 522);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // panel16
+            // 
+            panel16.BackColor = Color.Gray;
+            panel16.Controls.Add(panel20);
+            panel16.Controls.Add(panel19);
+            panel16.Controls.Add(panel18);
+            panel16.Location = new Point(177, 155);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(1202, 118);
+            panel16.TabIndex = 4;
+            // 
+            // panel20
+            // 
+            panel20.BackColor = Color.FromArgb(0, 64, 0);
+            panel20.Controls.Add(button19);
+            panel20.Location = new Point(968, 34);
+            panel20.Name = "panel20";
+            panel20.Size = new Size(216, 57);
+            panel20.TabIndex = 1;
+            // 
+            // button19
+            // 
+            button19.BackColor = Color.FromArgb(0, 64, 0);
+            button19.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            button19.Location = new Point(11, 8);
+            button19.Name = "button19";
+            button19.Size = new Size(197, 40);
+            button19.TabIndex = 0;
+            button19.Text = "Add Student";
+            button19.UseVisualStyleBackColor = false;
+            button19.Click += button19_Click;
+            // 
+            // panel19
+            // 
+            panel19.BackColor = Color.RoyalBlue;
+            panel19.Controls.Add(label4);
+            panel19.Controls.Add(comboBox1);
+            panel19.Location = new Point(557, 34);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(354, 57);
+            panel19.TabIndex = 1;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic);
+            label4.Location = new Point(28, 12);
+            label4.Name = "label4";
+            label4.Size = new Size(70, 31);
+            label4.TabIndex = 1;
+            label4.Text = "Class";
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(121, 15);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(199, 28);
+            comboBox1.TabIndex = 0;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // panel18
+            // 
+            panel18.BackColor = Color.RoyalBlue;
+            panel18.Controls.Add(pictureBox29);
+            panel18.Controls.Add(textBox1);
+            panel18.Location = new Point(86, 34);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(387, 57);
+            panel18.TabIndex = 0;
+            // 
+            // pictureBox29
+            // 
+            pictureBox29.Image = Properties.Resources.find;
+            pictureBox29.Location = new Point(30, 8);
+            pictureBox29.Name = "pictureBox29";
+            pictureBox29.Size = new Size(40, 40);
+            pictureBox29.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox29.TabIndex = 3;
+            pictureBox29.TabStop = false;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(91, 17);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(264, 27);
+            textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold | FontStyle.Italic);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
+            label3.Location = new Point(121, 47);
+            label3.Name = "label3";
+            label3.Size = new Size(366, 54);
+            label3.TabIndex = 3;
+            label3.Text = "Manage Students";
             // 
             // panel1
             // 
@@ -986,6 +1130,7 @@
             Name = "Admin_student";
             Text = "Admin_student";
             WindowState = FormWindowState.Maximized;
+            Load += Admin_student_Load;
             panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
@@ -1020,6 +1165,17 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            leftPanel.ResumeLayout(false);
+            leftPanel.PerformLayout();
+            panel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel16.ResumeLayout(false);
+            panel20.ResumeLayout(false);
+            panel19.ResumeLayout(false);
+            panel19.PerformLayout();
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox29).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
@@ -1100,5 +1256,17 @@
         private Panel leftPanel;
         private Panel panel1;
         private Panel panel2;
+        private Panel panel17;
+        private Panel panel16;
+        private Panel panel20;
+        private Button button19;
+        private Panel panel19;
+        private Label label4;
+        private ComboBox comboBox1;
+        private Panel panel18;
+        private PictureBox pictureBox29;
+        private TextBox textBox1;
+        private Label label3;
+        private DataGridView dataGridView1;
     }
 }
