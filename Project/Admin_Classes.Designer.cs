@@ -60,6 +60,25 @@
             pictureBox17 = new PictureBox();
             button9 = new Button();
             leftPanel = new Panel();
+            panel21 = new Panel();
+            comboBoxClass_Teacher = new ComboBox();
+            comboBox_Grade = new ComboBox();
+            Class_Name = new TextBox();
+            Class_ID = new TextBox();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            panel19 = new Panel();
+            panel22 = new Panel();
+            save = new Button();
+            label5 = new Label();
+            panel17 = new Panel();
+            dataGridView1 = new DataGridView();
+            panel16 = new Panel();
+            panel18 = new Panel();
+            grade = new ComboBox();
+            label4 = new Label();
+            label3 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel8 = new Panel();
@@ -115,6 +134,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            leftPanel.SuspendLayout();
+            panel21.SuspendLayout();
+            panel19.SuspendLayout();
+            panel22.SuspendLayout();
+            panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel16.SuspendLayout();
+            panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel8.SuspendLayout();
             panel12.SuspendLayout();
@@ -319,7 +346,7 @@
             button4.Name = "button4";
             button4.Size = new Size(242, 46);
             button4.TabIndex = 5;
-            button4.Text = "Teacher";
+            button4.Text = "User";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
@@ -500,11 +527,203 @@
             // leftPanel
             // 
             leftPanel.BackColor = SystemColors.InactiveCaption;
+            leftPanel.Controls.Add(panel21);
+            leftPanel.Controls.Add(panel17);
+            leftPanel.Controls.Add(panel16);
+            leftPanel.Controls.Add(label3);
             leftPanel.Dock = DockStyle.Fill;
             leftPanel.Location = new Point(420, 85);
             leftPanel.Name = "leftPanel";
             leftPanel.Size = new Size(1500, 995);
             leftPanel.TabIndex = 11;
+            // 
+            // panel21
+            // 
+            panel21.BackColor = Color.Gray;
+            panel21.Controls.Add(comboBoxClass_Teacher);
+            panel21.Controls.Add(comboBox_Grade);
+            panel21.Controls.Add(Class_Name);
+            panel21.Controls.Add(Class_ID);
+            panel21.Controls.Add(label8);
+            panel21.Controls.Add(label7);
+            panel21.Controls.Add(label6);
+            panel21.Controls.Add(panel19);
+            panel21.Controls.Add(label5);
+            panel21.Location = new Point(346, 689);
+            panel21.Name = "panel21";
+            panel21.Size = new Size(941, 276);
+            panel21.TabIndex = 4;
+            // 
+            // comboBoxClass_Teacher
+            // 
+            comboBoxClass_Teacher.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxClass_Teacher.FormattingEnabled = true;
+            comboBoxClass_Teacher.Location = new Point(633, 106);
+            comboBoxClass_Teacher.Name = "comboBoxClass_Teacher";
+            comboBoxClass_Teacher.Size = new Size(277, 28);
+            comboBoxClass_Teacher.TabIndex = 12;
+            // 
+            // comboBox_Grade
+            // 
+            comboBox_Grade.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_Grade.FormattingEnabled = true;
+            comboBox_Grade.Location = new Point(633, 30);
+            comboBox_Grade.Name = "comboBox_Grade";
+            comboBox_Grade.Size = new Size(277, 28);
+            comboBox_Grade.TabIndex = 11;
+            // 
+            // Class_Name
+            // 
+            Class_Name.Location = new Point(194, 106);
+            Class_Name.Name = "Class_Name";
+            Class_Name.Size = new Size(214, 27);
+            Class_Name.TabIndex = 10;
+            // 
+            // Class_ID
+            // 
+            Class_ID.Location = new Point(194, 31);
+            Class_ID.Name = "Class_ID";
+            Class_ID.Size = new Size(214, 27);
+            Class_ID.TabIndex = 9;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label8.Location = new Point(476, 106);
+            label8.Name = "label8";
+            label8.Size = new Size(154, 31);
+            label8.TabIndex = 8;
+            label8.Text = "Class Teacher";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label7.Location = new Point(476, 31);
+            label7.Name = "label7";
+            label7.Size = new Size(77, 31);
+            label7.TabIndex = 7;
+            label7.Text = "Grade";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(42, 27);
+            label6.Name = "label6";
+            label6.Size = new Size(97, 31);
+            label6.TabIndex = 6;
+            label6.Text = "Class ID";
+            // 
+            // panel19
+            // 
+            panel19.BackColor = Color.DarkBlue;
+            panel19.Controls.Add(panel22);
+            panel19.Location = new Point(342, 170);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(266, 73);
+            panel19.TabIndex = 5;
+            // 
+            // panel22
+            // 
+            panel22.BackColor = Color.FromArgb(0, 64, 0);
+            panel22.Controls.Add(save);
+            panel22.Location = new Point(27, 10);
+            panel22.Name = "panel22";
+            panel22.Size = new Size(216, 55);
+            panel22.TabIndex = 3;
+            // 
+            // save
+            // 
+            save.BackColor = Color.FromArgb(0, 64, 0);
+            save.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            save.Location = new Point(11, 8);
+            save.Name = "save";
+            save.Size = new Size(197, 40);
+            save.TabIndex = 0;
+            save.Text = "Save";
+            save.UseVisualStyleBackColor = false;
+            save.Click += save_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label5.Location = new Point(42, 102);
+            label5.Name = "label5";
+            label5.Size = new Size(136, 31);
+            label5.TabIndex = 4;
+            label5.Text = "Class Name";
+            // 
+            // panel17
+            // 
+            panel17.BackColor = Color.Gray;
+            panel17.Controls.Add(dataGridView1);
+            panel17.Location = new Point(134, 271);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(1242, 394);
+            panel17.TabIndex = 3;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(55, 39);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(1140, 312);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // panel16
+            // 
+            panel16.BackColor = Color.Gray;
+            panel16.Controls.Add(panel18);
+            panel16.Location = new Point(134, 133);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(1242, 103);
+            panel16.TabIndex = 2;
+            // 
+            // panel18
+            // 
+            panel18.BackColor = Color.DarkBlue;
+            panel18.Controls.Add(grade);
+            panel18.Controls.Add(label4);
+            panel18.Location = new Point(55, 14);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(371, 73);
+            panel18.TabIndex = 4;
+            // 
+            // grade
+            // 
+            grade.DropDownStyle = ComboBoxStyle.DropDownList;
+            grade.FormattingEnabled = true;
+            grade.Location = new Point(136, 22);
+            grade.Name = "grade";
+            grade.Size = new Size(188, 28);
+            grade.TabIndex = 1;
+            grade.SelectedIndexChanged += grade_SelectedIndexChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(31, 22);
+            label4.Name = "label4";
+            label4.Size = new Size(68, 28);
+            label4.TabIndex = 0;
+            label4.Text = "Grade";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold | FontStyle.Italic);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
+            label3.Location = new Point(76, 52);
+            label3.Name = "label3";
+            label3.Size = new Size(295, 54);
+            label3.TabIndex = 1;
+            label3.Text = "Manage Class";
             // 
             // label1
             // 
@@ -986,6 +1205,7 @@
             Name = "Admin_Classes";
             Text = "Admin_Classes";
             WindowState = FormWindowState.Maximized;
+            Load += Admin_Classes_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
             panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
@@ -1000,6 +1220,17 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            leftPanel.ResumeLayout(false);
+            leftPanel.PerformLayout();
+            panel21.ResumeLayout(false);
+            panel21.PerformLayout();
+            panel19.ResumeLayout(false);
+            panel22.ResumeLayout(false);
+            panel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel16.ResumeLayout(false);
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel8.ResumeLayout(false);
             panel12.ResumeLayout(false);
@@ -1100,5 +1331,24 @@
         private PictureBox pictureBox19;
         private Label label2;
         private PictureBox pictureBox2;
+        private Label label3;
+        private Panel panel17;
+        private Panel panel16;
+        private Panel panel19;
+        private Panel panel18;
+        private ComboBox grade;
+        private Label label4;
+        private Panel panel21;
+        private DataGridView dataGridView1;
+        private Panel panel22;
+        private Button save;
+        private Label label5;
+        private ComboBox comboBoxClass_Teacher;
+        private ComboBox comboBox_Grade;
+        private TextBox Class_Name;
+        private TextBox Class_ID;
+        private Label label8;
+        private Label label7;
+        private Label label6;
     }
 }
