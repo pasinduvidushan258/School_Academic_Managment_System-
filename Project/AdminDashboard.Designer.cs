@@ -127,9 +127,6 @@
             panel18 = new Panel();
             Classes = new Label();
             label4 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
@@ -956,7 +953,7 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.BackColor = Color.White;
+            label20.BackColor = Color.Gray;
             label20.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             label20.ForeColor = Color.Navy;
             label20.Location = new Point(322, 221);
@@ -968,7 +965,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.BackColor = Color.White;
+            label19.BackColor = Color.Gray;
             label19.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             label19.ForeColor = Color.Navy;
             label19.Location = new Point(322, 163);
@@ -980,7 +977,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.BackColor = Color.White;
+            label18.BackColor = Color.Gray;
             label18.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             label18.ForeColor = Color.Navy;
             label18.Location = new Point(322, 111);
@@ -1049,7 +1046,7 @@
             // pending_Approval
             // 
             pending_Approval.AutoSize = true;
-            pending_Approval.BackColor = Color.White;
+            pending_Approval.BackColor = Color.Gray;
             pending_Approval.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             pending_Approval.ForeColor = Color.Navy;
             pending_Approval.Location = new Point(383, 312);
@@ -1061,7 +1058,7 @@
             // Subject_Teachers
             // 
             Subject_Teachers.AutoSize = true;
-            Subject_Teachers.BackColor = Color.White;
+            Subject_Teachers.BackColor = Color.Gray;
             Subject_Teachers.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             Subject_Teachers.ForeColor = Color.Navy;
             Subject_Teachers.Location = new Point(383, 256);
@@ -1073,7 +1070,7 @@
             // Class_Teachers
             // 
             Class_Teachers.AutoSize = true;
-            Class_Teachers.BackColor = Color.White;
+            Class_Teachers.BackColor = Color.Gray;
             Class_Teachers.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             Class_Teachers.ForeColor = Color.Navy;
             Class_Teachers.Location = new Point(383, 202);
@@ -1085,7 +1082,7 @@
             // Admins
             // 
             Admins.AutoSize = true;
-            Admins.BackColor = Color.White;
+            Admins.BackColor = Color.Gray;
             Admins.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             Admins.ForeColor = Color.Navy;
             Admins.Location = new Point(383, 150);
@@ -1301,9 +1298,6 @@
             Text = "AdminDashboard";
             WindowState = FormWindowState.Maximized;
             Load += AdminDashboard_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();

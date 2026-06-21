@@ -13,7 +13,7 @@ namespace Project
 {
     public partial class Class_Teacher_Discipline : Form
     {
-        private string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
+        private string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
         private DataTable disciplineTable = new DataTable();
 
         public Class_Teacher_Discipline()

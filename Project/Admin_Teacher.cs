@@ -14,7 +14,7 @@ namespace Project
     public partial class Admin_Teacher : Form
     {
         // Database Connection String
-        string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
+        string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
 
         // To remember the index of the rows being edited
         private int editIndexPending = -1;

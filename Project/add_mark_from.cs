@@ -13,7 +13,7 @@ namespace Project
 {
     public partial class add_mark_from : Form
     {
-        private string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
+        private string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
         private int _classID;
         private int _term;
         private int _subjectID;

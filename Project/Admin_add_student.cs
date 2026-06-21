@@ -17,7 +17,7 @@ namespace Project
     public partial class Admin_add_student : Form
     {
         // Database Connection String
-        string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
+        string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
         public Admin_add_student()
         {
             InitializeComponent();

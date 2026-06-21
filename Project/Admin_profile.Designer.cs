@@ -30,7 +30,9 @@
         {
             button1 = new Button();
             panel6 = new Panel();
+            button6 = new Button();
             panel15 = new Panel();
+            pictureBox13 = new PictureBox();
             pictureBox8 = new PictureBox();
             panel7 = new Panel();
             button2 = new Button();
@@ -137,9 +139,8 @@
             pictureBox19 = new PictureBox();
             label2 = new Label();
             pictureBox2 = new PictureBox();
-            button6 = new Button();
-            pictureBox13 = new PictureBox();
             panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
@@ -188,7 +189,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -226,6 +226,19 @@
             panel6.Size = new Size(356, 933);
             panel6.TabIndex = 0;
             // 
+            // button6
+            // 
+            button6.BackColor = Color.RoyalBlue;
+            button6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.Black;
+            button6.Location = new Point(77, 39);
+            button6.Name = "button6";
+            button6.Size = new Size(242, 46);
+            button6.TabIndex = 14;
+            button6.Text = "Dashboard";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click_1;
+            // 
             // panel15
             // 
             panel15.BackColor = Color.Black;
@@ -233,6 +246,16 @@
             panel15.Name = "panel15";
             panel15.Size = new Size(350, 5);
             panel15.TabIndex = 18;
+            // 
+            // pictureBox13
+            // 
+            pictureBox13.Image = Properties.Resources.app;
+            pictureBox13.Location = new Point(33, 41);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(40, 40);
+            pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox13.TabIndex = 13;
+            pictureBox13.TabStop = false;
             // 
             // pictureBox8
             // 
@@ -297,7 +320,7 @@
             button4.Name = "button4";
             button4.Size = new Size(242, 46);
             button4.TabIndex = 5;
-            button4.Text = "Teacher";
+            button4.Text = "user";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
@@ -1411,29 +1434,6 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
-            // button6
-            // 
-            button6.BackColor = Color.RoyalBlue;
-            button6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.Black;
-            button6.Location = new Point(77, 39);
-            button6.Name = "button6";
-            button6.Size = new Size(242, 46);
-            button6.TabIndex = 14;
-            button6.Text = "Dashboard";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click_1;
-            // 
-            // pictureBox13
-            // 
-            pictureBox13.Image = Properties.Resources.app;
-            pictureBox13.Location = new Point(33, 41);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(40, 40);
-            pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox13.TabIndex = 13;
-            pictureBox13.TabStop = false;
-            // 
             // Admin_profile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1447,6 +1447,7 @@
             Text = "Admin_profile";
             WindowState = FormWindowState.Maximized;
             panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
@@ -1500,7 +1501,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ResumeLayout(false);
         }
 

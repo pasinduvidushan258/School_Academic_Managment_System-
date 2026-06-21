@@ -112,7 +112,7 @@ namespace Project
                 return;
             }
 
-            string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
+            string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
 
             try
             {

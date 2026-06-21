@@ -14,7 +14,7 @@ namespace Project
     public partial class Admin_student : Form
     {
         // Database Connection String
-        string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
+        string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
 
         // දැනට Edit කරමින් පවතින පේළියේ (Row) Index එක මතක තබාගැනීමට
         private int editingRowIndex = -1;
