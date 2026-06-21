@@ -48,7 +48,6 @@
             panel8 = new Panel();
             panel14 = new Panel();
             pictureBox12 = new PictureBox();
-            pictureBox13 = new PictureBox();
             panel4 = new Panel();
             panel9 = new Panel();
             button7 = new Button();
@@ -99,7 +98,7 @@
             Students = new Label();
             label3 = new Label();
             panel15 = new Panel();
-            comboBox2 = new ComboBox();
+            selectedTerm = new ComboBox();
             comboBox1 = new ComboBox();
             Load = new Button();
             pictureBox26 = new PictureBox();
@@ -112,13 +111,8 @@
             button1 = new Button();
             pictureBox8 = new PictureBox();
             panel7 = new Panel();
-            button2 = new Button();
-            pictureBox9 = new PictureBox();
-            button3 = new Button();
             button4 = new Button();
-            pictureBox10 = new PictureBox();
             button5 = new Button();
-            button6 = new Button();
             pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
@@ -131,7 +125,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             panel4.SuspendLayout();
             panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
@@ -159,8 +152,6 @@
             panel2.SuspendLayout();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -346,7 +337,7 @@
             // pictureBox11
             // 
             pictureBox11.Image = Properties.Resources.reading_book;
-            pictureBox11.Location = new Point(33, 192);
+            pictureBox11.Location = new Point(35, 140);
             pictureBox11.Name = "pictureBox11";
             pictureBox11.Size = new Size(40, 40);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -374,22 +365,12 @@
             // pictureBox12
             // 
             pictureBox12.Image = Properties.Resources.account;
-            pictureBox12.Location = new Point(33, 117);
+            pictureBox12.Location = new Point(35, 65);
             pictureBox12.Name = "pictureBox12";
             pictureBox12.Size = new Size(40, 40);
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox12.TabIndex = 2;
             pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            pictureBox13.Image = Properties.Resources.app;
-            pictureBox13.Location = new Point(33, 43);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(40, 40);
-            pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox13.TabIndex = 0;
-            pictureBox13.TabStop = false;
             // 
             // panel4
             // 
@@ -934,7 +915,7 @@
             // panel15
             // 
             panel15.BackColor = SystemColors.ControlDark;
-            panel15.Controls.Add(comboBox2);
+            panel15.Controls.Add(selectedTerm);
             panel15.Controls.Add(comboBox1);
             panel15.Controls.Add(Load);
             panel15.Controls.Add(pictureBox26);
@@ -946,13 +927,13 @@
             panel15.Size = new Size(1304, 131);
             panel15.TabIndex = 1;
             // 
-            // comboBox2
+            // selectedTerm
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(654, 86);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 8;
+            selectedTerm.FormattingEnabled = true;
+            selectedTerm.Location = new Point(654, 86);
+            selectedTerm.Name = "selectedTerm";
+            selectedTerm.Size = new Size(151, 28);
+            selectedTerm.TabIndex = 8;
             // 
             // comboBox1
             // 
@@ -1044,16 +1025,10 @@
             panel6.Controls.Add(button1);
             panel6.Controls.Add(pictureBox8);
             panel6.Controls.Add(panel7);
-            panel6.Controls.Add(button2);
-            panel6.Controls.Add(pictureBox9);
-            panel6.Controls.Add(button3);
             panel6.Controls.Add(button4);
-            panel6.Controls.Add(pictureBox10);
             panel6.Controls.Add(button5);
             panel6.Controls.Add(pictureBox11);
-            panel6.Controls.Add(button6);
             panel6.Controls.Add(pictureBox12);
-            panel6.Controls.Add(pictureBox13);
             panel6.Location = new Point(33, 117);
             panel6.Name = "panel6";
             panel6.Size = new Size(356, 933);
@@ -1090,89 +1065,30 @@
             panel7.Size = new Size(350, 5);
             panel7.TabIndex = 0;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.RoyalBlue;
-            button2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Black;
-            button2.Location = new Point(77, 330);
-            button2.Name = "button2";
-            button2.Size = new Size(242, 46);
-            button2.TabIndex = 9;
-            button2.Text = "Top Students";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.Image = Properties.Resources.ranking;
-            pictureBox9.Location = new Point(33, 332);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(40, 40);
-            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox9.TabIndex = 8;
-            pictureBox9.TabStop = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.RoyalBlue;
-            button3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.Black;
-            button3.Location = new Point(77, 263);
-            button3.Name = "button3";
-            button3.Size = new Size(242, 46);
-            button3.TabIndex = 7;
-            button3.Text = "Analytics";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
             // button4
             // 
             button4.BackColor = Color.DeepSkyBlue;
             button4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.Black;
-            button4.Location = new Point(77, 190);
+            button4.Location = new Point(79, 138);
             button4.Name = "button4";
             button4.Size = new Size(242, 46);
             button4.TabIndex = 5;
             button4.Text = "Subject Marks";
             button4.UseVisualStyleBackColor = false;
             // 
-            // pictureBox10
-            // 
-            pictureBox10.Image = Properties.Resources.bar_chart1;
-            pictureBox10.Location = new Point(33, 265);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(40, 40);
-            pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox10.TabIndex = 6;
-            pictureBox10.TabStop = false;
-            // 
             // button5
             // 
             button5.BackColor = Color.RoyalBlue;
             button5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.Black;
-            button5.Location = new Point(77, 115);
+            button5.Location = new Point(79, 63);
             button5.Name = "button5";
             button5.Size = new Size(242, 46);
             button5.TabIndex = 3;
             button5.Text = "My Profile";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.RoyalBlue;
-            button6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.Black;
-            button6.Location = new Point(77, 41);
-            button6.Name = "button6";
-            button6.Size = new Size(242, 46);
-            button6.TabIndex = 1;
-            button6.Text = "Dashboard";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
             // 
             // pictureBox2
             // 
@@ -1207,7 +1123,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             panel4.ResumeLayout(false);
             panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
@@ -1242,8 +1157,6 @@
             panel2.PerformLayout();
             panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
@@ -1270,7 +1183,6 @@
         private Panel panel8;
         private Panel panel14;
         private PictureBox pictureBox12;
-        private PictureBox pictureBox13;
         private Panel panel4;
         private Panel panel9;
         private Button button7;
@@ -1308,13 +1220,8 @@
         private Button button1;
         private PictureBox pictureBox8;
         private Panel panel7;
-        private Button button2;
-        private PictureBox pictureBox9;
-        private Button button3;
         private Button button4;
-        private PictureBox pictureBox10;
         private Button button5;
-        private Button button6;
         private PictureBox pictureBox2;
         private Panel panel15;
         private Label label3;
@@ -1326,7 +1233,7 @@
         private Label label8;
         private PictureBox pictureBox26;
         private Button Load;
-        private ComboBox comboBox2;
+        private ComboBox selectedTerm;
         private ComboBox comboBox1;
         private Panel panel21;
         private Label label13;

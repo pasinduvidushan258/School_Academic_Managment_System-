@@ -60,23 +60,17 @@ namespace Project
 
         private void Class_Analytics_Click(object sender, EventArgs e)
         {
-            Admin_marks admin_Marks = new Admin_marks();
-            admin_Marks.Show();
-            this.Hide();
+            
         }
 
         private void Discipline_Click(object sender, EventArgs e)
         {
-            Admin_Discipline admin_Discipline = new Admin_Discipline();
-            admin_Discipline.Show();
-            this.Hide();
+            
         }
 
         private void Extra_Curricular_Click(object sender, EventArgs e)
         {
-            Admin_Extra_curricular admin_Extra_Curricular = new Admin_Extra_curricular();
-            admin_Extra_Curricular.Show();
-            this.Hide();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

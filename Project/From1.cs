@@ -141,6 +141,8 @@ namespace Project
                                 Project.Teacher_profile.Session.LoggedInUserID = userId;
                                 Project.Class_Teacher_Profile.Session.LoggedInUserID = userId;
                                 Project.Class_Teacher_Profile.Session.LoggedInUsername = username;
+                                Project.Admin_profile.Session.LoggedInUsername = username;
+                                Project.Admin_profile.Session.LoggedInUserID=userId;
 
                                 if (userRole == "Admin")
                                 {
@@ -151,14 +153,14 @@ namespace Project
 
                                 else if (userRole == "ClassTeacher")
                                 {
-                                    ClassTeacherDashboard classteacherFrom = new ClassTeacherDashboard();
+                                    Class_Teacher_Profile classteacherFrom = new Class_Teacher_Profile();
                                     classteacherFrom.Show();
                                     this.Hide();
                                 }
 
                                 else if (userRole == "Teacher")
                                 {
-                                    TeacherDashboard teacherForm = new TeacherDashboard();
+                                    Teacher_profile teacherForm = new Teacher_profile();
                                     teacherForm.Show();
                                     this.Hide();
                                 }

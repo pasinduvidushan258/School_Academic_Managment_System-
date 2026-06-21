@@ -14,7 +14,7 @@ namespace Project
     public partial class Admin_Teacher : Form
     {
         // Database Connection String
-        string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
+        string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
 
         // To remember the index of the rows being edited
         private int editIndexPending = -1;
@@ -24,22 +24,20 @@ namespace Project
         {
             InitializeComponent();
 
-            
+
             Pending_Users_view.ReadOnly = true;
             Pending_Users_view.AllowUserToAddRows = false;
 
             Current_Users_View.ReadOnly = true;
             Current_Users_View.AllowUserToAddRows = false;
 
-            
+
             this.Load += new EventHandler(Admin_Teacher_Load);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            AdminDashboard adminDashboard = new AdminDashboard();
-            adminDashboard.Show();
-            this.Hide();
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -72,23 +70,17 @@ namespace Project
 
         private void Class_Analytics_Click(object sender, EventArgs e)
         {
-            Admin_marks admin_Marks = new Admin_marks();
-            admin_Marks.Show();
-            this.Hide();
+
         }
 
         private void Discipline_Click(object sender, EventArgs e)
         {
-            Admin_Discipline admin_Discipline = new Admin_Discipline();
-            admin_Discipline.Show();
-            this.Hide();
+
         }
 
         private void Extra_Curricular_Click(object sender, EventArgs e)
         {
-            Admin_Extra_curricular admin_Extra_Curricular = new Admin_Extra_curricular();
-            admin_Extra_Curricular.Show();
-            this.Hide();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -241,8 +233,8 @@ namespace Project
             string keyword = textBox1.Text.Trim();
             string role = comboBox1.SelectedItem?.ToString() ?? "All Roles";
 
-            LoadPendingUsers(keyword); 
-            LoadCurrentUsers(keyword, role); 
+            LoadPendingUsers(keyword);
+            LoadCurrentUsers(keyword, role);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -272,7 +264,7 @@ namespace Project
 
             string userId = grid.Rows[e.RowIndex].Cells["UserID"].Value.ToString();
 
-            
+
             if (grid.Columns[e.ColumnIndex].Name == "DeleteAction")
             {
                 if (MessageBox.Show("Are you sure you want to delete this user?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -282,16 +274,16 @@ namespace Project
                         using (MySqlConnection conn = new MySqlConnection(connectionString))
                         {
                             conn.Open();
-                            
+
                             new MySqlCommand("UPDATE classes SET ClassTeacherID = NULL WHERE ClassTeacherID = " + userId, conn).ExecuteNonQuery();
                             new MySqlCommand("DELETE FROM teacher_allocations WHERE TeacherID = " + userId, conn).ExecuteNonQuery();
                             new MySqlCommand("DELETE FROM exam_marks WHERE TeacherID = " + userId, conn).ExecuteNonQuery();
 
-                            
+
                             new MySqlCommand("DELETE FROM users WHERE UserID = " + userId, conn).ExecuteNonQuery();
                             MessageBox.Show("Successfully Deleted!");
 
-                            
+
                             string keyword = textBox1.Text.Trim();
                             string role = comboBox1.SelectedItem?.ToString() ?? "All Roles";
                             LoadPendingUsers(keyword);
@@ -301,7 +293,7 @@ namespace Project
                     catch (Exception ex) { MessageBox.Show("Error deleting: " + ex.Message); }
                 }
             }
-            
+
             else if (grid.Columns[e.ColumnIndex].Name == "EditAction")
             {
                 DataGridViewLinkCell linkCell = (DataGridViewLinkCell)grid.Rows[e.RowIndex].Cells["EditAction"];
@@ -317,7 +309,7 @@ namespace Project
                     }
 
                     grid.Rows[e.RowIndex].ReadOnly = false;
-                    SetGridColumnsReadOnly(grid); 
+                    SetGridColumnsReadOnly(grid);
 
                     linkCell.Value = "Save";
                     editIndex = e.RowIndex;
@@ -364,7 +356,7 @@ namespace Project
         {
             Admin_Manage_Pending_User manageUserForm = new Admin_Manage_Pending_User();
 
-            
+
             if (manageUserForm.ShowDialog() == DialogResult.OK)
             {
                 string keyword = textBox1.Text.Trim();
@@ -373,6 +365,23 @@ namespace Project
                 LoadPendingUsers(keyword);
                 LoadCurrentUsers(keyword, role);
             }
+        }
+
+        private void pictureBox27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            AdminDashboard adminDashboard = new AdminDashboard();
+            adminDashboard.Show();
+            this.Hide();
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

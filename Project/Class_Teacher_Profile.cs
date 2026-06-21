@@ -48,16 +48,12 @@ namespace Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Class_Teacher_Analytics classTeacherAnalytics = new Class_Teacher_Analytics();
-            classTeacherAnalytics.Show();
-            this.Hide();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Class_Teacher_Top_Students classTeacherTopStudents = new Class_Teacher_Top_Students();
-            classTeacherTopStudents.Show();
-            this.Hide();
+            
         }
 
         private void Class_Analytics_Click(object sender, EventArgs e)
@@ -90,9 +86,7 @@ namespace Project
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ClassTeacherDashboard classTeacherDashboard = new ClassTeacherDashboard();
-            classTeacherDashboard.Show();
-            this.Hide();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)

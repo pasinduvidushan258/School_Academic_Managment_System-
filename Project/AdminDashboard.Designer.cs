@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             panel15 = new Panel();
-            pictureBox27 = new PictureBox();
-            Class_Analytics = new Button();
-            pictureBox26 = new PictureBox();
             button1 = new Button();
             button7 = new Button();
-            pictureBox28 = new PictureBox();
-            Discipline = new Button();
             pictureBox14 = new PictureBox();
             panel10 = new Panel();
             button8 = new Button();
@@ -43,7 +38,6 @@
             button9 = new Button();
             button10 = new Button();
             pictureBox16 = new PictureBox();
-            Extra_Curricular = new Button();
             pictureBox8 = new PictureBox();
             panel4 = new Panel();
             panel11 = new Panel();
@@ -186,39 +180,6 @@
             panel15.Size = new Size(350, 5);
             panel15.TabIndex = 18;
             // 
-            // pictureBox27
-            // 
-            pictureBox27.Image = Properties.Resources.discipline;
-            pictureBox27.Location = new Point(33, 519);
-            pictureBox27.Name = "pictureBox27";
-            pictureBox27.Size = new Size(40, 40);
-            pictureBox27.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox27.TabIndex = 14;
-            pictureBox27.TabStop = false;
-            // 
-            // Class_Analytics
-            // 
-            Class_Analytics.BackColor = Color.RoyalBlue;
-            Class_Analytics.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Class_Analytics.ForeColor = Color.Black;
-            Class_Analytics.Location = new Point(77, 444);
-            Class_Analytics.Name = "Class_Analytics";
-            Class_Analytics.Size = new Size(242, 46);
-            Class_Analytics.TabIndex = 13;
-            Class_Analytics.Text = "All Marks";
-            Class_Analytics.UseVisualStyleBackColor = false;
-            Class_Analytics.Click += Class_Analytics_Click;
-            // 
-            // pictureBox26
-            // 
-            pictureBox26.Image = Properties.Resources.report;
-            pictureBox26.Location = new Point(33, 446);
-            pictureBox26.Name = "pictureBox26";
-            pictureBox26.Size = new Size(40, 40);
-            pictureBox26.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox26.TabIndex = 12;
-            pictureBox26.TabStop = false;
-            // 
             // button1
             // 
             button1.BackColor = Color.Brown;
@@ -243,29 +204,6 @@
             button7.TabIndex = 11;
             button7.Text = "Log Out";
             button7.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox28
-            // 
-            pictureBox28.Image = Properties.Resources.ranking;
-            pictureBox28.Location = new Point(33, 593);
-            pictureBox28.Name = "pictureBox28";
-            pictureBox28.Size = new Size(40, 40);
-            pictureBox28.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox28.TabIndex = 16;
-            pictureBox28.TabStop = false;
-            // 
-            // Discipline
-            // 
-            Discipline.BackColor = Color.RoyalBlue;
-            Discipline.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Discipline.ForeColor = Color.Black;
-            Discipline.Location = new Point(77, 517);
-            Discipline.Name = "Discipline";
-            Discipline.Size = new Size(242, 46);
-            Discipline.TabIndex = 15;
-            Discipline.Text = "Discipline";
-            Discipline.UseVisualStyleBackColor = false;
-            Discipline.Click += Discipline_Click;
             // 
             // pictureBox14
             // 
@@ -340,19 +278,6 @@
             pictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox16.TabIndex = 6;
             pictureBox16.TabStop = false;
-            // 
-            // Extra_Curricular
-            // 
-            Extra_Curricular.BackColor = Color.RoyalBlue;
-            Extra_Curricular.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Extra_Curricular.ForeColor = Color.Black;
-            Extra_Curricular.Location = new Point(77, 591);
-            Extra_Curricular.Name = "Extra_Curricular";
-            Extra_Curricular.Size = new Size(242, 46);
-            Extra_Curricular.TabIndex = 17;
-            Extra_Curricular.Text = "Extra Curricular";
-            Extra_Curricular.UseVisualStyleBackColor = false;
-            Extra_Curricular.Click += Extra_Curricular_Click;
             // 
             // pictureBox8
             // 
@@ -946,12 +871,6 @@
             // 
             panel6.BackColor = Color.Gray;
             panel6.Controls.Add(panel15);
-            panel6.Controls.Add(Extra_Curricular);
-            panel6.Controls.Add(pictureBox28);
-            panel6.Controls.Add(Discipline);
-            panel6.Controls.Add(pictureBox27);
-            panel6.Controls.Add(Class_Analytics);
-            panel6.Controls.Add(pictureBox26);
             panel6.Controls.Add(button1);
             panel6.Controls.Add(pictureBox8);
             panel6.Controls.Add(panel7);
@@ -1439,13 +1358,8 @@
         #endregion
 
         private Panel panel15;
-        private PictureBox pictureBox27;
-        private Button Class_Analytics;
-        private PictureBox pictureBox26;
         private Button button1;
         private Button button7;
-        private PictureBox pictureBox28;
-        private Button Discipline;
         private PictureBox pictureBox14;
         private Panel panel10;
         private Button button8;
@@ -1453,7 +1367,6 @@
         private Button button9;
         private Button button10;
         private PictureBox pictureBox16;
-        private Button Extra_Curricular;
         private PictureBox pictureBox8;
         private Panel panel4;
         private Panel panel11;

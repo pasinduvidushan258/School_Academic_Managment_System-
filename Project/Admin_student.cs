@@ -14,7 +14,7 @@ namespace Project
     public partial class Admin_student : Form
     {
         // Database Connection String
-        string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
+        string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
 
         // දැනට Edit කරමින් පවතින පේළියේ (Row) Index එක මතක තබාගැනීමට
         private int editingRowIndex = -1;
@@ -82,7 +82,7 @@ namespace Project
                 {
                     conn.Open();
 
-                    
+
                     string query = @"
                         SELECT s.StudentNo,
                                CONCAT(s.FirstName, ' ', IFNULL(s.LastName, '')) AS 'Name',
@@ -149,7 +149,7 @@ namespace Project
             }
         }
 
-        
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             string keyword = textBox1.Text.Trim();
@@ -161,7 +161,7 @@ namespace Project
             LoadStudents(keyword, classId);
         }
 
-        
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedValue != null && int.TryParse(comboBox1.SelectedValue.ToString(), out int classId))
@@ -171,14 +171,14 @@ namespace Project
             }
         }
 
-        
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
 
             string studentNo = dataGridView1.Rows[e.RowIndex].Cells["StudentNo"].Value.ToString();
 
-           
+
             if (dataGridView1.Columns[e.ColumnIndex].Name == "DeleteAction")
             {
                 if (MessageBox.Show("Are you sure you want to delete this student?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -189,12 +189,12 @@ namespace Project
                         {
                             conn.Open();
 
-                            
+
                             MySqlCommand cmd1 = new MySqlCommand("DELETE FROM exam_marks WHERE StudentNo = @StudentNo", conn);
                             cmd1.Parameters.AddWithValue("@StudentNo", studentNo);
                             cmd1.ExecuteNonQuery();
 
-                            
+
                             MySqlCommand cmd2 = new MySqlCommand("DELETE FROM students WHERE StudentNo = @StudentNo", conn);
                             cmd2.Parameters.AddWithValue("@StudentNo", studentNo);
                             cmd2.ExecuteNonQuery();
@@ -214,17 +214,17 @@ namespace Project
                 }
             }
 
-            
+
             else if (dataGridView1.Columns[e.ColumnIndex].Name == "EditAction")
             {
                 DataGridViewLinkCell linkCell = (DataGridViewLinkCell)dataGridView1.Rows[e.RowIndex].Cells["EditAction"];
 
                 if (linkCell.Value.ToString() == "Edit")
                 {
-                    
+
                     dataGridView1.ReadOnly = false;
 
-                   
+
                     if (editingRowIndex != -1 && editingRowIndex != e.RowIndex)
                     {
                         dataGridView1.Rows[editingRowIndex].ReadOnly = true;
@@ -234,12 +234,12 @@ namespace Project
                     //  Only this line is allowed to be edited.
                     dataGridView1.Rows[e.RowIndex].ReadOnly = false;
 
-                 
+
                     dataGridView1.Rows[e.RowIndex].Cells["StudentNo"].ReadOnly = true;
                     dataGridView1.Rows[e.RowIndex].Cells["Name"].ReadOnly = true;
                     dataGridView1.Rows[e.RowIndex].Cells["Class"].ReadOnly = true;
 
-                 
+
                     linkCell.Value = "Save";
                     editingRowIndex = e.RowIndex;
                 }
@@ -286,7 +286,7 @@ namespace Project
                             }
                         }
 
-                        
+
                         dataGridView1.ReadOnly = true;
                         linkCell.Value = "Edit";
                         editingRowIndex = -1;
@@ -299,7 +299,7 @@ namespace Project
             }
         }
 
-        
+
         private void button19_Click(object sender, EventArgs e)
         {
             Admin_add_student admin_Add_Student = new Admin_add_student();
@@ -313,7 +313,7 @@ namespace Project
             }
         }
 
-        
+
         private void button6_Click(object sender, EventArgs e)
         {
             AdminDashboard adminDashboard = new AdminDashboard();
@@ -351,23 +351,17 @@ namespace Project
 
         private void Class_Analytics_Click(object sender, EventArgs e)
         {
-            Admin_marks admin_Marks = new Admin_marks();
-            admin_Marks.Show();
-            this.Hide();
+
         }
 
         private void Discipline_Click(object sender, EventArgs e)
         {
-            Admin_Discipline admin_Discipline = new Admin_Discipline();
-            admin_Discipline.Show();
-            this.Hide();
+
         }
 
         private void Extra_Curricular_Click(object sender, EventArgs e)
         {
-            Admin_Extra_curricular admin_Extra_Curricular = new Admin_Extra_curricular();
-            admin_Extra_Curricular.Show();
-            this.Hide();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -379,6 +373,11 @@ namespace Project
 
         private void leftPanel_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
