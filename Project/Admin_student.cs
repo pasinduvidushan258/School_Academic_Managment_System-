@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class AdminDashboard : Form
+    public partial class Admin_student : Form
     {
-        public AdminDashboard()
+        public Admin_student()
         {
             InitializeComponent();
         }
@@ -70,6 +70,13 @@ namespace Project
         {
             Admin_Extra_curricular admin_Extra_Curricular = new Admin_Extra_curricular();
             admin_Extra_Curricular.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            From1 from1 = new From1();
+            from1.Show();
             this.Hide();
         }
     }

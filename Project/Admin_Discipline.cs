@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class AdminDashboard : Form
+    public partial class Admin_Discipline : Form
     {
-        public AdminDashboard()
+        public Admin_Discipline()
         {
             InitializeComponent();
         }
@@ -52,6 +52,13 @@ namespace Project
             this.Hide();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            From1 from1 = new From1();
+            from1.Show();
+            this.Hide();
+        }
+
         private void Class_Analytics_Click(object sender, EventArgs e)
         {
             Admin_marks admin_Marks = new Admin_marks();
@@ -68,8 +75,8 @@ namespace Project
 
         private void Extra_Curricular_Click(object sender, EventArgs e)
         {
-            Admin_Extra_curricular admin_Extra_Curricular = new Admin_Extra_curricular();
-            admin_Extra_Curricular.Show();
+            Admin_Extra_curricular admin_Extra_ = new Admin_Extra_curricular();
+            admin_Extra_.Show();
             this.Hide();
         }
     }
