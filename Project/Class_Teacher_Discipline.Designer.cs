@@ -103,6 +103,15 @@
             panel6 = new Panel();
             label1 = new Label();
             leftPanel = new Panel();
+            dgvDiscipline = new DataGridView();
+            btnSaveAll = new Button();
+            btnSearch = new Button();
+            txtSearchStudentNo = new TextBox();
+            colStudentName = new DataGridViewTextBoxColumn();
+            colStudentNo = new DataGridViewTextBoxColumn();
+            colDiscipline = new DataGridViewTextBoxColumn();
+            colCancel = new DataGridViewButtonColumn();
+            DisciplineID = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox29).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
@@ -139,6 +148,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             panel2.SuspendLayout();
             panel6.SuspendLayout();
+            leftPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDiscipline).BeginInit();
             SuspendLayout();
             // 
             // button7
@@ -935,6 +946,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1482, 85);
             panel1.TabIndex = 9;
+            panel1.Paint += panel1_Paint;
             // 
             // panel2
             // 
@@ -996,11 +1008,97 @@
             // leftPanel
             // 
             leftPanel.BackColor = SystemColors.InactiveCaption;
+            leftPanel.Controls.Add(dgvDiscipline);
+            leftPanel.Controls.Add(btnSaveAll);
+            leftPanel.Controls.Add(btnSearch);
+            leftPanel.Controls.Add(txtSearchStudentNo);
             leftPanel.Dock = DockStyle.Fill;
             leftPanel.Location = new Point(0, 0);
             leftPanel.Name = "leftPanel";
             leftPanel.Size = new Size(1902, 1033);
             leftPanel.TabIndex = 11;
+            leftPanel.Paint += leftPanel_Paint;
+            // 
+            // dgvDiscipline
+            // 
+            dgvDiscipline.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDiscipline.Columns.AddRange(new DataGridViewColumn[] { colStudentName, colStudentNo, colDiscipline, colCancel, DisciplineID });
+            dgvDiscipline.Location = new Point(519, 307);
+            dgvDiscipline.Name = "dgvDiscipline";
+            dgvDiscipline.RowHeadersWidth = 51;
+            dgvDiscipline.Size = new Size(554, 251);
+            dgvDiscipline.TabIndex = 3;
+            dgvDiscipline.CellContentClick += dgvDiscipline_CellContentClick;
+            // 
+            // btnSaveAll
+            // 
+            btnSaveAll.Location = new Point(738, 193);
+            btnSaveAll.Name = "btnSaveAll";
+            btnSaveAll.Size = new Size(94, 29);
+            btnSaveAll.TabIndex = 2;
+            btnSaveAll.Text = "Save All";
+            btnSaveAll.UseVisualStyleBackColor = true;
+            btnSaveAll.Click += btnSaveAll_Click;
+            // 
+            // btnSearch
+            // 
+            btnSearch.Location = new Point(528, 193);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(94, 29);
+            btnSearch.TabIndex = 1;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // txtSearchStudentNo
+            // 
+            txtSearchStudentNo.Location = new Point(483, 135);
+            txtSearchStudentNo.Name = "txtSearchStudentNo";
+            txtSearchStudentNo.Size = new Size(160, 27);
+            txtSearchStudentNo.TabIndex = 0;
+            // 
+            // colStudentName
+            // 
+            colStudentName.DataPropertyName = "Student Name";
+            colStudentName.HeaderText = "Student Name";
+            colStudentName.MinimumWidth = 6;
+            colStudentName.Name = "colStudentName";
+            colStudentName.Width = 125;
+            // 
+            // colStudentNo
+            // 
+            colStudentNo.DataPropertyName = "Student Number";
+            colStudentNo.HeaderText = "Student Number";
+            colStudentNo.MinimumWidth = 6;
+            colStudentNo.Name = "colStudentNo";
+            colStudentNo.Width = 125;
+            // 
+            // colDiscipline
+            // 
+            colDiscipline.DataPropertyName = "Discipline";
+            colDiscipline.HeaderText = "Discipline";
+            colDiscipline.MinimumWidth = 6;
+            colDiscipline.Name = "colDiscipline";
+            colDiscipline.Width = 125;
+            // 
+            // colCancel
+            // 
+            colCancel.HeaderText = "Cancel";
+            colCancel.MinimumWidth = 6;
+            colCancel.Name = "colCancel";
+            colCancel.ReadOnly = true;
+            colCancel.Text = "Cancel Discipline";
+            colCancel.UseColumnTextForButtonValue = true;
+            colCancel.Width = 125;
+            // 
+            // DisciplineID
+            // 
+            DisciplineID.DataPropertyName = "DisciplineID";
+            DisciplineID.HeaderText = "Column1";
+            DisciplineID.MinimumWidth = 6;
+            DisciplineID.Name = "DisciplineID";
+            DisciplineID.Visible = false;
+            DisciplineID.Width = 125;
             // 
             // Class_Teacher_Discipline
             // 
@@ -1051,6 +1149,9 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel6.ResumeLayout(false);
+            leftPanel.ResumeLayout(false);
+            leftPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDiscipline).EndInit();
             ResumeLayout(false);
         }
 
@@ -1131,5 +1232,14 @@
         private Panel panel6;
         private Label label1;
         private Panel leftPanel;
+        private DataGridView dgvDiscipline;
+        private Button btnSaveAll;
+        private Button btnSearch;
+        private TextBox txtSearchStudentNo;
+        private DataGridViewTextBoxColumn colStudentName;
+        private DataGridViewTextBoxColumn colStudentNo;
+        private DataGridViewTextBoxColumn colDiscipline;
+        private DataGridViewButtonColumn colCancel;
+        private DataGridViewTextBoxColumn DisciplineID;
     }
 }
