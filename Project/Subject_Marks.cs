@@ -13,6 +13,7 @@ namespace Project
 {
     public partial class Subject_Marks : Form
     {
+        string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
         public Subject_Marks()
         {
             InitializeComponent();
@@ -63,7 +64,6 @@ namespace Project
 
         private void LoadClasses()
         {
-            string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
 
             string query = @"
                 SELECT DISTINCT c.ClassID, c.ClassName 

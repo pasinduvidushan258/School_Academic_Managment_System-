@@ -146,8 +146,10 @@
             // 
             // button1
             // 
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Location = new Point(213, 356);
+            button1.Margin = new Padding(5);
             button1.Name = "button1";
             button1.Size = new Size(125, 37);
             button1.TabIndex = 9;

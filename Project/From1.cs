@@ -112,7 +112,7 @@ namespace Project
                 return;
             }
 
-            string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
+            string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
 
             try
             {
@@ -139,6 +139,8 @@ namespace Project
 
                                 Project.Teacher_profile.Session.LoggedInUsername = username;
                                 Project.Teacher_profile.Session.LoggedInUserID = userId; 
+                                Project.Class_Teacher_Profile.Session.LoggedInUserID = userId;
+                                Project.Class_Teacher_Profile.Session.LoggedInUsername = username;
 
                                 if (userRole == "Admin")
                                 {
@@ -146,7 +148,15 @@ namespace Project
                                     adminForm.Show();
                                     this.Hide();
                                 }
-                                else if (userRole == "Teacher" || userRole == "ClassTeacher") 
+
+                                else if(userRole == "ClassTeacher")
+                                {
+                                    ClassTeacherDashboard classteacherFrom = new ClassTeacherDashboard();
+                                    classteacherFrom.Show();
+                                    this.Hide();
+                                }
+
+                                else if (userRole == "Teacher") 
                                 {
                                     TeacherDashboard teacherForm = new TeacherDashboard();
                                     teacherForm.Show();
