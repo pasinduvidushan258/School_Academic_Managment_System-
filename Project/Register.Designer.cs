@@ -184,9 +184,8 @@
             // 
             txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPassword.Location = new Point(20, 305);
-            txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(250, 35);
+            txtPassword.Size = new Size(250, 34);
             txtPassword.TabIndex = 12;
             txtPassword.UseSystemPasswordChar = true;
             // 
@@ -194,9 +193,8 @@
             // 
             txtConfirmPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtConfirmPassword.Location = new Point(309, 305);
-            txtConfirmPassword.Multiline = true;
             txtConfirmPassword.Name = "txtConfirmPassword";
-            txtConfirmPassword.Size = new Size(250, 35);
+            txtConfirmPassword.Size = new Size(250, 34);
             txtConfirmPassword.TabIndex = 13;
             txtConfirmPassword.UseSystemPasswordChar = true;
             // 

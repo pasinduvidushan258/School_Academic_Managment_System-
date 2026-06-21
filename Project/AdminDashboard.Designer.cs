@@ -95,6 +95,41 @@
             label1 = new Label();
             label2 = new Label();
             leftPanel = new Panel();
+            panel23 = new Panel();
+            label20 = new Label();
+            label19 = new Label();
+            label18 = new Label();
+            label17 = new Label();
+            label16 = new Label();
+            label15 = new Label();
+            label8 = new Label();
+            panel22 = new Panel();
+            pending_Approval = new Label();
+            Subject_Teachers = new Label();
+            Class_Teachers = new Label();
+            Admins = new Label();
+            label14 = new Label();
+            label13 = new Label();
+            label12 = new Label();
+            label11 = new Label();
+            label7 = new Label();
+            label3 = new Label();
+            panel16 = new Panel();
+            panel21 = new Panel();
+            label10 = new Label();
+            subjects = new Label();
+            panel19 = new Panel();
+            label9 = new Label();
+            Teachers = new Label();
+            panel17 = new Panel();
+            Student = new Label();
+            label5 = new Label();
+            panel18 = new Panel();
+            Classes = new Label();
+            label4 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
@@ -127,6 +162,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             panel2.SuspendLayout();
             panel6.SuspendLayout();
+            leftPanel.SuspendLayout();
+            panel23.SuspendLayout();
+            panel22.SuspendLayout();
+            panel16.SuspendLayout();
+            panel21.SuspendLayout();
+            panel19.SuspendLayout();
+            panel17.SuspendLayout();
+            panel18.SuspendLayout();
             SuspendLayout();
             // 
             // panel15
@@ -148,6 +191,7 @@
             button1.TabIndex = 11;
             button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button7
             // 
@@ -750,7 +794,7 @@
             button4.Name = "button4";
             button4.Size = new Size(242, 46);
             button4.TabIndex = 5;
-            button4.Text = "Teacher";
+            button4.Text = "User";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
@@ -883,11 +927,366 @@
             // leftPanel
             // 
             leftPanel.BackColor = SystemColors.InactiveCaption;
+            leftPanel.Controls.Add(panel23);
+            leftPanel.Controls.Add(panel22);
+            leftPanel.Controls.Add(label3);
+            leftPanel.Controls.Add(panel16);
             leftPanel.Dock = DockStyle.Fill;
             leftPanel.Location = new Point(0, 0);
             leftPanel.Name = "leftPanel";
             leftPanel.Size = new Size(1920, 1080);
             leftPanel.TabIndex = 11;
+            leftPanel.Paint += leftPanel_Paint;
+            // 
+            // panel23
+            // 
+            panel23.BackColor = Color.Gray;
+            panel23.Controls.Add(label20);
+            panel23.Controls.Add(label19);
+            panel23.Controls.Add(label18);
+            panel23.Controls.Add(label17);
+            panel23.Controls.Add(label16);
+            panel23.Controls.Add(label15);
+            panel23.Controls.Add(label8);
+            panel23.Location = new Point(1374, 465);
+            panel23.Name = "panel23";
+            panel23.Size = new Size(510, 316);
+            panel23.TabIndex = 7;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.BackColor = Color.White;
+            label20.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label20.ForeColor = Color.Navy;
+            label20.Location = new Point(322, 221);
+            label20.Name = "label20";
+            label20.Size = new Size(92, 31);
+            label20.TabIndex = 18;
+            label20.Text = "label20";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.BackColor = Color.White;
+            label19.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label19.ForeColor = Color.Navy;
+            label19.Location = new Point(322, 163);
+            label19.Name = "label19";
+            label19.Size = new Size(92, 31);
+            label19.TabIndex = 17;
+            label19.Text = "label19";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.BackColor = Color.White;
+            label18.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label18.ForeColor = Color.Navy;
+            label18.Location = new Point(322, 111);
+            label18.Name = "label18";
+            label18.Size = new Size(92, 31);
+            label18.TabIndex = 16;
+            label18.Text = "label18";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label17.Location = new Point(100, 217);
+            label17.Name = "label17";
+            label17.Size = new Size(144, 31);
+            label17.TabIndex = 15;
+            label17.Text = "Grade 12-13";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label16.Location = new Point(100, 163);
+            label16.Name = "label16";
+            label16.Size = new Size(144, 31);
+            label16.TabIndex = 14;
+            label16.Text = "Grade 10-11";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label15.Location = new Point(100, 111);
+            label15.Name = "label15";
+            label15.Size = new Size(116, 31);
+            label15.TabIndex = 13;
+            label15.Text = "grade 6-9";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(175, 25);
+            label8.Name = "label8";
+            label8.Size = new Size(167, 38);
+            label8.TabIndex = 10;
+            label8.Text = "Grade Stats";
+            // 
+            // panel22
+            // 
+            panel22.BackColor = Color.Gray;
+            panel22.Controls.Add(pending_Approval);
+            panel22.Controls.Add(Subject_Teachers);
+            panel22.Controls.Add(Class_Teachers);
+            panel22.Controls.Add(Admins);
+            panel22.Controls.Add(label14);
+            panel22.Controls.Add(label13);
+            panel22.Controls.Add(label12);
+            panel22.Controls.Add(label11);
+            panel22.Controls.Add(label7);
+            panel22.Location = new Point(483, 465);
+            panel22.Name = "panel22";
+            panel22.Size = new Size(778, 442);
+            panel22.TabIndex = 6;
+            // 
+            // pending_Approval
+            // 
+            pending_Approval.AutoSize = true;
+            pending_Approval.BackColor = Color.White;
+            pending_Approval.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            pending_Approval.ForeColor = Color.Navy;
+            pending_Approval.Location = new Point(383, 312);
+            pending_Approval.Name = "pending_Approval";
+            pending_Approval.Size = new Size(207, 31);
+            pending_Approval.TabIndex = 19;
+            pending_Approval.Text = "pending Approval";
+            // 
+            // Subject_Teachers
+            // 
+            Subject_Teachers.AutoSize = true;
+            Subject_Teachers.BackColor = Color.White;
+            Subject_Teachers.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            Subject_Teachers.ForeColor = Color.Navy;
+            Subject_Teachers.Location = new Point(383, 256);
+            Subject_Teachers.Name = "Subject_Teachers";
+            Subject_Teachers.Size = new Size(191, 31);
+            Subject_Teachers.TabIndex = 18;
+            Subject_Teachers.Text = "Subject Teachers";
+            // 
+            // Class_Teachers
+            // 
+            Class_Teachers.AutoSize = true;
+            Class_Teachers.BackColor = Color.White;
+            Class_Teachers.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            Class_Teachers.ForeColor = Color.Navy;
+            Class_Teachers.Location = new Point(383, 202);
+            Class_Teachers.Name = "Class_Teachers";
+            Class_Teachers.Size = new Size(164, 31);
+            Class_Teachers.TabIndex = 17;
+            Class_Teachers.Text = "Class Teachers";
+            // 
+            // Admins
+            // 
+            Admins.AutoSize = true;
+            Admins.BackColor = Color.White;
+            Admins.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            Admins.ForeColor = Color.Navy;
+            Admins.Location = new Point(383, 150);
+            Admins.Name = "Admins";
+            Admins.Size = new Size(96, 31);
+            Admins.TabIndex = 16;
+            Admins.Text = "Admins";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label14.ForeColor = Color.Maroon;
+            label14.Location = new Point(104, 312);
+            label14.Name = "label14";
+            label14.Size = new Size(207, 31);
+            label14.TabIndex = 15;
+            label14.Text = "pending Approval";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label13.Location = new Point(104, 256);
+            label13.Name = "label13";
+            label13.Size = new Size(191, 31);
+            label13.TabIndex = 14;
+            label13.Text = "Subject Teachers";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label12.Location = new Point(104, 202);
+            label12.Name = "label12";
+            label12.Size = new Size(164, 31);
+            label12.TabIndex = 13;
+            label12.Text = "Class Teachers";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            label11.Location = new Point(104, 150);
+            label11.Name = "label11";
+            label11.Size = new Size(96, 31);
+            label11.TabIndex = 12;
+            label11.Text = "Admins";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(221, 38);
+            label7.Name = "label7";
+            label7.Size = new Size(308, 38);
+            label7.TabIndex = 11;
+            label7.Text = "User Roles Breakdown";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold | FontStyle.Italic);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
+            label3.Location = new Point(483, 117);
+            label3.Name = "label3";
+            label3.Size = new Size(214, 54);
+            label3.TabIndex = 2;
+            label3.Text = "Dashbord";
+            // 
+            // panel16
+            // 
+            panel16.BackColor = Color.Gray;
+            panel16.Controls.Add(panel21);
+            panel16.Controls.Add(panel19);
+            panel16.Controls.Add(panel17);
+            panel16.Controls.Add(panel18);
+            panel16.Location = new Point(483, 220);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(1368, 158);
+            panel16.TabIndex = 5;
+            // 
+            // panel21
+            // 
+            panel21.BackColor = Color.RoyalBlue;
+            panel21.Controls.Add(label10);
+            panel21.Controls.Add(subjects);
+            panel21.Location = new Point(1123, 12);
+            panel21.Name = "panel21";
+            panel21.Size = new Size(206, 121);
+            panel21.TabIndex = 1;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(48, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(105, 81);
+            label10.TabIndex = 2;
+            label10.Text = "38";
+            // 
+            // subjects
+            // 
+            subjects.AutoSize = true;
+            subjects.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold);
+            subjects.Location = new Point(48, 75);
+            subjects.Name = "subjects";
+            subjects.Size = new Size(122, 38);
+            subjects.TabIndex = 1;
+            subjects.Text = "subjects";
+            // 
+            // panel19
+            // 
+            panel19.BackColor = Color.RoyalBlue;
+            panel19.Controls.Add(label9);
+            panel19.Controls.Add(Teachers);
+            panel19.Location = new Point(756, 12);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(206, 121);
+            panel19.TabIndex = 1;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(55, 2);
+            label9.Name = "label9";
+            label9.Size = new Size(105, 81);
+            label9.TabIndex = 3;
+            label9.Text = "38";
+            // 
+            // Teachers
+            // 
+            Teachers.AutoSize = true;
+            Teachers.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold);
+            Teachers.Location = new Point(44, 75);
+            Teachers.Name = "Teachers";
+            Teachers.Size = new Size(128, 38);
+            Teachers.TabIndex = 1;
+            Teachers.Text = "Teachers";
+            // 
+            // panel17
+            // 
+            panel17.BackColor = Color.RoyalBlue;
+            panel17.Controls.Add(Student);
+            panel17.Controls.Add(label5);
+            panel17.Location = new Point(398, 12);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(206, 121);
+            panel17.TabIndex = 1;
+            // 
+            // Student
+            // 
+            Student.AutoSize = true;
+            Student.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Student.Location = new Point(45, 2);
+            Student.Name = "Student";
+            Student.Size = new Size(105, 81);
+            Student.TabIndex = 2;
+            Student.Text = "38";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold);
+            label5.Location = new Point(45, 75);
+            label5.Name = "label5";
+            label5.Size = new Size(120, 38);
+            label5.TabIndex = 1;
+            label5.Text = "Student";
+            // 
+            // panel18
+            // 
+            panel18.BackColor = Color.RoyalBlue;
+            panel18.Controls.Add(Classes);
+            panel18.Controls.Add(label4);
+            panel18.Location = new Point(57, 12);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(206, 121);
+            panel18.TabIndex = 0;
+            // 
+            // Classes
+            // 
+            Classes.AutoSize = true;
+            Classes.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Classes.Location = new Point(49, 0);
+            Classes.Name = "Classes";
+            Classes.Size = new Size(105, 81);
+            Classes.TabIndex = 1;
+            Classes.Text = "38";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(49, 75);
+            label4.Name = "label4";
+            label4.Size = new Size(108, 38);
+            label4.TabIndex = 0;
+            label4.Text = "Classes";
             // 
             // AdminDashboard
             // 
@@ -901,6 +1300,10 @@
             Name = "AdminDashboard";
             Text = "AdminDashboard";
             WindowState = FormWindowState.Maximized;
+            Load += AdminDashboard_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
@@ -934,6 +1337,21 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel6.ResumeLayout(false);
+            leftPanel.ResumeLayout(false);
+            leftPanel.PerformLayout();
+            panel23.ResumeLayout(false);
+            panel23.PerformLayout();
+            panel22.ResumeLayout(false);
+            panel22.PerformLayout();
+            panel16.ResumeLayout(false);
+            panel21.ResumeLayout(false);
+            panel21.PerformLayout();
+            panel19.ResumeLayout(false);
+            panel19.PerformLayout();
+            panel17.ResumeLayout(false);
+            panel17.PerformLayout();
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1006,5 +1424,46 @@
         private Label label1;
         private Label label2;
         private Panel leftPanel;
+        private FlowLayoutPanel flowLayoutPanel4;
+        private Panel panel16;
+        private Panel panel18;
+        private Label label3;
+        private Panel panel21;
+        private Label subjects;
+        private Panel panel19;
+        private Label Teachers;
+        private Panel panel17;
+        private Label label5;
+        private Label label4;
+        private Panel panel23;
+        private Panel panel22;
+        private Label label10;
+        private Label label9;
+        private Label Student;
+        private Label Classes;
+        private Panel panel32;
+        private Button button20;
+        private Panel panel27;
+        private Panel panel25;
+        private Panel panel26;
+        private Panel panel24;
+        private Panel panel28;
+        private Label label6;
+        private Label label17;
+        private Label label16;
+        private Label label15;
+        private Label label8;
+        private Label Admins;
+        private Label label14;
+        private Label label13;
+        private Label label12;
+        private Label label11;
+        private Label label7;
+        private Label label20;
+        private Label label19;
+        private Label label18;
+        private Label pending_Approval;
+        private Label Subject_Teachers;
+        private Label Class_Teachers;
     }
 }

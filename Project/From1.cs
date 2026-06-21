@@ -131,14 +131,14 @@ namespace Project
 
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
-                            if (reader.Read()) 
+                            if (reader.Read())
                             {
                                 string userRole = reader["UserRole"].ToString();
-                                int userId = Convert.ToInt32(reader["UserID"]); 
+                                int userId = Convert.ToInt32(reader["UserID"]);
 
 
                                 Project.Teacher_profile.Session.LoggedInUsername = username;
-                                Project.Teacher_profile.Session.LoggedInUserID = userId; 
+                                Project.Teacher_profile.Session.LoggedInUserID = userId;
                                 Project.Class_Teacher_Profile.Session.LoggedInUserID = userId;
                                 Project.Class_Teacher_Profile.Session.LoggedInUsername = username;
                                 Project.Admin_profile.Session.LoggedInUsername = username;
@@ -151,14 +151,14 @@ namespace Project
                                     this.Hide();
                                 }
 
-                                else if(userRole == "ClassTeacher")
+                                else if (userRole == "ClassTeacher")
                                 {
                                     Class_Teacher_Profile classteacherFrom = new Class_Teacher_Profile();
                                     classteacherFrom.Show();
                                     this.Hide();
                                 }
 
-                                else if (userRole == "Teacher") 
+                                else if (userRole == "Teacher")
                                 {
                                     Teacher_profile teacherForm = new Teacher_profile();
                                     teacherForm.Show();
@@ -211,6 +211,11 @@ namespace Project
         }
 
         private void PanelLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
