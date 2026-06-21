@@ -20,7 +20,7 @@ namespace Project
 
 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            selectedTerm.DropDownStyle = ComboBoxStyle.DropDownList;
 
 
             LoadClasses();
@@ -64,6 +64,7 @@ namespace Project
 
         private void LoadClasses()
         {
+            string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
 
             string query = @"
                 SELECT DISTINCT c.ClassID, c.ClassName 
@@ -98,14 +99,14 @@ namespace Project
 
         private void LoadTerms()
         {
-            comboBox2.Items.Clear();
-            comboBox2.Items.Add("Term 1");
-            comboBox2.Items.Add("Term 2");
-            comboBox2.Items.Add("Term 3");
+            selectedTerm.Items.Clear();
+            selectedTerm.Items.Add("Term 1");
+            selectedTerm.Items.Add("Term 2");
+            selectedTerm.Items.Add("Term 3");
 
-            if (comboBox2.Items.Count > 0)
+            if (selectedTerm.Items.Count > 0)
             {
-                comboBox2.SelectedIndex = 0;
+                selectedTerm.SelectedIndex = 0;
             }
         }
 
@@ -120,11 +121,7 @@ namespace Project
             int selectedClassID = Convert.ToInt32(comboBox1.SelectedValue);
             int loggedInTeacherID = Teacher_profile.Session.LoggedInUserID;
 
-            // Extract numeric term value (e.g., extracts 1 out of "Term 1")
-            int selectedTerm = 1;
-            string termText = comboBox2.SelectedItem.ToString();
-            if (termText.Contains("2")) selectedTerm = 2;
-            else if (termText.Contains("3")) selectedTerm = 3;
+            string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
 
             // QUERY 1: Fetches the student list and pairs them with their matching marks for the selected term
             string query = @"
@@ -254,7 +251,7 @@ namespace Project
 
             int classID = Convert.ToInt32(comboBox1.SelectedValue);
             int term = 1;
-            string termText = comboBox2.SelectedItem.ToString();
+            string termText = selectedTerm.SelectedItem.ToString();
             if (termText.Contains("2")) term = 2;
             else if (termText.Contains("3")) term = 3;
 

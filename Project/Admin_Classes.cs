@@ -14,7 +14,7 @@ namespace Project
     public partial class Admin_Classes : Form
     {
         // Database Connection String
-        string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
+        string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
 
         // A variable to remember the row being edited
         private int editIndex = -1;
@@ -70,16 +70,12 @@ namespace Project
 
         private void Discipline_Click(object sender, EventArgs e)
         {
-            Admin_Discipline admin_Discipline = new Admin_Discipline();
-            admin_Discipline.Show();
-            this.Hide();
+            
         }
 
         private void Extra_Curricular_Click(object sender, EventArgs e)
         {
-            Admin_Extra_curricular admin_Extra_Curricular = new Admin_Extra_curricular();
-            admin_Extra_Curricular.Show();
-            this.Hide();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -91,9 +87,7 @@ namespace Project
 
         private void Class_Analytics_Click_1(object sender, EventArgs e)
         {
-            Admin_marks admin_marks = new Admin_marks();
-            admin_marks.Show();
-            this.Hide();
+            
         }
 
         private void grade_SelectedIndexChanged(object sender, EventArgs e)

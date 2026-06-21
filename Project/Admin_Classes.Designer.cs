@@ -28,15 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox28 = new PictureBox();
             button1 = new Button();
             panel6 = new Panel();
             panel15 = new Panel();
-            Extra_Curricular = new Button();
-            Discipline = new Button();
-            pictureBox27 = new PictureBox();
-            Class_Analytics = new Button();
-            pictureBox26 = new PictureBox();
             pictureBox8 = new PictureBox();
             panel7 = new Panel();
             button2 = new Button();
@@ -120,10 +114,7 @@
             pictureBox19 = new PictureBox();
             label2 = new Label();
             pictureBox2 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
             panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
@@ -165,16 +156,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox28
-            // 
-            pictureBox28.Image = Properties.Resources.ranking;
-            pictureBox28.Location = new Point(33, 593);
-            pictureBox28.Name = "pictureBox28";
-            pictureBox28.Size = new Size(40, 40);
-            pictureBox28.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox28.TabIndex = 16;
-            pictureBox28.TabStop = false;
-            // 
             // button1
             // 
             button1.BackColor = Color.Brown;
@@ -192,12 +173,6 @@
             // 
             panel6.BackColor = Color.Gray;
             panel6.Controls.Add(panel15);
-            panel6.Controls.Add(Extra_Curricular);
-            panel6.Controls.Add(pictureBox28);
-            panel6.Controls.Add(Discipline);
-            panel6.Controls.Add(pictureBox27);
-            panel6.Controls.Add(Class_Analytics);
-            panel6.Controls.Add(pictureBox26);
             panel6.Controls.Add(button1);
             panel6.Controls.Add(pictureBox8);
             panel6.Controls.Add(panel7);
@@ -223,65 +198,6 @@
             panel15.Name = "panel15";
             panel15.Size = new Size(350, 5);
             panel15.TabIndex = 18;
-            // 
-            // Extra_Curricular
-            // 
-            Extra_Curricular.BackColor = Color.RoyalBlue;
-            Extra_Curricular.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Extra_Curricular.ForeColor = Color.Black;
-            Extra_Curricular.Location = new Point(77, 591);
-            Extra_Curricular.Name = "Extra_Curricular";
-            Extra_Curricular.Size = new Size(242, 46);
-            Extra_Curricular.TabIndex = 17;
-            Extra_Curricular.Text = "Extra Curricular";
-            Extra_Curricular.UseVisualStyleBackColor = false;
-            Extra_Curricular.Click += Extra_Curricular_Click;
-            // 
-            // Discipline
-            // 
-            Discipline.BackColor = Color.RoyalBlue;
-            Discipline.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Discipline.ForeColor = Color.Black;
-            Discipline.Location = new Point(77, 517);
-            Discipline.Name = "Discipline";
-            Discipline.Size = new Size(242, 46);
-            Discipline.TabIndex = 15;
-            Discipline.Text = "Discipline";
-            Discipline.UseVisualStyleBackColor = false;
-            Discipline.Click += Discipline_Click;
-            // 
-            // pictureBox27
-            // 
-            pictureBox27.Image = Properties.Resources.discipline;
-            pictureBox27.Location = new Point(33, 519);
-            pictureBox27.Name = "pictureBox27";
-            pictureBox27.Size = new Size(40, 40);
-            pictureBox27.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox27.TabIndex = 14;
-            pictureBox27.TabStop = false;
-            // 
-            // Class_Analytics
-            // 
-            Class_Analytics.BackColor = Color.RoyalBlue;
-            Class_Analytics.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Class_Analytics.ForeColor = Color.Black;
-            Class_Analytics.Location = new Point(77, 444);
-            Class_Analytics.Name = "Class_Analytics";
-            Class_Analytics.Size = new Size(242, 46);
-            Class_Analytics.TabIndex = 13;
-            Class_Analytics.Text = "All Marks";
-            Class_Analytics.UseVisualStyleBackColor = false;
-            Class_Analytics.Click += Class_Analytics_Click_1;
-            // 
-            // pictureBox26
-            // 
-            pictureBox26.Image = Properties.Resources.report;
-            pictureBox26.Location = new Point(33, 446);
-            pictureBox26.Name = "pictureBox26";
-            pictureBox26.Size = new Size(40, 40);
-            pictureBox26.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox26.TabIndex = 12;
-            pictureBox26.TabStop = false;
             // 
             // pictureBox8
             // 
@@ -1206,10 +1122,7 @@
             Text = "Admin_Classes";
             WindowState = FormWindowState.Maximized;
             Load += Admin_Classes_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
             panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
@@ -1257,16 +1170,9 @@
         }
 
         #endregion
-
-        private PictureBox pictureBox28;
         private Button button1;
         private Panel panel6;
         private Panel panel15;
-        private Button Extra_Curricular;
-        private Button Discipline;
-        private PictureBox pictureBox27;
-        private Button Class_Analytics;
-        private PictureBox pictureBox26;
         private PictureBox pictureBox8;
         private Panel panel7;
         private Button button2;

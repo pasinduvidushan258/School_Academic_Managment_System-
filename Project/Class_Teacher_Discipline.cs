@@ -308,5 +308,10 @@ namespace Project
 
         private void leftPanel_Paint(object sender, PaintEventArgs e) { }
         private void panel1_Paint(object sender, PaintEventArgs e) { }
+
+        private void txtSearchStudentNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

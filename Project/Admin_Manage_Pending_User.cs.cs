@@ -15,7 +15,7 @@ namespace Project
     public partial class Admin_Manage_Pending_User : Form
     {
         // Database Connection String
-        string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
+        string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
 
         // To remember the ID of the User selected from the DataGrid
         private string selectedUserID = "";
