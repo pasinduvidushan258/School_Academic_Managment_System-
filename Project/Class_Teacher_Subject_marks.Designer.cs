@@ -103,6 +103,32 @@
             panel6 = new Panel();
             label1 = new Label();
             leftPanel = new Panel();
+            label8 = new Label();
+            panel17 = new Panel();
+            dataGridView1 = new DataGridView();
+            Add_marks = new Button();
+            pictureBox30 = new PictureBox();
+            label10 = new Label();
+            panel16 = new Panel();
+            panel21 = new Panel();
+            label13 = new Label();
+            Highest = new Label();
+            panel20 = new Panel();
+            label7 = new Label();
+            label11 = new Label();
+            Class_avg = new Label();
+            panel19 = new Panel();
+            label9 = new Label();
+            Students = new Label();
+            label3 = new Label();
+            panel18 = new Panel();
+            comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
+            Load = new Button();
+            pictureBox31 = new PictureBox();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox29).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
@@ -139,6 +165,16 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             panel2.SuspendLayout();
             panel6.SuspendLayout();
+            leftPanel.SuspendLayout();
+            panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox30).BeginInit();
+            panel16.SuspendLayout();
+            panel21.SuspendLayout();
+            panel20.SuspendLayout();
+            panel19.SuspendLayout();
+            panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox31).BeginInit();
             SuspendLayout();
             // 
             // button7
@@ -933,7 +969,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(420, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1482, 85);
+            panel1.Size = new Size(1500, 85);
             panel1.TabIndex = 9;
             // 
             // panel2
@@ -949,7 +985,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(420, 1033);
+            panel2.Size = new Size(420, 1080);
             panel2.TabIndex = 10;
             // 
             // panel6
@@ -996,17 +1032,286 @@
             // leftPanel
             // 
             leftPanel.BackColor = SystemColors.InactiveCaption;
+            leftPanel.Controls.Add(label8);
+            leftPanel.Controls.Add(panel17);
+            leftPanel.Controls.Add(panel16);
+            leftPanel.Controls.Add(label3);
+            leftPanel.Controls.Add(panel18);
             leftPanel.Dock = DockStyle.Fill;
             leftPanel.Location = new Point(0, 0);
             leftPanel.Name = "leftPanel";
-            leftPanel.Size = new Size(1902, 1033);
+            leftPanel.Size = new Size(1920, 1080);
             leftPanel.TabIndex = 11;
+            leftPanel.Paint += leftPanel_Paint;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            label8.Location = new Point(474, 136);
+            label8.Name = "label8";
+            label8.Size = new Size(498, 28);
+            label8.TabIndex = 11;
+            label8.Text = "Enter and manage student marks by class and term";
+            // 
+            // panel17
+            // 
+            panel17.BackColor = SystemColors.ControlDark;
+            panel17.Controls.Add(dataGridView1);
+            panel17.Controls.Add(Add_marks);
+            panel17.Controls.Add(pictureBox30);
+            panel17.Controls.Add(label10);
+            panel17.Location = new Point(494, 471);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(1304, 564);
+            panel17.TabIndex = 10;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(81, 90);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(1161, 408);
+            dataGridView1.TabIndex = 3;
+            // 
+            // Add_marks
+            // 
+            Add_marks.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            Add_marks.Location = new Point(1077, 16);
+            Add_marks.Name = "Add_marks";
+            Add_marks.Size = new Size(215, 57);
+            Add_marks.TabIndex = 2;
+            Add_marks.Text = "Add marks";
+            Add_marks.UseVisualStyleBackColor = true;
+            Add_marks.Click += Add_marks_Click;
+            // 
+            // pictureBox30
+            // 
+            pictureBox30.Image = Properties.Resources.mark;
+            pictureBox30.Location = new Point(45, 24);
+            pictureBox30.Name = "pictureBox30";
+            pictureBox30.Size = new Size(30, 30);
+            pictureBox30.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox30.TabIndex = 1;
+            pictureBox30.TabStop = false;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label10.Location = new Point(81, 16);
+            label10.Name = "label10";
+            label10.Size = new Size(166, 38);
+            label10.TabIndex = 0;
+            label10.Text = "Mark Sheet";
+            // 
+            // panel16
+            // 
+            panel16.BackColor = Color.Navy;
+            panel16.Controls.Add(panel21);
+            panel16.Controls.Add(panel20);
+            panel16.Controls.Add(panel19);
+            panel16.Location = new Point(647, 328);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(967, 125);
+            panel16.TabIndex = 9;
+            // 
+            // panel21
+            // 
+            panel21.BackColor = Color.DeepSkyBlue;
+            panel21.Controls.Add(label13);
+            panel21.Controls.Add(Highest);
+            panel21.Location = new Point(743, 12);
+            panel21.Name = "panel21";
+            panel21.Size = new Size(142, 97);
+            panel21.TabIndex = 1;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold | FontStyle.Italic);
+            label13.Location = new Point(42, 57);
+            label13.Name = "label13";
+            label13.Size = new Size(70, 23);
+            label13.TabIndex = 2;
+            label13.Text = "Highest";
+            // 
+            // Highest
+            // 
+            Highest.AutoSize = true;
+            Highest.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold);
+            Highest.Location = new Point(31, 0);
+            Highest.Name = "Highest";
+            Highest.Size = new Size(0, 62);
+            Highest.TabIndex = 1;
+            // 
+            // panel20
+            // 
+            panel20.BackColor = Color.DeepSkyBlue;
+            panel20.Controls.Add(label7);
+            panel20.Controls.Add(label11);
+            panel20.Controls.Add(Class_avg);
+            panel20.Location = new Point(428, 13);
+            panel20.Name = "panel20";
+            panel20.Size = new Size(175, 97);
+            panel20.TabIndex = 1;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold);
+            label7.Location = new Point(84, -1);
+            label7.Name = "label7";
+            label7.Size = new Size(68, 62);
+            label7.TabIndex = 7;
+            label7.Text = "%";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold | FontStyle.Italic);
+            label11.Location = new Point(42, 62);
+            label11.Name = "label11";
+            label11.Size = new Size(86, 23);
+            label11.TabIndex = 2;
+            label11.Text = "Class Avg";
+            // 
+            // Class_avg
+            // 
+            Class_avg.AutoSize = true;
+            Class_avg.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold);
+            Class_avg.Location = new Point(22, -1);
+            Class_avg.Name = "Class_avg";
+            Class_avg.Size = new Size(0, 62);
+            Class_avg.TabIndex = 1;
+            // 
+            // panel19
+            // 
+            panel19.BackColor = Color.DeepSkyBlue;
+            panel19.Controls.Add(label9);
+            panel19.Controls.Add(Students);
+            panel19.Location = new Point(120, 13);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(142, 97);
+            panel19.TabIndex = 0;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label9.Location = new Point(29, 61);
+            label9.Name = "label9";
+            label9.Size = new Size(77, 23);
+            label9.TabIndex = 1;
+            label9.Text = "Students";
+            // 
+            // Students
+            // 
+            Students.AutoSize = true;
+            Students.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Students.Location = new Point(29, 0);
+            Students.Name = "Students";
+            Students.Size = new Size(0, 62);
+            Students.TabIndex = 0;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold);
+            label3.Location = new Point(446, 90);
+            label3.Name = "label3";
+            label3.Size = new Size(246, 46);
+            label3.TabIndex = 8;
+            label3.Text = "Subject Marks";
+            // 
+            // panel18
+            // 
+            panel18.BackColor = SystemColors.ControlDark;
+            panel18.Controls.Add(comboBox2);
+            panel18.Controls.Add(comboBox1);
+            panel18.Controls.Add(Load);
+            panel18.Controls.Add(pictureBox31);
+            panel18.Controls.Add(label6);
+            panel18.Controls.Add(label5);
+            panel18.Controls.Add(label4);
+            panel18.Location = new Point(494, 179);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(1304, 131);
+            panel18.TabIndex = 7;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(605, 86);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(151, 28);
+            comboBox2.TabIndex = 8;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(230, 86);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 28);
+            comboBox1.TabIndex = 7;
+            // 
+            // Load
+            // 
+            Load.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            Load.Location = new Point(1034, 33);
+            Load.Name = "Load";
+            Load.Size = new Size(170, 56);
+            Load.TabIndex = 6;
+            Load.Text = "Load";
+            Load.UseVisualStyleBackColor = true;
+            Load.Click += Load_Click;
+            // 
+            // pictureBox31
+            // 
+            pictureBox31.Image = Properties.Resources.filter;
+            pictureBox31.Location = new Point(126, 8);
+            pictureBox31.Name = "pictureBox31";
+            pictureBox31.Size = new Size(30, 30);
+            pictureBox31.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox31.TabIndex = 5;
+            pictureBox31.TabStop = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            label6.Location = new Point(585, 49);
+            label6.Name = "label6";
+            label6.Size = new Size(62, 25);
+            label6.TabIndex = 2;
+            label6.Text = "Term";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(210, 49);
+            label5.Name = "label5";
+            label5.Size = new Size(67, 25);
+            label5.TabIndex = 1;
+            label5.Text = "Class";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(162, 8);
+            label4.Name = "label4";
+            label4.Size = new Size(85, 38);
+            label4.TabIndex = 0;
+            label4.Text = "Filter";
             // 
             // Class_Teacher_Subject_marks
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1902, 1033);
+            ClientSize = new Size(1920, 1080);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Controls.Add(leftPanel);
@@ -1051,6 +1356,22 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel6.ResumeLayout(false);
+            leftPanel.ResumeLayout(false);
+            leftPanel.PerformLayout();
+            panel17.ResumeLayout(false);
+            panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox30).EndInit();
+            panel16.ResumeLayout(false);
+            panel21.ResumeLayout(false);
+            panel21.PerformLayout();
+            panel20.ResumeLayout(false);
+            panel20.PerformLayout();
+            panel19.ResumeLayout(false);
+            panel19.PerformLayout();
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox31).EndInit();
             ResumeLayout(false);
         }
 
@@ -1131,5 +1452,31 @@
         private Panel panel6;
         private Label label1;
         private Panel leftPanel;
+        private Label label8;
+        private Panel panel17;
+        private DataGridView dataGridView1;
+        private Button Add_marks;
+        private PictureBox pictureBox30;
+        private Label label10;
+        private Panel panel16;
+        private Panel panel21;
+        private Label label13;
+        private Label Highest;
+        private Panel panel20;
+        private Label label7;
+        private Label label11;
+        private Label Class_avg;
+        private Panel panel19;
+        private Label label9;
+        private Label Students;
+        private Label label3;
+        private Panel panel18;
+        private ComboBox comboBox2;
+        private ComboBox comboBox1;
+        private Button Load;
+        private PictureBox pictureBox31;
+        private Label label6;
+        private Label label5;
+        private Label label4;
     }
 }

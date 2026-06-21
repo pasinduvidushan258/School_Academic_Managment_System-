@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             pictureBox14 = new PictureBox();
             button9 = new Button();
             button10 = new Button();
@@ -95,9 +98,11 @@
             pictureBox2 = new PictureBox();
             leftPanel = new Panel();
             panel20 = new Panel();
+            listBoxCurrentSubjects = new ListBox();
             label12 = new Label();
             pictureBox40 = new PictureBox();
             panel19 = new Panel();
+            dataGridViewAssignedClass = new DataGridView();
             label11 = new Label();
             pictureBox39 = new PictureBox();
             panel18 = new Panel();
@@ -119,18 +124,15 @@
             label8 = new Label();
             label7 = new Label();
             pictureBox31 = new PictureBox();
-            panel17 = new Panel();
-            label6 = new Label();
-            pictureBox30 = new PictureBox();
             panel16 = new Panel();
+            disTeacherId = new Label();
+            disGender = new Label();
+            disMobile = new Label();
+            disDOB = new Label();
+            disEmail = new Label();
+            disFullName = new Label();
             bottom_whiteline_pi = new Label();
             top_whiteline_pi = new Label();
-            g_Ender = new Label();
-            m_Obile = new Label();
-            d_ob = new Label();
-            e_Mail = new Label();
-            index_Number = new Label();
-            full_Name = new Label();
             gender = new Label();
             mobile = new Label();
             dob = new Label();
@@ -183,6 +185,7 @@
             panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox40).BeginInit();
             panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAssignedClass).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox39).BeginInit();
             panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox38).BeginInit();
@@ -195,8 +198,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox35).BeginInit();
             ((System.ComponentModel.ISupportInitialize)passwordShow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox31).BeginInit();
-            panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox30).BeginInit();
             panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox29).BeginInit();
             panel15.SuspendLayout();
@@ -642,7 +643,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1500, 85);
             panel1.TabIndex = 3;
-            
             // 
             // panel2
             // 
@@ -954,7 +954,6 @@
             leftPanel.Controls.Add(panel20);
             leftPanel.Controls.Add(panel19);
             leftPanel.Controls.Add(panel18);
-            leftPanel.Controls.Add(panel17);
             leftPanel.Controls.Add(panel16);
             leftPanel.Controls.Add(panel15);
             leftPanel.Controls.Add(label4);
@@ -969,6 +968,7 @@
             // panel20
             // 
             panel20.BackColor = Color.Gray;
+            panel20.Controls.Add(listBoxCurrentSubjects);
             panel20.Controls.Add(label12);
             panel20.Controls.Add(pictureBox40);
             panel20.Location = new Point(1458, 869);
@@ -976,20 +976,31 @@
             panel20.Size = new Size(414, 181);
             panel20.TabIndex = 6;
             // 
+            // listBoxCurrentSubjects
+            // 
+            listBoxCurrentSubjects.BackColor = Color.Gray;
+            listBoxCurrentSubjects.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            listBoxCurrentSubjects.FormattingEnabled = true;
+            listBoxCurrentSubjects.ItemHeight = 23;
+            listBoxCurrentSubjects.Location = new Point(62, 61);
+            listBoxCurrentSubjects.Name = "listBoxCurrentSubjects";
+            listBoxCurrentSubjects.Size = new Size(232, 73);
+            listBoxCurrentSubjects.TabIndex = 22;
+            // 
             // label12
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(62, 25);
+            label12.Location = new Point(62, 4);
             label12.Name = "label12";
-            label12.Size = new Size(221, 38);
+            label12.Size = new Size(126, 38);
             label12.TabIndex = 1;
-            label12.Text = "Current Subject";
+            label12.Text = "Subjects";
             // 
             // pictureBox40
             // 
             pictureBox40.Image = Properties.Resources.project;
-            pictureBox40.Location = new Point(26, 29);
+            pictureBox40.Location = new Point(26, 11);
             pictureBox40.Name = "pictureBox40";
             pictureBox40.Size = new Size(30, 30);
             pictureBox40.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -999,12 +1010,49 @@
             // panel19
             // 
             panel19.BackColor = Color.Gray;
+            panel19.Controls.Add(dataGridViewAssignedClass);
             panel19.Controls.Add(label11);
             panel19.Controls.Add(pictureBox39);
-            panel19.Location = new Point(1003, 689);
+            panel19.Location = new Point(1003, 422);
             panel19.Name = "panel19";
-            panel19.Size = new Size(414, 361);
+            panel19.Size = new Size(414, 628);
             panel19.TabIndex = 5;
+            // 
+            // dataGridViewAssignedClass
+            // 
+            dataGridViewAssignedClass.BackgroundColor = Color.Gray;
+            dataGridViewAssignedClass.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.Gray;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewAssignedClass.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewAssignedClass.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.Gray;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridViewAssignedClass.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewAssignedClass.EnableHeadersVisualStyles = false;
+            dataGridViewAssignedClass.Location = new Point(26, 88);
+            dataGridViewAssignedClass.Name = "dataGridViewAssignedClass";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.Gray;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridViewAssignedClass.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewAssignedClass.RowHeadersWidth = 51;
+            dataGridViewAssignedClass.Size = new Size(365, 465);
+            dataGridViewAssignedClass.TabIndex = 2;
             // 
             // label11
             // 
@@ -1242,47 +1290,17 @@
             pictureBox31.TabIndex = 0;
             pictureBox31.TabStop = false;
             // 
-            // panel17
-            // 
-            panel17.BackColor = Color.Gray;
-            panel17.Controls.Add(label6);
-            panel17.Controls.Add(pictureBox30);
-            panel17.Location = new Point(1003, 422);
-            panel17.Name = "panel17";
-            panel17.Size = new Size(414, 248);
-            panel17.TabIndex = 4;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(62, 25);
-            label6.Name = "label6";
-            label6.Size = new Size(221, 38);
-            label6.TabIndex = 1;
-            label6.Text = "Current Subject";
-            // 
-            // pictureBox30
-            // 
-            pictureBox30.Image = Properties.Resources.project;
-            pictureBox30.Location = new Point(26, 29);
-            pictureBox30.Name = "pictureBox30";
-            pictureBox30.Size = new Size(30, 30);
-            pictureBox30.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox30.TabIndex = 0;
-            pictureBox30.TabStop = false;
-            // 
             // panel16
             // 
             panel16.BackColor = Color.Gray;
+            panel16.Controls.Add(disTeacherId);
+            panel16.Controls.Add(disGender);
+            panel16.Controls.Add(disMobile);
+            panel16.Controls.Add(disDOB);
+            panel16.Controls.Add(disEmail);
+            panel16.Controls.Add(disFullName);
             panel16.Controls.Add(bottom_whiteline_pi);
             panel16.Controls.Add(top_whiteline_pi);
-            panel16.Controls.Add(g_Ender);
-            panel16.Controls.Add(m_Obile);
-            panel16.Controls.Add(d_ob);
-            panel16.Controls.Add(e_Mail);
-            panel16.Controls.Add(index_Number);
-            panel16.Controls.Add(full_Name);
             panel16.Controls.Add(gender);
             panel16.Controls.Add(mobile);
             panel16.Controls.Add(dob);
@@ -1296,14 +1314,66 @@
             panel16.Size = new Size(496, 628);
             panel16.TabIndex = 3;
             // 
-            // g_Ender
+            // disTeacherId
             // 
-            g_Ender.AutoSize = true;
-            g_Ender.Font = new Font("Segoe UI", 10F);
-            g_Ender.ForeColor = SystemColors.ButtonHighlight;
-            g_Ender.Location = new Point(251, 405);
-            g_Ender.Name = "g_Ender";
-            g_Ender.Size = new Size(0, 23);
+            disTeacherId.AutoSize = true;
+            disTeacherId.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            disTeacherId.Location = new Point(227, 183);
+            disTeacherId.Name = "disTeacherId";
+            disTeacherId.Size = new Size(69, 23);
+            disTeacherId.TabIndex = 21;
+            disTeacherId.Text = "label18";
+            // 
+            // disGender
+            // 
+            disGender.AutoSize = true;
+            disGender.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            disGender.Location = new Point(227, 416);
+            disGender.Name = "disGender";
+            disGender.Size = new Size(69, 23);
+            disGender.TabIndex = 20;
+            disGender.Text = "label17";
+            // 
+            // disMobile
+            // 
+            disMobile.AutoSize = true;
+            disMobile.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            disMobile.Location = new Point(227, 353);
+            disMobile.Name = "disMobile";
+            disMobile.Size = new Size(69, 23);
+            disMobile.TabIndex = 19;
+            disMobile.Text = "label16";
+            // 
+            // disDOB
+            // 
+            disDOB.AutoSize = true;
+            disDOB.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            disDOB.Location = new Point(227, 293);
+            disDOB.Name = "disDOB";
+            disDOB.Size = new Size(69, 23);
+            disDOB.TabIndex = 18;
+            disDOB.Text = "label15";
+            // 
+            // disEmail
+            // 
+            disEmail.AutoSize = true;
+            disEmail.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            disEmail.Location = new Point(227, 241);
+            disEmail.Name = "disEmail";
+            disEmail.Size = new Size(69, 23);
+            disEmail.TabIndex = 17;
+            disEmail.Text = "label14";
+            // 
+            // disFullName
+            // 
+            disFullName.AutoSize = true;
+            disFullName.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            disFullName.Location = new Point(227, 119);
+            disFullName.Name = "disFullName";
+            disFullName.Size = new Size(69, 23);
+            disFullName.TabIndex = 16;
+            disFullName.Text = "label13";
+            // 
             // bottom_whiteline_pi
             // 
             bottom_whiteline_pi.BackColor = Color.White;
@@ -1320,99 +1390,9 @@
             top_whiteline_pi.Size = new Size(496, 1);
             top_whiteline_pi.TabIndex = 14;
             // 
-            // g_Ender
-            // 
-            g_Ender.AutoSize = true;
-            g_Ender.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            g_Ender.ForeColor = SystemColors.ButtonHighlight;
-            g_Ender.Location = new Point(173, 408);
-            g_Ender.Name = "g_Ender";
-            g_Ender.Size = new Size(0, 28);
-            g_Ender.TabIndex = 13;
-            // 
-            // m_Obile
-            // 
-            m_Obile.AutoSize = true;
-            m_Obile.Font = new Font("Segoe UI", 10F);
-            m_Obile.ForeColor = SystemColors.ButtonHighlight;
-            m_Obile.Location = new Point(54, 405);
-            m_Obile.Name = "m_Obile";
-            m_Obile.Size = new Size(0, 23);
-            m_Obile.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            m_Obile.ForeColor = SystemColors.ButtonHighlight;
-            m_Obile.Location = new Point(173, 341);
-            m_Obile.Name = "m_Obile";
-            m_Obile.Size = new Size(0, 28);
-            m_Obile.TabIndex = 12;
-            // 
-            // d_ob
-            // 
-            d_ob.AutoSize = true;
-            d_ob.Font = new Font("Segoe UI", 10F);
-            d_ob.ForeColor = SystemColors.ButtonHighlight;
-            d_ob.Location = new Point(251, 293);
-            d_ob.Name = "d_ob";
-            d_ob.Size = new Size(0, 23);
-            d_ob.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            d_ob.ForeColor = SystemColors.ButtonHighlight;
-            d_ob.Location = new Point(173, 285);
-            d_ob.Name = "d_ob";
-            d_ob.Size = new Size(0, 28);
-            d_ob.TabIndex = 11;
-            // 
-            // e_Mail
-            // 
-            e_Mail.AutoSize = true;
-            e_Mail.Font = new Font("Segoe UI", 10F);
-            e_Mail.ForeColor = SystemColors.ButtonHighlight;
-            e_Mail.Location = new Point(54, 293);
-            e_Mail.Name = "e_Mail";
-            e_Mail.Size = new Size(0, 23);
-            e_Mail.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            e_Mail.ForeColor = SystemColors.ButtonHighlight;
-            e_Mail.Location = new Point(173, 233);
-            e_Mail.Name = "e_Mail";
-            e_Mail.Size = new Size(0, 28);
-            e_Mail.TabIndex = 10;
-            // 
-            // index_Number
-            // 
-            index_Number.AutoSize = true;
-            index_Number.Font = new Font("Segoe UI", 10F);
-            index_Number.ForeColor = SystemColors.ButtonHighlight;
-            index_Number.Location = new Point(251, 149);
-            index_Number.Name = "index_Number";
-            index_Number.Size = new Size(0, 23);
-            index_Number.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            index_Number.ForeColor = SystemColors.ButtonHighlight;
-            index_Number.Location = new Point(173, 175);
-            index_Number.Name = "index_Number";
-            index_Number.Size = new Size(0, 28);
-            index_Number.TabIndex = 9;
-            // 
-            // full_Name
-            // 
-            full_Name.AutoSize = true;
-            full_Name.ForeColor = SystemColors.ButtonHighlight;
-            full_Name.Location = new Point(54, 149);
-            full_Name.Name = "full_Name";
-            full_Name.Size = new Size(0, 20);
-            full_Name.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            full_Name.ForeColor = SystemColors.ButtonHighlight;
-            full_Name.Location = new Point(173, 121);
-            full_Name.Name = "full_Name";
-            full_Name.Size = new Size(0, 28);
-            full_Name.TabIndex = 8;
-            // 
             // gender
             // 
             gender.AutoSize = true;
-            gender.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            gender.Location = new Point(251, 353);
-            gender.Name = "gender";
-            gender.Size = new Size(68, 23);
-            gender.TabIndex = 7;
-            gender.Text = "Gender";
             gender.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             gender.Location = new Point(6, 408);
             gender.Name = "gender";
@@ -1423,12 +1403,6 @@
             // mobile
             // 
             mobile.AutoSize = true;
-            mobile.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            mobile.Location = new Point(54, 353);
-            mobile.Name = "mobile";
-            mobile.Size = new Size(66, 23);
-            mobile.TabIndex = 6;
-            mobile.Text = "Mobile";
             mobile.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             mobile.Location = new Point(5, 341);
             mobile.Name = "mobile";
@@ -1439,12 +1413,6 @@
             // dob
             // 
             dob.AutoSize = true;
-            dob.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dob.Location = new Point(251, 241);
-            dob.Name = "dob";
-            dob.Size = new Size(115, 23);
-            dob.TabIndex = 5;
-            dob.Text = "Date of Birth";
             dob.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             dob.Location = new Point(3, 285);
             dob.Name = "dob";
@@ -1455,12 +1423,6 @@
             // email
             // 
             email.AutoSize = true;
-            email.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            email.Location = new Point(54, 241);
-            email.Name = "email";
-            email.Size = new Size(61, 23);
-            email.TabIndex = 4;
-            email.Text = "E-mail";
             email.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             email.Location = new Point(3, 233);
             email.Name = "email";
@@ -1471,12 +1433,6 @@
             // indexNumber
             // 
             indexNumber.AutoSize = true;
-            indexNumber.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            indexNumber.Location = new Point(251, 100);
-            indexNumber.Name = "indexNumber";
-            indexNumber.Size = new Size(125, 23);
-            indexNumber.TabIndex = 3;
-            indexNumber.Text = "Index Number";
             indexNumber.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             indexNumber.Location = new Point(3, 175);
             indexNumber.Name = "indexNumber";
@@ -1488,12 +1444,6 @@
             // fullName
             // 
             fullName.AutoSize = true;
-            fullName.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            fullName.Location = new Point(54, 98);
-            fullName.Name = "fullName";
-            fullName.Size = new Size(91, 23);
-            fullName.TabIndex = 2;
-            fullName.Text = "Full Name";
             fullName.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             fullName.Location = new Point(6, 115);
             fullName.Name = "fullName";
@@ -1558,9 +1508,10 @@
             // Teacher_name
             // 
             Teacher_name.AutoSize = true;
-            Teacher_name.Location = new Point(218, 20);
+            Teacher_name.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold);
+            Teacher_name.Location = new Point(229, 62);
             Teacher_name.Name = "Teacher_name";
-            Teacher_name.Size = new Size(50, 20);
+            Teacher_name.Size = new Size(128, 50);
             Teacher_name.TabIndex = 4;
             Teacher_name.Text = "label5";
             // 
@@ -1656,6 +1607,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox40).EndInit();
             panel19.ResumeLayout(false);
             panel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAssignedClass).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox39).EndInit();
             panel18.ResumeLayout(false);
             panel18.PerformLayout();
@@ -1669,9 +1621,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox35).EndInit();
             ((System.ComponentModel.ISupportInitialize)passwordShow).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox31).EndInit();
-            panel17.ResumeLayout(false);
-            panel17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox30).EndInit();
             panel16.ResumeLayout(false);
             panel16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox29).EndInit();
@@ -1765,9 +1714,6 @@
         private Panel panel18;
         private Label label7;
         private PictureBox pictureBox31;
-        private Panel panel17;
-        private Label label6;
-        private PictureBox pictureBox30;
         private Button btnUpdatePassword;
         private TextBox txtConfirmPassword;
         private Label label10;
@@ -1796,13 +1742,15 @@
         private Label dob;
         private Label email;
         private Label indexNumber;
-        private Label full_Name;
-        private Label g_Ender;
-        private Label m_Obile;
-        private Label d_ob;
-        private Label e_Mail;
-        private Label index_Number;
         private Label top_whiteline_pi;
         private Label bottom_whiteline_pi;
+        private Label disTeacherId;
+        private Label disGender;
+        private Label disMobile;
+        private Label disDOB;
+        private Label disEmail;
+        private Label disFullName;
+        private DataGridView dataGridViewAssignedClass;
+        private ListBox listBoxCurrentSubjects;
     }
 }

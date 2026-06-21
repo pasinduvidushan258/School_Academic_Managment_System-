@@ -22,13 +22,15 @@ namespace Project
             public static int LoggedInUserID = 0;
         }
 
-        private string connectionString = "Server=localhost;Port=3307;Database=school_ams;Uid=root;Pwd=;";
+        private string connectionString = "Server=localhost;Port=3306;Database=school_ams;Uid=root;Pwd=;";
         public Teacher_profile()
         {
             InitializeComponent();
             txtCurrentPassword.UseSystemPasswordChar = true;
             txtNewPassword.UseSystemPasswordChar = true;
             txtConfirmPassword.UseSystemPasswordChar = true;
+
+            this.Load += new System.EventHandler(this.Teacher_profile_Load);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -119,6 +121,174 @@ namespace Project
             txtCurrentPassword.Clear();
             txtNewPassword.Clear();
             txtConfirmPassword.Clear();
+        }
+
+        private void LoadAssignedClasses(int teacherId)
+        {
+            // Query linking your allocations, classes, and subjects tables together
+            string query = @"SELECT c.Grade AS 'Grade', 
+                            c.ClassName AS 'Class Name', 
+                            s.SubjectName AS 'Subject' 
+                     FROM teacher_allocations ta
+                     INNER JOIN classes c ON ta.ClassID = c.ClassID
+                     INNER JOIN subjects s ON ta.SubjectID = s.SubjectID
+                     WHERE ta.TeacherID = @TeacherID";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@TeacherID", teacherId);
+
+                    try
+                    {
+                        conn.Open();
+
+                        // Use MySqlDataAdapter to fill a DataTable directly
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+
+                            // Bind the data table data directly to your exact DataGridView name
+                            dataGridViewAssignedClass.DataSource = dt;
+
+                            // Visual formatting fixes for a clean UI
+                            dataGridViewAssignedClass.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                            dataGridViewAssignedClass.AllowUserToAddRows = false;
+                            dataGridViewAssignedClass.ReadOnly = true;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error loading assigned classes: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void LoadCurrentSubjects(int teacherId)
+        {
+            // Clear any default design-time items first
+            listBoxCurrentSubjects.Items.Clear();
+
+            // Query links allocations to subjects and ensures unique names using DISTINCT
+            string query = @"SELECT DISTINCT s.SubjectName 
+                     FROM teacher_allocations ta
+                     INNER JOIN subjects s ON ta.SubjectID = s.SubjectID
+                     WHERE ta.TeacherID = @TeacherID 
+                     ORDER BY s.SubjectName ASC";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@TeacherID", teacherId);
+
+                    try
+                    {
+                        conn.Open();
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            bool hasSubjects = false;
+
+                            while (reader.Read())
+                            {
+                                hasSubjects = true;
+                                string subjectName = reader["SubjectName"].ToString();
+
+                                // Add each subject string line-by-line into the ListBox
+                                listBoxCurrentSubjects.Items.Add(subjectName);
+                            }
+
+                            // If the teacher has no allocations assigned yet
+                            if (!hasSubjects)
+                            {
+                                listBoxCurrentSubjects.Items.Add("No assigned subjects found.");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error loading teaching subjects: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void Teacher_profile_Load(object sender, EventArgs e)
+        {
+            string currentLoggedInUser = Session.LoggedInUsername;
+
+            if (string.IsNullOrEmpty(currentLoggedInUser))
+            {
+                MessageBox.Show("No active user session found. Please log in again.", "Session Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string query = "SELECT UserID, FirstName, LastName, Email, MobileNumber, Gender, DOB FROM users WHERE Username = @Username";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Username", currentLoggedInUser);
+
+                    try
+                    {
+                        conn.Open();
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                int loggedInTeacherID = Convert.ToInt32(reader["UserID"]);
+                                disTeacherId.Text = reader["UserID"].ToString();
+                                string firstName = reader["FirstName"] != DBNull.Value ? reader["FirstName"].ToString() : "";
+                                string lastName = reader["LastName"] != DBNull.Value ? reader["LastName"].ToString() : "";
+                                string gender = reader["Gender"] != DBNull.Value ? reader["Gender"].ToString().Trim() : "";
+
+                                string prefix = "";
+                                if (gender.Equals("Male", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    prefix = "Mr. ";
+                                }
+                                else if (gender.Equals("Female", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    prefix = "Miss ";
+                                }
+
+                                Teacher_name.Text = $"{prefix}{firstName} {lastName}".Trim();
+
+                                disFullName.Text = $"{firstName} {lastName}".Trim();
+                                disEmail.Text = reader["Email"] != DBNull.Value ? reader["Email"].ToString() : "N/A";
+                                disMobile.Text = reader["MobileNumber"] != DBNull.Value ? reader["MobileNumber"].ToString() : "N/A";
+                                disGender.Text = reader["Gender"] != DBNull.Value ? reader["Gender"].ToString() : "N/A";
+                                disGender.Text = string.IsNullOrEmpty(gender) ? "N/A" : gender;
+
+                                if (reader["DOB"] != DBNull.Value)
+                                {
+                                    DateTime dob = Convert.ToDateTime(reader["DOB"]);
+                                    disDOB.Text = dob.ToString("yyyy-MM-dd");
+                                }
+                                else
+                                {
+                                    disDOB.Text = "N/A";
+                                }
+
+                                LoadAssignedClasses(loggedInTeacherID);
+                                LoadCurrentSubjects(loggedInTeacherID);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Profile details could not be found in the database.", "Data Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred while loading profile information: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
 
         private void btnUpdatePassword_Click(object sender, EventArgs e)
